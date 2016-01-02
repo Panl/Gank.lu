@@ -1,25 +1,91 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3eF-VA-VkZ">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Gank.lu-->
+        <scene sceneID="DRB-1H-eCi">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <tableViewController id="HtY-vg-xlN" customClass="ViewController" customModule="Gank_lu" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="280" sectionHeaderHeight="28" sectionFooterHeight="28" id="sKx-rD-tcu">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="280" id="wyF-5p-iWd">
+                                <rect key="frame" x="0.0" y="92" width="600" height="280"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wyF-5p-iWd" id="28S-gg-RmB">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="279"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ocw-zi-se6">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="161"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="161" id="7hy-DV-eac"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="代码家" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyI-ep-jNC">
+                                            <rect key="frame" x="8" y="169" width="51" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="2016年1月2日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A57-bQ-hPi">
+                                            <rect key="frame" x="67" y="169" width="107" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" red="0.27073469065656564" green="0.27073469065656564" blue="0.27073469065656564" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cRb-cP-If3">
+                                            <rect key="frame" x="8" y="198" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="dyI-ep-jNC" firstAttribute="top" secondItem="Ocw-zi-se6" secondAttribute="bottom" constant="8" symbolic="YES" id="3OG-fD-uGL"/>
+                                        <constraint firstItem="A57-bQ-hPi" firstAttribute="leading" secondItem="dyI-ep-jNC" secondAttribute="trailing" constant="8" id="BDd-Ef-7Z9"/>
+                                        <constraint firstItem="A57-bQ-hPi" firstAttribute="baseline" secondItem="dyI-ep-jNC" secondAttribute="baseline" id="C0e-7X-S1S"/>
+                                        <constraint firstItem="Ocw-zi-se6" firstAttribute="leading" secondItem="28S-gg-RmB" secondAttribute="leading" id="C9Z-OK-8S3"/>
+                                        <constraint firstItem="Ocw-zi-se6" firstAttribute="top" secondItem="28S-gg-RmB" secondAttribute="top" id="PP9-Ol-5Vy"/>
+                                        <constraint firstItem="Ocw-zi-se6" firstAttribute="width" secondItem="28S-gg-RmB" secondAttribute="width" id="Utc-iP-Dbd"/>
+                                        <constraint firstItem="A57-bQ-hPi" firstAttribute="top" secondItem="Ocw-zi-se6" secondAttribute="bottom" constant="8" symbolic="YES" id="glV-eK-MbA"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="HtY-vg-xlN" id="a97-nz-iUc"/>
+                            <outlet property="delegate" destination="HtY-vg-xlN" id="WSw-KQ-Ttp"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Gank.lu" id="uWa-bY-BMl"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lGj-20-4lT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1044" y="-361"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="334-Rq-K5x">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3eF-VA-VkZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Unq-eq-MYj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="HtY-vg-xlN" kind="relationship" relationship="rootViewController" id="h7H-gX-FDH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="62x-1q-r5c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="232" y="-361"/>
         </scene>
     </scenes>
 </document>
