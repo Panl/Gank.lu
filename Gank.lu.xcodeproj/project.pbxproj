@@ -1,0 +1,510 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BE3078B41C38272500B007EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3078B31C38272500B007EA /* AppDelegate.swift */; };
+		BE3078B61C38272500B007EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3078B51C38272500B007EA /* ViewController.swift */; };
+		BE3078B91C38272500B007EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE3078B71C38272500B007EA /* Main.storyboard */; };
+		BE3078BB1C38272500B007EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE3078BA1C38272500B007EA /* Assets.xcassets */; };
+		BE3078BE1C38272500B007EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE3078BC1C38272500B007EA /* LaunchScreen.storyboard */; };
+		BE3078C91C38272500B007EA /* Gank_luTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3078C81C38272500B007EA /* Gank_luTests.swift */; };
+		BE3078D41C38272500B007EA /* Gank_luUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3078D31C38272500B007EA /* Gank_luUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BE3078C51C38272500B007EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE3078A81C38272500B007EA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BE3078AF1C38272500B007EA;
+			remoteInfo = Gank.lu;
+		};
+		BE3078D01C38272500B007EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE3078A81C38272500B007EA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BE3078AF1C38272500B007EA;
+			remoteInfo = Gank.lu;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BE3078B01C38272500B007EA /* Gank.lu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gank.lu.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE3078B31C38272500B007EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BE3078B51C38272500B007EA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BE3078B81C38272500B007EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BE3078BA1C38272500B007EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BE3078BD1C38272500B007EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BE3078BF1C38272500B007EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE3078C41C38272500B007EA /* Gank.luTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Gank.luTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE3078C81C38272500B007EA /* Gank_luTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gank_luTests.swift; sourceTree = "<group>"; };
+		BE3078CA1C38272500B007EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE3078CF1C38272500B007EA /* Gank.luUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Gank.luUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE3078D31C38272500B007EA /* Gank_luUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gank_luUITests.swift; sourceTree = "<group>"; };
+		BE3078D51C38272500B007EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BE3078AD1C38272500B007EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE3078C11C38272500B007EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE3078CC1C38272500B007EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BE3078A71C38272500B007EA = {
+			isa = PBXGroup;
+			children = (
+				BE3078B21C38272500B007EA /* Gank.lu */,
+				BE3078C71C38272500B007EA /* Gank.luTests */,
+				BE3078D21C38272500B007EA /* Gank.luUITests */,
+				BE3078B11C38272500B007EA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BE3078B11C38272500B007EA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BE3078B01C38272500B007EA /* Gank.lu.app */,
+				BE3078C41C38272500B007EA /* Gank.luTests.xctest */,
+				BE3078CF1C38272500B007EA /* Gank.luUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BE3078B21C38272500B007EA /* Gank.lu */ = {
+			isa = PBXGroup;
+			children = (
+				BE3078B31C38272500B007EA /* AppDelegate.swift */,
+				BE3078B51C38272500B007EA /* ViewController.swift */,
+				BE3078B71C38272500B007EA /* Main.storyboard */,
+				BE3078BA1C38272500B007EA /* Assets.xcassets */,
+				BE3078BC1C38272500B007EA /* LaunchScreen.storyboard */,
+				BE3078BF1C38272500B007EA /* Info.plist */,
+			);
+			path = Gank.lu;
+			sourceTree = "<group>";
+		};
+		BE3078C71C38272500B007EA /* Gank.luTests */ = {
+			isa = PBXGroup;
+			children = (
+				BE3078C81C38272500B007EA /* Gank_luTests.swift */,
+				BE3078CA1C38272500B007EA /* Info.plist */,
+			);
+			path = Gank.luTests;
+			sourceTree = "<group>";
+		};
+		BE3078D21C38272500B007EA /* Gank.luUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BE3078D31C38272500B007EA /* Gank_luUITests.swift */,
+				BE3078D51C38272500B007EA /* Info.plist */,
+			);
+			path = Gank.luUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BE3078AF1C38272500B007EA /* Gank.lu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE3078D81C38272500B007EA /* Build configuration list for PBXNativeTarget "Gank.lu" */;
+			buildPhases = (
+				BE3078AC1C38272500B007EA /* Sources */,
+				BE3078AD1C38272500B007EA /* Frameworks */,
+				BE3078AE1C38272500B007EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Gank.lu;
+			productName = Gank.lu;
+			productReference = BE3078B01C38272500B007EA /* Gank.lu.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BE3078C31C38272500B007EA /* Gank.luTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE3078DB1C38272500B007EA /* Build configuration list for PBXNativeTarget "Gank.luTests" */;
+			buildPhases = (
+				BE3078C01C38272500B007EA /* Sources */,
+				BE3078C11C38272500B007EA /* Frameworks */,
+				BE3078C21C38272500B007EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BE3078C61C38272500B007EA /* PBXTargetDependency */,
+			);
+			name = Gank.luTests;
+			productName = Gank.luTests;
+			productReference = BE3078C41C38272500B007EA /* Gank.luTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BE3078CE1C38272500B007EA /* Gank.luUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE3078DE1C38272500B007EA /* Build configuration list for PBXNativeTarget "Gank.luUITests" */;
+			buildPhases = (
+				BE3078CB1C38272500B007EA /* Sources */,
+				BE3078CC1C38272500B007EA /* Frameworks */,
+				BE3078CD1C38272500B007EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BE3078D11C38272500B007EA /* PBXTargetDependency */,
+			);
+			name = Gank.luUITests;
+			productName = Gank.luUITests;
+			productReference = BE3078CF1C38272500B007EA /* Gank.luUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BE3078A81C38272500B007EA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = smartalker;
+				TargetAttributes = {
+					BE3078AF1C38272500B007EA = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = BG63VCU95W;
+					};
+					BE3078C31C38272500B007EA = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = BG63VCU95W;
+						TestTargetID = BE3078AF1C38272500B007EA;
+					};
+					BE3078CE1C38272500B007EA = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = BG63VCU95W;
+						TestTargetID = BE3078AF1C38272500B007EA;
+					};
+				};
+			};
+			buildConfigurationList = BE3078AB1C38272500B007EA /* Build configuration list for PBXProject "Gank.lu" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BE3078A71C38272500B007EA;
+			productRefGroup = BE3078B11C38272500B007EA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BE3078AF1C38272500B007EA /* Gank.lu */,
+				BE3078C31C38272500B007EA /* Gank.luTests */,
+				BE3078CE1C38272500B007EA /* Gank.luUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BE3078AE1C38272500B007EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE3078BE1C38272500B007EA /* LaunchScreen.storyboard in Resources */,
+				BE3078BB1C38272500B007EA /* Assets.xcassets in Resources */,
+				BE3078B91C38272500B007EA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE3078C21C38272500B007EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE3078CD1C38272500B007EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BE3078AC1C38272500B007EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE3078B61C38272500B007EA /* ViewController.swift in Sources */,
+				BE3078B41C38272500B007EA /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE3078C01C38272500B007EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE3078C91C38272500B007EA /* Gank_luTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE3078CB1C38272500B007EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE3078D41C38272500B007EA /* Gank_luUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BE3078C61C38272500B007EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BE3078AF1C38272500B007EA /* Gank.lu */;
+			targetProxy = BE3078C51C38272500B007EA /* PBXContainerItemProxy */;
+		};
+		BE3078D11C38272500B007EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BE3078AF1C38272500B007EA /* Gank.lu */;
+			targetProxy = BE3078D01C38272500B007EA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BE3078B71C38272500B007EA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE3078B81C38272500B007EA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BE3078BC1C38272500B007EA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE3078BD1C38272500B007EA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BE3078D61C38272500B007EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BE3078D71C38272500B007EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BE3078D91C38272500B007EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Gank.lu/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.smartalker.Gank-lu";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BE3078DA1C38272500B007EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Gank.lu/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.smartalker.Gank-lu";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BE3078DC1C38272500B007EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = Gank.luTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.smartalker.Gank-luTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gank.lu.app/Gank.lu";
+			};
+			name = Debug;
+		};
+		BE3078DD1C38272500B007EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = Gank.luTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.smartalker.Gank-luTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gank.lu.app/Gank.lu";
+			};
+			name = Release;
+		};
+		BE3078DF1C38272500B007EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Gank.luUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.smartalker.Gank-luUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Gank.lu;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		BE3078E01C38272500B007EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Gank.luUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.smartalker.Gank-luUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Gank.lu;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BE3078AB1C38272500B007EA /* Build configuration list for PBXProject "Gank.lu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE3078D61C38272500B007EA /* Debug */,
+				BE3078D71C38272500B007EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE3078D81C38272500B007EA /* Build configuration list for PBXNativeTarget "Gank.lu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE3078D91C38272500B007EA /* Debug */,
+				BE3078DA1C38272500B007EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BE3078DB1C38272500B007EA /* Build configuration list for PBXNativeTarget "Gank.luTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE3078DC1C38272500B007EA /* Debug */,
+				BE3078DD1C38272500B007EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BE3078DE1C38272500B007EA /* Build configuration list for PBXNativeTarget "Gank.luUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE3078DF1C38272500B007EA /* Debug */,
+				BE3078E01C38272500B007EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BE3078A81C38272500B007EA /* Project object */;
+}
