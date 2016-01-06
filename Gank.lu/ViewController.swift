@@ -54,8 +54,8 @@ extension ViewController:UITableViewDataSource,UITableViewDelegate{
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let cell = tableView.cellForRowAtIndexPath(indexPath)
-        nextText = cell?.textLabel?.text
+        let cell = tableView.cellForRowAtIndexPath(indexPath) as! GirlCell
+        nextText = cell.contentLabel.text
         
         performSegueWithIdentifier("showNext", sender: nil)
     }
