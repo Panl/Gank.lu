@@ -14,6 +14,8 @@
 		BE3078BE1C38272500B007EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE3078BC1C38272500B007EA /* LaunchScreen.storyboard */; };
 		BE3078C91C38272500B007EA /* Gank_luTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3078C81C38272500B007EA /* Gank_luTests.swift */; };
 		BE3078D41C38272500B007EA /* Gank_luUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3078D31C38272500B007EA /* Gank_luUITests.swift */; };
+		BEEF9EAD1C3D3D6F00125F03 /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF9EAC1C3D3D6F00125F03 /* NextViewController.swift */; };
+		BEEF9EAF1C3D42E500125F03 /* GirlCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF9EAE1C3D42E500125F03 /* GirlCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		BE3078CF1C38272500B007EA /* Gank.luUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Gank.luUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE3078D31C38272500B007EA /* Gank_luUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gank_luUITests.swift; sourceTree = "<group>"; };
 		BE3078D51C38272500B007EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEEF9EAC1C3D3D6F00125F03 /* NextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
+		BEEF9EAE1C3D42E500125F03 /* GirlCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GirlCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 			children = (
 				BE3078B31C38272500B007EA /* AppDelegate.swift */,
 				BE3078B51C38272500B007EA /* ViewController.swift */,
+				BEEF9EAC1C3D3D6F00125F03 /* NextViewController.swift */,
+				BEEF9EB01C3D42F900125F03 /* cells */,
 				BE3078B71C38272500B007EA /* Main.storyboard */,
 				BE3078BA1C38272500B007EA /* Assets.xcassets */,
 				BE3078BC1C38272500B007EA /* LaunchScreen.storyboard */,
@@ -123,6 +129,14 @@
 				BE3078D51C38272500B007EA /* Info.plist */,
 			);
 			path = Gank.luUITests;
+			sourceTree = "<group>";
+		};
+		BEEF9EB01C3D42F900125F03 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				BEEF9EAE1C3D42E500125F03 /* GirlCell.swift */,
+			);
+			name = cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +274,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE3078B61C38272500B007EA /* ViewController.swift in Sources */,
+				BEEF9EAD1C3D3D6F00125F03 /* NextViewController.swift in Sources */,
 				BE3078B41C38272500B007EA /* AppDelegate.swift in Sources */,
+				BEEF9EAF1C3D42E500125F03 /* GirlCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,6 +503,7 @@
 				BE3078DA1C38272500B007EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BE3078DB1C38272500B007EA /* Build configuration list for PBXNativeTarget "Gank.luTests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +512,7 @@
 				BE3078DD1C38272500B007EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BE3078DE1C38272500B007EA /* Build configuration list for PBXNativeTarget "Gank.luUITests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +521,7 @@
 				BE3078E01C38272500B007EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
