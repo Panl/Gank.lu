@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Gank.lu-->
@@ -31,10 +32,12 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vNm-ke-dAO">
                                                     <rect key="frame" x="0.0" y="0.0" width="590" height="349"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="width" secondItem="vNm-ke-dAO" secondAttribute="height" multiplier="100:100" id="Xyv-bn-H9p"/>
                                                         <constraint firstAttribute="height" constant="190" id="eAa-ca-YCy"/>
                                                     </constraints>
                                                     <variation key="default">
                                                         <mask key="constraints">
+                                                            <exclude reference="Xyv-bn-H9p"/>
                                                             <exclude reference="eAa-ca-YCy"/>
                                                         </mask>
                                                     </variation>
@@ -83,11 +86,17 @@
                                                 <constraint firstAttribute="bottom" secondItem="zEn-oV-oYT" secondAttribute="bottom" constant="15" id="W93-FN-ltr"/>
                                                 <constraint firstItem="zEn-oV-oYT" firstAttribute="top" secondItem="vNm-ke-dAO" secondAttribute="bottom" constant="15" id="cK1-Id-vYV"/>
                                                 <constraint firstItem="vNm-ke-dAO" firstAttribute="leading" secondItem="gFa-Bf-c0T" secondAttribute="leading" id="cKY-Xe-Ciq"/>
+                                                <constraint firstItem="zEn-oV-oYT" firstAttribute="top" secondItem="vNm-ke-dAO" secondAttribute="bottom" constant="15" id="d7F-Ec-Fu1"/>
                                                 <constraint firstItem="jVt-aC-zYW" firstAttribute="bottom" secondItem="BU6-dK-BKF" secondAttribute="bottom" constant="-2" id="mKi-AD-GVx"/>
                                                 <constraint firstItem="zEn-oV-oYT" firstAttribute="leading" secondItem="gFa-Bf-c0T" secondAttribute="leading" constant="10" id="p5Q-Pt-3BR"/>
                                                 <constraint firstItem="rRg-4O-Eep" firstAttribute="centerY" secondItem="BU6-dK-BKF" secondAttribute="centerY" id="uAB-le-FKS"/>
                                                 <constraint firstItem="jVt-aC-zYW" firstAttribute="leading" secondItem="BU6-dK-BKF" secondAttribute="trailing" constant="5" id="xL4-bE-36r"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="cK1-Id-vYV"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="avatarImageView" destination="zEn-oV-oYT" id="AsP-3n-O7k"/>

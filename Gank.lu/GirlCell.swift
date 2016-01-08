@@ -28,7 +28,13 @@ class GirlCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
+        self.contentView.layer.cornerRadius = 5
+        self.contentView.backgroundColor = UIColor.whiteColor()
+        //self.contentView.layer.shadowColor = UIColor.grayColor().CGColor
+        //self.contentView.layer.shadowOffset = CGSizeMake(4, 4)
+        //self.contentView.layer.shadowOpacity = 0.8
+        //self.contentView.layer.shadowRadius = 3
+        self.girlImageView.layer.cornerRadius = 5
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
