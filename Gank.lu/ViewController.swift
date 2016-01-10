@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ViewController: UIViewController {
     let data = [
@@ -22,6 +23,11 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         tableView.dataSource = self
         tableView.delegate = self
+        
+        Alamofire.request(.GET, "http://gank.avosapps.com/api/data/iOS/20/2")
+            .responseJSON { response in
+                debugPrint(response)
+        }
     }
 
     override func didReceiveMemoryWarning() {
