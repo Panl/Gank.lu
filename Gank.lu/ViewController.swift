@@ -24,10 +24,7 @@ class ViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         
-        Alamofire.request(.GET, "http://gank.avosapps.com/api/data/福利/20/2".stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLFragmentAllowedCharacterSet())!)
-            .responseJSON { response in
-                debugPrint(response)
-        }
+        GankHttp.shareInstance.fetchGankData(2)
     }
 
     override func didReceiveMemoryWarning() {
