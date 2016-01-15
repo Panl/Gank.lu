@@ -25,6 +25,7 @@ class ViewController: UIViewController {
         tableView.delegate = self
         
         GankHttp.shareInstance.fetchGankData(2)
+        
     }
 
     override func didReceiveMemoryWarning() {
