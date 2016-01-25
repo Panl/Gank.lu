@@ -24,6 +24,5 @@ class GankHttp {
         Alamofire.request(.GET, requestUrl!).responseJSON(){
             response in debugPrint(response)
         }
-        
     }
 }
