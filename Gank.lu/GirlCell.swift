@@ -9,12 +9,15 @@
 import UIKit
 
 struct GirlFlow {
-    let avatar:String
-    let image:String
-    let nickName:String
-    let userName:String
-    let content:String
-    let created_at:String
+    let updatedAt:String
+    let who:String
+    let publishedAt:String
+    let objectId:String
+    let used:Bool
+    let type:String
+    let createdAt:String
+    let desc:String
+    let url:String
 }
 
 class GirlCell: UITableViewCell {

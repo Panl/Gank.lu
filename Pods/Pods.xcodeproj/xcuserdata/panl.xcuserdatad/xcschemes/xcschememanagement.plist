@@ -9,7 +9,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Kingfisher.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SwiftyJSON.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -17,12 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>175892047F5D57D69AC9D102FB92A2F2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>432ECC54282C84882B482CCB4CF227FC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>57CFC4DF5A94826729A3A532FC59EE52</key>
+		<key>7EF03E8ED909AACF0B55C7EEDD598072</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B463565F227BE3992316F95F3498E0E9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
