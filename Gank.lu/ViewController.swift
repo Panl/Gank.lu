@@ -15,16 +15,37 @@ import Kingfisher
 class ViewController: UIViewController ,GankHttpDelegate{
     var data:[GirlFlow] = []
     var nextText:String?
+    var refreshControl:UIRefreshControl?
+    var refreshing:Bool = false{
+        didSet{
+            if self.refreshing {
+                self.refreshControl!.beginRefreshing()
+                self.refreshControl!.attributedTitle = NSAttributedString(string: "Loading...")
+                print("Loading...")
+            }else{
+                self.refreshControl!.endRefreshing()
+                self.refreshControl!.attributedTitle = NSAttributedString(string: "Pull to refresh")
+                print("Loaded & set:Pull to Refresh")
+            }
+        }
+    }
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         tableView.dataSource = self
         tableView.delegate = self
+        refreshControl = UIRefreshControl()
+        self.refreshControl?.addTarget(self, action: "pullToRefresh", forControlEvents: UIControlEvents.ValueChanged)
+        self.tableView.addSubview(refreshControl!)
         
-        GankHttp.shareInstance.fetchGankData(2)
+        GankHttp.shareInstance.fetchGankData(0)
         GankHttp.shareInstance.delegate = self
-        
+        refreshing = true;
+    }
+    
+    func pullToRefresh(){
+        GankHttp.shareInstance.fetchGankData(0)
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,6 +54,7 @@ class ViewController: UIViewController ,GankHttpDelegate{
     }
     
     func gankDataReceived(json: AnyObject) {
+        refreshing = false
         let jsonResult = JSON(json)
         jsonParse(jsonResult)
     }
@@ -60,6 +82,7 @@ class ViewController: UIViewController ,GankHttpDelegate{
 }
 
 extension ViewController:UITableViewDataSource,UITableViewDelegate{
+    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
@@ -69,7 +92,7 @@ extension ViewController:UITableViewDataSource,UITableViewDelegate{
         let girlFlow = data[indexPath.row]
         cell.girlImageView.kf_setImageWithURL(NSURL(string: girlFlow.url)!)
         cell.nickNameLabel.text = girlFlow.who
-        cell.timeLabel.text = girlFlow.updatedAt
+        cell.timeLabel.text = girlFlow.publishedAt
         cell.contentLabel.text = girlFlow.desc
         return cell
     }
