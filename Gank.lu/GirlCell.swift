@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 struct GirlFlow {
     let updatedAt:String
@@ -18,6 +19,18 @@ struct GirlFlow {
     let createdAt:String
     let desc:String
     let url:String
+    
+    init(item:JSON){
+        updatedAt = item["updateAt"].stringValue
+        who = item["who"].stringValue
+        objectId = item["objectId"].stringValue
+        publishedAt = item["publishedAt"].stringValue
+        used = item["used"].boolValue
+        createdAt = item["createdAt"].stringValue
+        url = item["url"].stringValue
+        desc = item["desc"].stringValue
+        type = item["type"].stringValue
+    }
 }
 
 class GirlCell: UITableViewCell {
@@ -29,6 +42,7 @@ class GirlCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

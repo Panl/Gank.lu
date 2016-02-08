@@ -21,14 +21,24 @@ class ViewController: UIViewController ,GankHttpDelegate{
             if self.refreshing {
                 self.refreshControl!.beginRefreshing()
                 self.refreshControl!.attributedTitle = NSAttributedString(string: "Loading...")
-                print("Loading...")
             }else{
                 self.refreshControl!.endRefreshing()
                 self.refreshControl!.attributedTitle = NSAttributedString(string: "Pull to refresh")
-                print("Loaded & set:Pull to Refresh")
             }
         }
     }
+    
+    var loadingMore:Bool = false{
+        didSet{
+            if !self.loadingMore{
+               loadMoreText.text = "上拉加载更多"
+            }
+        }
+    }
+    var page:Int = 0
+    let tableFooterView = UIView()
+    var loadMoreText = UILabel()
+    
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,13 +49,30 @@ class ViewController: UIViewController ,GankHttpDelegate{
         self.refreshControl?.addTarget(self, action: "pullToRefresh", forControlEvents: UIControlEvents.ValueChanged)
         self.tableView.addSubview(refreshControl!)
         
-        GankHttp.shareInstance.fetchGankData(0)
+        GankHttp.shareInstance.fetchGankData(page)
         GankHttp.shareInstance.delegate = self
         refreshing = true;
+        
+        createTableFooter()
+    }
+    
+    func createTableFooter(){//初始化tv的footerView
+        
+        tableFooterView.frame = CGRectMake(0, 0, self.tableView.bounds.size.width, 60)
+        loadMoreText.frame =  CGRectMake(0, 0, self.tableView.bounds.size.width, 60)
+        loadMoreText.text = "上拉查看更多"
+        
+        loadMoreText.textAlignment = NSTextAlignment.Center
+        
+        tableFooterView.addSubview(loadMoreText)
+        
+        self.tableView.tableFooterView = tableFooterView
     }
     
     func pullToRefresh(){
-        GankHttp.shareInstance.fetchGankData(0)
+        refreshing = true
+        page = 0
+        GankHttp.shareInstance.fetchGankData(page)
     }
 
     override func didReceiveMemoryWarning() {
@@ -54,28 +81,34 @@ class ViewController: UIViewController ,GankHttpDelegate{
     }
     
     func gankDataReceived(json: AnyObject) {
-        refreshing = false
         let jsonResult = JSON(json)
-        jsonParse(jsonResult)
+        page++
+        if loadingMore{
+            loadMoreData(jsonResult)
+        }else{
+            refreshData(jsonResult)
+        }
     }
     
-    func jsonParse(json:JSON){
+    func refreshData(json:JSON){
+        data.removeAll()
         let result = json["results"].array
-        debugPrint(result)
         for item in result!{
-            let updateAt = item["updateAt"].stringValue
-            let who = item["who"].stringValue
-            let objectId = item["objectId"].stringValue
-            let publishedAt = item["publishedAt"].stringValue
-            let used = item["used"].boolValue
-            let createdAt = item["createdAt"].stringValue
-            let url = item["url"].stringValue
-            let desc = item["desc"].stringValue
-            let type = item["type"].stringValue
-            let girl = GirlFlow(updatedAt: updateAt,who: who,publishedAt: publishedAt,objectId: objectId,used: used,type: type,createdAt: createdAt,desc: desc,url: url)
+            let girl = GirlFlow(item: item)
             data.append(girl)
         }
         tableView.reloadData()
+        refreshing = false
+    }
+    
+    func loadMoreData(json:JSON){
+        let result = json["results"].array
+        for item in result!{
+            let girl = GirlFlow(item: item)
+            data.append(girl)
+        }
+        tableView.reloadData()
+        loadingMore = false
     }
     
     
@@ -106,6 +139,21 @@ extension ViewController:UITableViewDataSource,UITableViewDelegate{
         nextText = cell.contentLabel.text
         
         performSegueWithIdentifier("showNext", sender: nil)
+    }
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        if scrollView.contentOffset.y > (scrollView.contentSize.height - scrollView.frame.size.height + 30){
+            loadMoreText.text = "松开载入更多"
+        }else{
+            loadMoreText.text = "上拉查看更多"
+        }
+    }
+    
+    func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if scrollView.contentOffset.y > (scrollView.contentSize.height - scrollView.frame.size.height + 30){
+            loadingMore = true
+            GankHttp.shareInstance.fetchGankData(page)
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
