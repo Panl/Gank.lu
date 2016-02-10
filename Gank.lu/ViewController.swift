@@ -58,10 +58,9 @@ class ViewController: UIViewController ,GankHttpDelegate{
     
     func createTableFooter(){//初始化tv的footerView
         
-        tableFooterView.frame = CGRectMake(0, 0, self.tableView.bounds.size.width, 60)
-        loadMoreText.frame =  CGRectMake(0, 0, self.tableView.bounds.size.width, 60)
+        tableFooterView.frame = CGRectMake(0, 0, self.tableView.bounds.size.width, 50)
+        loadMoreText.frame =  CGRectMake(0, 0, self.tableView.bounds.size.width, 50)
         loadMoreText.text = "上拉查看更多"
-        
         loadMoreText.textAlignment = NSTextAlignment.Center
         
         tableFooterView.addSubview(loadMoreText)
