@@ -11,6 +11,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import Kingfisher
+import MJRefresh
 
 class ViewController: UIViewController ,GankHttpDelegate{
     var data:[GirlFlow] = []
@@ -26,11 +27,17 @@ class ViewController: UIViewController ,GankHttpDelegate{
         // Do any additional setup after loading the view, typically from a nib.
         tableView.dataSource = self
         tableView.delegate = self
-        GankHttp.shareInstance.fetchGankData(page)
         GankHttp.shareInstance.delegate = self
-        
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 420
+        initMJRefresh()
+    }
+    
+    func initMJRefresh(){
+        tableView.mj_header = MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: "pullToRefresh")
+        tableView.mj_header.beginRefreshing()
+
+        tableView.mj_footer = MJRefreshAutoFooter(refreshingTarget: self, refreshingAction: "pullToLoadMore")
     }
     
     override func didReceiveMemoryWarning() {
@@ -38,10 +45,22 @@ class ViewController: UIViewController ,GankHttpDelegate{
         // Dispose of any resources that can be recreated.
     }
     
+    func pullToRefresh(){
+        loadingMore = false
+        page = 0
+        GankHttp.shareInstance.fetchGankData(page)
+    }
+    
+    func pullToLoadMore(){
+        loadingMore = true
+        tableView.mj_footer.beginRefreshing()
+        GankHttp.shareInstance.fetchGankData(page)
+    }
+    
     func gankDataReceived(json: AnyObject) {
-        let jsonResult = JSON(json)
         page++
-        if loadingMore{
+        let jsonResult = JSON(json)
+        if loadingMore {
             loadMoreData(jsonResult)
         }else{
             refreshData(jsonResult)
@@ -49,6 +68,7 @@ class ViewController: UIViewController ,GankHttpDelegate{
     }
     
     func refreshData(json:JSON){
+        tableView.mj_header.endRefreshing()
         data.removeAll()
         let result = json["results"].array
         for item in result!{
@@ -59,7 +79,11 @@ class ViewController: UIViewController ,GankHttpDelegate{
     }
     
     func loadMoreData(json:JSON){
+        tableView.mj_footer.endRefreshing()
         let result = json["results"].array
+        if result?.count < 20{
+           tableView.mj_footer.endRefreshingWithNoMoreData()
+        }
         for item in result!{
             let girl = GirlFlow(item: item)
             data.append(girl)

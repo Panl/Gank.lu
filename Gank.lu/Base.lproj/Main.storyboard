@@ -20,14 +20,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="440" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ry4-tv-fDi">
-                                <rect key="frame" x="5" y="5" width="590" height="590"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="girlCell" rowHeight="420" id="j1L-dq-5Jk" customClass="GirlCell" customModule="Gank_lu" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="590" height="420"/>
+                                        <rect key="frame" x="0.0" y="92" width="600" height="420"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="j1L-dq-5Jk" id="gFa-Bf-c0T">
-                                            <rect key="frame" x="0.0" y="0.0" width="590" height="420"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="420"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vNm-ke-dAO">
@@ -97,10 +97,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Ry4-tv-fDi" firstAttribute="top" secondItem="sHS-Cp-sqR" secondAttribute="top" constant="5" id="0YY-4a-MNF"/>
-                            <constraint firstAttribute="trailing" secondItem="Ry4-tv-fDi" secondAttribute="trailing" constant="5" id="biH-k9-Uxd"/>
-                            <constraint firstItem="Jbf-5S-1Hu" firstAttribute="top" secondItem="Ry4-tv-fDi" secondAttribute="bottom" constant="5" id="guD-bS-kSY"/>
-                            <constraint firstItem="Ry4-tv-fDi" firstAttribute="leading" secondItem="sHS-Cp-sqR" secondAttribute="leading" constant="5" id="hIZ-0t-3VQ"/>
+                            <constraint firstItem="Ry4-tv-fDi" firstAttribute="top" secondItem="sHS-Cp-sqR" secondAttribute="top" id="0YY-4a-MNF"/>
+                            <constraint firstAttribute="trailing" secondItem="Ry4-tv-fDi" secondAttribute="trailing" id="biH-k9-Uxd"/>
+                            <constraint firstItem="Jbf-5S-1Hu" firstAttribute="top" secondItem="Ry4-tv-fDi" secondAttribute="bottom" id="guD-bS-kSY"/>
+                            <constraint firstItem="Ry4-tv-fDi" firstAttribute="leading" secondItem="sHS-Cp-sqR" secondAttribute="leading" id="hIZ-0t-3VQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Gank.lu" id="Ah9-SH-jbB"/>

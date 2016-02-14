@@ -54,6 +54,7 @@
 		BE3078CF1C38272500B007EA /* Gank.luUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Gank.luUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE3078D31C38272500B007EA /* Gank_luUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gank_luUITests.swift; sourceTree = "<group>"; };
 		BE3078D51C38272500B007EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE424F751C70D76A00F57CDE /* Gank.lu-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Gank.lu-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		BEC684751C42B3560036F73F /* GankHttpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GankHttpClient.swift; sourceTree = "<group>"; };
 		BEEF9EAC1C3D3D6F00125F03 /* NextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
 		BEEF9EAE1C3D42E500125F03 /* GirlCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GirlCell.swift; sourceTree = "<group>"; };
@@ -119,6 +120,7 @@
 		BE3078B21C38272500B007EA /* Gank.lu */ = {
 			isa = PBXGroup;
 			children = (
+				BE424F751C70D76A00F57CDE /* Gank.lu-Bridging-Header.h */,
 				BE3078B31C38272500B007EA /* AppDelegate.swift */,
 				BEC684741C42B3010036F73F /* UIControllers */,
 				BEEF9EB01C3D42F900125F03 /* cells */,
@@ -506,11 +508,14 @@
 			baseConfigurationReference = 8CDD4AD1C5DF42823A1B3660 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Gank.lu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.smartalker.Gank-lu";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Gank.lu-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -519,11 +524,13 @@
 			baseConfigurationReference = 1B738C319521A4EC4231D580 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Gank.lu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.smartalker.Gank-lu";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Gank.lu-Bridging-Header.h";
 			};
 			name = Release;
 		};
