@@ -31,6 +31,7 @@ struct GirlFlow {
         desc = item["desc"].stringValue
         type = item["type"].stringValue
     }
+    
 }
 
 class GirlCell: UITableViewCell {
@@ -49,6 +50,18 @@ class GirlCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    
+    func setCellViews(girlFlow:GirlFlow){
+        self.girlImageView.kf_setImageWithURL(NSURL(string: girlFlow.url)!)
+        self.nickNameLabel.text = girlFlow.who
+        self.timeLabel.text = girlFlow.publishedAt
+        self.contentLabel.text = girlFlow.desc
+    }
+    
+    func heightForCell()->CGFloat{
+        return girlImageView.frame.height + nickNameLabel.frame.height + contentLabel.frame.height+30
     }
 
 }
