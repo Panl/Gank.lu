@@ -17,7 +17,7 @@ class ViewController: UIViewController ,GankHttpDelegate{
     var data:[GirlFlow] = []
     var nextText:String?
     var loadingMore = false
-    var page:Int = 0
+    var page:Int = 1
     let tableFooterView = UIView()
     var loadMoreText = UILabel()
     
@@ -47,7 +47,7 @@ class ViewController: UIViewController ,GankHttpDelegate{
     
     func pullToRefresh(){
         loadingMore = false
-        page = 0
+        page = 1
         GankHttp.shareInstance.fetchGankData(page)
     }
     
