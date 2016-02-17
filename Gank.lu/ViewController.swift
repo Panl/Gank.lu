@@ -12,6 +12,7 @@ import Alamofire
 import SwiftyJSON
 import Kingfisher
 import MJRefresh
+import MBProgressHUD
 
 class ViewController: UIViewController ,GankHttpDelegate{
     var data:[GirlFlow] = []
@@ -69,11 +70,19 @@ class ViewController: UIViewController ,GankHttpDelegate{
     
     func gankFetchFailed() {
         print("gankReceived failed")
+        textShow()
         if loadingMore {
             tableView.mj_footer.endRefreshing()
         }else{
             tableView.mj_header.endRefreshing()
         }
+    }
+    
+    func textShow(){
+        let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        hud.mode = MBProgressHUDMode.Text
+        hud.labelText = "数据加载失败..."
+        hud.hide(true, afterDelay: 2.0)
     }
     
     func refreshData(json:JSON){
