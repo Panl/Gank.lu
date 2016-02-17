@@ -9,6 +9,7 @@
 import Alamofire
 protocol GankHttpDelegate{
     func gankDataReceived(json:AnyObject)
+    func gankFetchFailed()
 }
 class GankHttp {
     
@@ -22,7 +23,12 @@ class GankHttp {
     func fetchGankData(page:Int){
         let requestUrl = "http://gank.avosapps.com/api/data/福利/20/\(page)".stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLFragmentAllowedCharacterSet())
         Alamofire.request(.GET, requestUrl!).responseJSON(){
-            response in self.delegate?.gankDataReceived(response.result.value!)
+            response in
+            guard let json = response.result.value else{
+                self.delegate?.gankFetchFailed()
+                return
+            }
+            self.delegate?.gankDataReceived(json)
         }
     }
 }

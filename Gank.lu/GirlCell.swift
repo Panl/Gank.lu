@@ -9,7 +9,7 @@
 import UIKit
 import SwiftyJSON
 
-struct GirlFlow {
+class GirlFlow {
     let updatedAt:String
     let who:String
     let publishedAt:String

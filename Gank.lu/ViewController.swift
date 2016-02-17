@@ -67,6 +67,15 @@ class ViewController: UIViewController ,GankHttpDelegate{
         }
     }
     
+    func gankFetchFailed() {
+        print("gankReceived failed")
+        if loadingMore {
+            tableView.mj_footer.endRefreshing()
+        }else{
+            tableView.mj_header.endRefreshing()
+        }
+    }
+    
     func refreshData(json:JSON){
         tableView.mj_header.endRefreshing()
         data.removeAll()
