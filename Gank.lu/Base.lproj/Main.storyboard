@@ -113,10 +113,10 @@
             </objects>
             <point key="canvasLocation" x="1882" y="-355"/>
         </scene>
-        <!--Next View Controller-->
+        <!--Gank View Controller-->
         <scene sceneID="qUd-aN-wyt">
             <objects>
-                <viewController id="1Cw-Cd-CMK" customClass="NextViewController" customModule="Gank_lu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="1Cw-Cd-CMK" customClass="GankViewController" customModule="Gank_lu" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UmR-MR-HU8"/>
                         <viewControllerLayoutGuide type="bottom" id="vxF-CT-idl"/>
@@ -125,24 +125,66 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PMd-rR-444">
-                                <rect key="frame" x="15" y="289" width="570" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="69" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CIH-5a-hQh">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="gankCell" rowHeight="69" id="wiO-pU-RyJ" customClass="GankCell" customModule="Gank_lu" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="600" height="69"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wiO-pU-RyJ" id="sRx-QI-tsg">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="68"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Android" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dP4-ph-GbP">
+                                                    <rect key="frame" x="15" y="8" width="75" height="24"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Android 逆向分析（1）反编译看看手机qq口令红包的实现原理" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iuf-nj-0hQ">
+                                                    <rect key="frame" x="40" y="40" width="545" height="15"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.30316840270000001" green="0.30316840270000001" blue="0.30316840270000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ø" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6C7-4w-f6B">
+                                                    <rect key="frame" x="23" y="37" width="9" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" red="0.30316840270000001" green="0.30316840270000001" blue="0.30316840270000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Iuf-nj-0hQ" secondAttribute="trailing" constant="15" id="6SY-RC-CxS"/>
+                                                <constraint firstItem="dP4-ph-GbP" firstAttribute="top" secondItem="sRx-QI-tsg" secondAttribute="top" constant="8" id="GGM-E4-OMb"/>
+                                                <constraint firstItem="6C7-4w-f6B" firstAttribute="centerY" secondItem="Iuf-nj-0hQ" secondAttribute="centerY" id="N3h-LD-Gcm"/>
+                                                <constraint firstItem="dP4-ph-GbP" firstAttribute="leading" secondItem="sRx-QI-tsg" secondAttribute="leading" constant="15" id="OVa-iX-V36"/>
+                                                <constraint firstItem="Iuf-nj-0hQ" firstAttribute="leading" secondItem="6C7-4w-f6B" secondAttribute="trailing" constant="8" id="P92-fF-7Dk"/>
+                                                <constraint firstItem="Iuf-nj-0hQ" firstAttribute="top" secondItem="dP4-ph-GbP" secondAttribute="bottom" constant="8" id="TL8-De-3H9"/>
+                                                <constraint firstItem="6C7-4w-f6B" firstAttribute="top" secondItem="dP4-ph-GbP" secondAttribute="bottom" constant="5" id="d1A-18-C3G"/>
+                                                <constraint firstItem="Iuf-nj-0hQ" firstAttribute="leading" secondItem="sRx-QI-tsg" secondAttribute="leading" constant="40" id="ja1-48-5uA"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Iuf-nj-0hQ" secondAttribute="bottom" constant="5" id="ozB-41-AZN"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="descLabel" destination="Iuf-nj-0hQ" id="P0o-v6-B9I"/>
+                                            <outlet property="typeLabel" destination="dP4-ph-GbP" id="oaF-8Y-3Mn"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="PMd-rR-444" secondAttribute="trailing" constant="15" id="0Og-b8-PIS"/>
-                            <constraint firstItem="PMd-rR-444" firstAttribute="centerY" secondItem="nEe-53-0XE" secondAttribute="centerY" id="35m-wL-hyB"/>
-                            <constraint firstItem="PMd-rR-444" firstAttribute="centerX" secondItem="nEe-53-0XE" secondAttribute="centerX" id="sPk-Mm-rXm"/>
-                            <constraint firstItem="PMd-rR-444" firstAttribute="leading" secondItem="nEe-53-0XE" secondAttribute="leading" constant="15" id="ykC-KN-dZ5"/>
+                            <constraint firstItem="CIH-5a-hQh" firstAttribute="top" secondItem="UmR-MR-HU8" secondAttribute="bottom" id="4yI-bu-Cla"/>
+                            <constraint firstItem="vxF-CT-idl" firstAttribute="top" secondItem="CIH-5a-hQh" secondAttribute="bottom" id="HWa-2i-5Em"/>
+                            <constraint firstItem="CIH-5a-hQh" firstAttribute="leading" secondItem="nEe-53-0XE" secondAttribute="leading" id="Orf-Gs-TLC"/>
+                            <constraint firstAttribute="trailing" secondItem="CIH-5a-hQh" secondAttribute="trailing" id="j4X-mQ-lzF"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="uMd-W4-VWU"/>
                     <connections>
-                        <outlet property="nextLabel" destination="PMd-rR-444" id="0Ce-VZ-efn"/>
+                        <outlet property="tableView" destination="CIH-5a-hQh" id="AaK-ov-TdN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Gt-wb-S1o" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftyJSON
+import Kingfisher
 
 class GirlFlow {
     let updatedAt:String
@@ -40,10 +41,11 @@ class GirlCell: UITableViewCell {
     @IBOutlet weak var nickNameLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
@@ -56,12 +58,9 @@ class GirlCell: UITableViewCell {
     func setCellViews(girlFlow:GirlFlow){
         self.girlImageView.kf_setImageWithURL(NSURL(string: girlFlow.url)!)
         self.nickNameLabel.text = girlFlow.who
-        self.timeLabel.text = girlFlow.publishedAt
+        let date = DateUtil.stringToDate(girlFlow.publishedAt)
+        self.timeLabel.text = DateUtil.dateToString(date, dateFormat: "yyyy年MM月dd日")
         self.contentLabel.text = girlFlow.desc
-    }
-    
-    func heightForCell()->CGFloat{
-        return girlImageView.frame.height + nickNameLabel.frame.height + contentLabel.frame.height+30
     }
 
 }

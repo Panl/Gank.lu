@@ -20,11 +20,23 @@ class GankHttp {
         return singleInstance
     }
     
-    func fetchGankData(page:Int){
+    func fetchGirlData(page:Int){
         let requestUrl = "http://gank.avosapps.com/api/data/福利/20/\(page)".stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLFragmentAllowedCharacterSet())
         Alamofire.request(.GET, requestUrl!).responseJSON(){
             response in
             guard let json = response.result.value else{
+                self.delegate?.gankFetchFailed()
+                return
+            }
+            self.delegate?.gankDataReceived(json)
+        }
+    }
+    
+    func fetchGankDataAtYear(year:Int,month:Int,day:Int){
+        let requestUrl = "http://gank.avosapps.com/api/day/\(year)/\(month)/\(day)"
+        Alamofire.request(.GET, requestUrl).responseJSON(){
+            response in
+            guard let json = response.result.value else {
                 self.delegate?.gankFetchFailed()
                 return
             }

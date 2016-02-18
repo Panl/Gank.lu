@@ -8,15 +8,13 @@
 //
 
 import UIKit
-import Alamofire
-import SwiftyJSON
-import Kingfisher
 import MJRefresh
+import SwiftyJSON
 import MBProgressHUD
 
-class ViewController: UIViewController ,GankHttpDelegate{
+class ViewController: BaseViewController ,GankHttpDelegate{
     var data:[GirlFlow] = []
-    var nextText:String?
+    var girlUrl:GirlFlow?
     var loadingMore = false
     var page:Int = 1
     let tableFooterView = UIView()
@@ -49,13 +47,13 @@ class ViewController: UIViewController ,GankHttpDelegate{
     func pullToRefresh(){
         loadingMore = false
         page = 1
-        GankHttp.shareInstance.fetchGankData(page)
+        GankHttp.shareInstance.fetchGirlData(page)
     }
     
     func pullToLoadMore(){
         loadingMore = true
         tableView.mj_footer.beginRefreshing()
-        GankHttp.shareInstance.fetchGankData(page)
+        GankHttp.shareInstance.fetchGirlData(page)
     }
     
     func gankDataReceived(json: AnyObject) {
@@ -70,7 +68,7 @@ class ViewController: UIViewController ,GankHttpDelegate{
     
     func gankFetchFailed() {
         print("gankReceived failed")
-        textShow()
+        ToastUtil.showTextToast(self.view)
         if loadingMore {
             tableView.mj_footer.endRefreshing()
         }else{
@@ -78,12 +76,7 @@ class ViewController: UIViewController ,GankHttpDelegate{
         }
     }
     
-    func textShow(){
-        let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
-        hud.mode = MBProgressHUDMode.Text
-        hud.labelText = "数据加载失败..."
-        hud.hide(true, afterDelay: 2.0)
-    }
+    
     
     func refreshData(json:JSON){
         tableView.mj_header.endRefreshing()
@@ -130,16 +123,15 @@ extension ViewController:UITableViewDataSource,UITableViewDelegate{
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let cell = tableView.cellForRowAtIndexPath(indexPath) as! GirlCell
-        nextText = cell.contentLabel.text
+        girlUrl = data[indexPath.row]
         performSegueWithIdentifier("showNext", sender: nil)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showNext" {
-            let nextViewController = segue.destinationViewController as! NextViewController
-            nextViewController.nextText
-                = nextText
+            let gankViewController = segue.destinationViewController as! GankViewController
+            gankViewController.girl
+                = girlUrl
         }
     }
 }
