@@ -12,7 +12,7 @@ import MBProgressHUD
 class GankViewController: BaseViewController ,GankHttpDelegate{
 
     @IBOutlet weak var tableView: UITableView!
-    var topImageHeight:CGFloat = 240
+    var topImageHeight:CGFloat = 220
     var girl:GirlFlow?
     var topImageView:UIImageView!
     var gankData:[Gank] = []
@@ -35,6 +35,8 @@ class GankViewController: BaseViewController ,GankHttpDelegate{
         tableView.addSubview(topImageView)
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 180
+        let date = DateUtil.stringToDate((girl?.publishedAt)!)
+        self.navigationItem.title = DateUtil.dateToString(date, dateFormat: "yyyy/MM/dd")
     }
     
     func initGankHttp(){
@@ -89,6 +91,7 @@ extension GankViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
          let cell = tableView.dequeueReusableCellWithIdentifier("gankCell",forIndexPath:indexPath) as! GankCell
         cell.setGankViews(gankData[indexPath.row])
+        //cell.setGankViews(gankData,indexPath: indexPath)
         return cell
     }
     

@@ -12,7 +12,7 @@ import MJRefresh
 import SwiftyJSON
 import MBProgressHUD
 
-class ViewController: BaseViewController ,GankHttpDelegate{
+class ViewController: BaseViewController ,GirlHttpDelegate{
     var data:[GirlFlow] = []
     var girlUrl:GirlFlow?
     var loadingMore = false
@@ -26,7 +26,7 @@ class ViewController: BaseViewController ,GankHttpDelegate{
         // Do any additional setup after loading the view, typically from a nib.
         tableView.dataSource = self
         tableView.delegate = self
-        GankHttp.shareInstance.delegate = self
+        GankHttp.shareInstance.girlDelegate = self
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 420
         initMJRefresh()
@@ -56,7 +56,7 @@ class ViewController: BaseViewController ,GankHttpDelegate{
         GankHttp.shareInstance.fetchGirlData(page)
     }
     
-    func gankDataReceived(json: AnyObject) {
+    func girlDataReceived(json: AnyObject) {
         page++
         let jsonResult = JSON(json)
         if loadingMore {
@@ -66,7 +66,7 @@ class ViewController: BaseViewController ,GankHttpDelegate{
         }
     }
     
-    func gankFetchFailed() {
+    func girlFetchFailed() {
         print("gankReceived failed")
         ToastUtil.showTextToast(self.view)
         if loadingMore {

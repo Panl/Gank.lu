@@ -11,11 +11,16 @@ protocol GankHttpDelegate{
     func gankDataReceived(json:AnyObject)
     func gankFetchFailed()
 }
+
+protocol GirlHttpDelegate{
+    func girlDataReceived(json:AnyObject)
+    func girlFetchFailed()
+}
 class GankHttp {
     
     private static let singleInstance = GankHttp()
     var delegate:GankHttpDelegate?
-    
+    var girlDelegate:GirlHttpDelegate?
     class var shareInstance : GankHttp {
         return singleInstance
     }
@@ -25,10 +30,10 @@ class GankHttp {
         Alamofire.request(.GET, requestUrl!).responseJSON(){
             response in
             guard let json = response.result.value else{
-                self.delegate?.gankFetchFailed()
+                self.girlDelegate?.girlFetchFailed()
                 return
             }
-            self.delegate?.gankDataReceived(json)
+            self.girlDelegate?.girlDataReceived(json)
         }
     }
     

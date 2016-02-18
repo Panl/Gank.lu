@@ -45,4 +45,31 @@ class GankCell: UITableViewCell {
         typeLabel.text = gank.type
         descLabel.text = gank.desc
     }
+    
+    func setGankViews(ganks:[Gank],indexPath:NSIndexPath){
+        if indexPath.row == 0{
+            typeLabel.hidden = false
+            typeLabel.sizeToFit()
+        }else {
+            if ganks[indexPath.row].type == ganks[indexPath.row - 1].type{
+                typeLabel.hidden = true
+                typeLabel.frame.size.height = 0
+            }else{
+                typeLabel.hidden = false
+                typeLabel.sizeToFit()
+            }
+        }
+        typeLabel.text = ganks[indexPath.row].type
+        descLabel.text = ganks[indexPath.row].desc
+    }
+    
+    func heightForCell()->CGFloat {
+        var height:CGFloat = 0.0
+        if typeLabel.hidden{
+            height = 16 + descLabel.frame.height
+        }else{
+            height = 24 + descLabel.frame.height + typeLabel.frame.height
+        }
+        return height
+    }
 }
