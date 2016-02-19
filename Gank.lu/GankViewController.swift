@@ -9,6 +9,8 @@
 import UIKit
 import SwiftyJSON
 import MBProgressHUD
+import SafariServices
+
 class GankViewController: BaseViewController ,GankHttpDelegate{
 
     @IBOutlet weak var tableView: UITableView!
@@ -91,12 +93,17 @@ extension GankViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
          let cell = tableView.dequeueReusableCellWithIdentifier("gankCell",forIndexPath:indexPath) as! GankCell
         cell.setGankViews(gankData[indexPath.row])
-        //cell.setGankViews(gankData,indexPath: indexPath)
         return cell
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let url = gankData[indexPath.row].url
+        let SFSafari = SFSafariViewController(URL: NSURL(string:url)!, entersReaderIfAvailable: true)
+        self.presentViewController(SFSafari, animated: true, completion: nil)
     }
     
     func scrollViewDidScroll(scrollView: UIScrollView) {

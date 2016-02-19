@@ -57,7 +57,7 @@ class ViewController: BaseViewController ,GirlHttpDelegate{
     }
     
     func girlDataReceived(json: AnyObject) {
-        page++
+        page += 1
         let jsonResult = JSON(json)
         if loadingMore {
             loadMoreData(jsonResult)
