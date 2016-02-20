@@ -25,13 +25,9 @@ class AboutViewController: BaseViewController {
     
     func initAboutViews(){
         self.automaticallyAdjustsScrollViewInsets = false
+        navigationItem.title = "About"
         batteryBgView.backgroundColor = navColor
         introduceTextView.text = introduce
-        introduceTextView.layer.cornerRadius = 5
-        introduceTextView.layer.shadowColor = UIColor.brownColor().CGColor
-        introduceTextView.layer.shadowOffset=CGSizeMake(10, 10);
-        introduceTextView.layer.shadowOpacity=0.5;
-        introduceTextView.layer.shadowRadius=5;
     }
     
     

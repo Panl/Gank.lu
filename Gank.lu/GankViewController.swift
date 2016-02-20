@@ -72,6 +72,9 @@ class GankViewController: BaseViewController ,GankHttpDelegate{
         let categorys = json["category"].array
         let result = json["results"]
         for category in categorys!{
+            if category.stringValue == "福利"{
+                continue
+            }
             let ganks = result[category.stringValue].array
             for gank in ganks!{
                 gankData.append(Gank(item: gank))
@@ -90,8 +93,6 @@ class GankViewController: BaseViewController ,GankHttpDelegate{
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
-
 }
 
 extension GankViewController:UITableViewDelegate,UITableViewDataSource{

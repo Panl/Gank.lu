@@ -112,7 +112,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="Ry4-tv-fDi" id="WB8-8e-wre"/>
-                        <segue destination="1Cw-Cd-CMK" kind="show" identifier="showNext" id="n71-kB-UM6"/>
+                        <segue destination="1Cw-Cd-CMK" kind="show" identifier="showGank" id="jhz-Sn-aO9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FWV-Rs-azP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -137,7 +137,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7tY-OB-eig">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="720"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iVu-19-aBC">
+                                            <view alpha="0.84999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iVu-19-aBC">
                                                 <rect key="frame" x="0.0" y="0.0" width="600" height="240"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="battery_icon" translatesAutoresizingMaskIntoConstraints="NO" id="soz-mE-nWK">
@@ -200,7 +200,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nKf-vC-FuM">
-                                                <rect key="frame" x="8" y="431" width="584" height="131"/>
+                                                <rect key="frame" x="8" y="431" width="584" height="150"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="91" id="85R-R7-chL"/>
@@ -211,7 +211,8 @@ pod 'SwiftyJSON'
 pod 'Kingfisher', '~&gt; 2.0'
 pod 'MJRefresh'
 pod 'MBProgressHUD', '~&gt; 0.9.2'
-pod 'RainbowNavigation', '~&gt; 1.0.0'</string>
+pod 'RainbowNavigation', '~&gt; 1.0.0'
+pod 'SKPhotoBrowser'</string>
                                                 <color key="textColor" red="0.30316840270000001" green="0.30316840270000001" blue="0.30316840270000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>

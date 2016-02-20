@@ -115,7 +115,13 @@ extension ViewController:UITableViewDataSource,UITableViewDelegate{
         let cell = tableView.dequeueReusableCellWithIdentifier("girlCell",forIndexPath:indexPath) as! GirlCell
         let girlFlow = data[indexPath.row]
         cell.setCellViews(girlFlow)
+        cell.addGirlAction(indexPath,target:self, action: Selector("showImage:"))
         return cell
+    }
+    
+    func showImage(sender:UIGestureRecognizer){
+        let girl = sender.view as! UIImageView
+        print("点击了\(girl.tag)")
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -124,11 +130,11 @@ extension ViewController:UITableViewDataSource,UITableViewDelegate{
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         girlUrl = data[indexPath.row]
-        performSegueWithIdentifier("showNext", sender: nil)
+        performSegueWithIdentifier("showGank", sender: nil)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "showNext" {
+        if segue.identifier == "showGank" {
             let gankViewController = segue.destinationViewController as! GankViewController
             gankViewController.girl
                 = girlUrl

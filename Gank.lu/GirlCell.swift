@@ -62,5 +62,12 @@ class GirlCell: UITableViewCell {
         self.timeLabel.text = DateUtil.dateToString(date, dateFormat: "yyyy年MM月dd日")
         self.contentLabel.text = girlFlow.desc
     }
+    
+    func addGirlAction(indexPath:NSIndexPath,target:AnyObject,action:Selector){
+        girlImageView.userInteractionEnabled = true
+        girlImageView.tag = indexPath.row
+        let tap = UITapGestureRecognizer(target: target, action: action)
+        girlImageView.addGestureRecognizer(tap)
+    }
 
 }
