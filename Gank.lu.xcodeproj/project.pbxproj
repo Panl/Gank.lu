@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		5793259D04AE26C50315E7FB /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45B557E3385F2047EA8646D9 /* Pods.framework */; };
+		BE2F0AC01C786D4A00A0CA63 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE2F0ABF1C786D4A00A0CA63 /* Images.xcassets */; };
+		BE2F0AC21C78740500A0CA63 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2F0AC11C78740500A0CA63 /* AboutViewController.swift */; };
 		BE3078B41C38272500B007EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3078B31C38272500B007EA /* AppDelegate.swift */; };
 		BE3078B61C38272500B007EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3078B51C38272500B007EA /* ViewController.swift */; };
 		BE3078B91C38272500B007EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE3078B71C38272500B007EA /* Main.storyboard */; };
-		BE3078BB1C38272500B007EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE3078BA1C38272500B007EA /* Assets.xcassets */; };
 		BE3078BE1C38272500B007EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE3078BC1C38272500B007EA /* LaunchScreen.storyboard */; };
 		BE3078C91C38272500B007EA /* Gank_luTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3078C81C38272500B007EA /* Gank_luTests.swift */; };
 		BE3078D41C38272500B007EA /* Gank_luUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3078D31C38272500B007EA /* Gank_luUITests.swift */; };
@@ -45,11 +46,12 @@
 		1B738C319521A4EC4231D580 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		45B557E3385F2047EA8646D9 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CDD4AD1C5DF42823A1B3660 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		BE2F0ABF1C786D4A00A0CA63 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BE2F0AC11C78740500A0CA63 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		BE3078B01C38272500B007EA /* Gank.lu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gank.lu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE3078B31C38272500B007EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE3078B51C38272500B007EA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BE3078B81C38272500B007EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		BE3078BA1C38272500B007EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE3078BD1C38272500B007EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE3078BF1C38272500B007EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE3078C41C38272500B007EA /* Gank.luTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Gank.luTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,9 +137,9 @@
 				BEC684741C42B3010036F73F /* UIControllers */,
 				BEEF9EB01C3D42F900125F03 /* cells */,
 				BE3078B71C38272500B007EA /* Main.storyboard */,
-				BE3078BA1C38272500B007EA /* Assets.xcassets */,
 				BE3078BC1C38272500B007EA /* LaunchScreen.storyboard */,
 				BE3078BF1C38272500B007EA /* Info.plist */,
+				BE2F0ABF1C786D4A00A0CA63 /* Images.xcassets */,
 			);
 			path = Gank.lu;
 			sourceTree = "<group>";
@@ -175,6 +177,7 @@
 				BE3078B51C38272500B007EA /* ViewController.swift */,
 				BEEF9EAC1C3D3D6F00125F03 /* GankViewController.swift */,
 				BEA575CA1C75582200696093 /* BaseViewController.swift */,
+				BE2F0AC11C78740500A0CA63 /* AboutViewController.swift */,
 			);
 			name = UIControllers;
 			sourceTree = "<group>";
@@ -306,8 +309,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE2F0AC01C786D4A00A0CA63 /* Images.xcassets in Resources */,
 				BE3078BE1C38272500B007EA /* LaunchScreen.storyboard in Resources */,
-				BE3078BB1C38272500B007EA /* Assets.xcassets in Resources */,
 				BE3078B91C38272500B007EA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -389,6 +392,7 @@
 				BEEF9EAF1C3D42E500125F03 /* GirlCell.swift in Sources */,
 				BEA575CF1C75A22C00696093 /* DateUtil.swift in Sources */,
 				BEA575CB1C75582200696093 /* BaseViewController.swift in Sources */,
+				BE2F0AC21C78740500A0CA63 /* AboutViewController.swift in Sources */,
 				BEA575CD1C75765900696093 /* GankCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

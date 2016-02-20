@@ -7,13 +7,28 @@
 //
 
 import UIKit
+import RainbowNavigation
 
-class BaseViewController: UIViewController {
+class BaseViewController: UIViewController,RainbowColorSource{
+    lazy var rainbowNavigation = RainbowNavigation()
+    let navColor = UIColor(red: 44/255.0, green: 62/255.0, blue: 80/255.0, alpha: 1.0)
 
     override func viewDidLoad() {
-        self.navigationController?.navigationBar.barTintColor = UIColor(red: 44/255, green: 62/255, blue: 80/255, alpha: 1)
-        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        initNavigationBar()
+    }
+    
+    func initNavigationBar(){
+        navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        navigationController?.navigationBar.df_setBackgroundColor(navColor)
+        navigationController?.navigationBar.df_setStatusBarMaskColor(UIColor(white: 0, alpha: 0.1))
         let navigationTitleAttribute : NSDictionary = NSDictionary(object: UIColor.whiteColor(),forKey: NSForegroundColorAttributeName)
-        self.navigationController?.navigationBar.titleTextAttributes =  navigationTitleAttribute as? [String : AnyObject]
+        navigationController?.navigationBar.titleTextAttributes =  navigationTitleAttribute as? [String : AnyObject]
+        if let navigationController = navigationController {
+            rainbowNavigation.wireTo(navigationController: navigationController)
+        }
+    }
+    
+    func navigationBarInColor() -> UIColor {
+        return navColor
     }
 }

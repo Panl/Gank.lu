@@ -8,43 +8,36 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
 		</dict>
 		<key>Kingfisher.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>3</integer>
 		</dict>
 		<key>MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>4</integer>
 		</dict>
 		<key>MJRefresh.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>5</integer>
 		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>6</integer>
+		</dict>
+		<key>RainbowNavigation.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>SwiftyJSON.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>7</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -54,12 +47,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>432ECC54282C84882B482CCB4CF227FC</key>
+		<key>24ACC339A840484187AD507C7D27B223</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>51EB7DB9ECCF8C40BB4815DBB1F01A0A</key>
+		<key>432ECC54282C84882B482CCB4CF227FC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -69,7 +62,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8F45919E6EB18D80708669A5379EE2C5</key>
+		<key>D136DB3882844A02DC36096801E032F6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DA22C3031CB39A36D09421DECA7825C2</key>
 		<dict>
 			<key>primary</key>
 			<true/>

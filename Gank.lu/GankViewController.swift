@@ -26,8 +26,15 @@ class GankViewController: BaseViewController ,GankHttpDelegate{
         initGankHttp()
     }
     
+    @IBAction func refreshGank(sender: AnyObject) {
+        showProgress()
+        let date = DateUtil.stringToDate((girl?.publishedAt)!)
+        let components = DateUtil.componentsFromDate(date)
+        GankHttp.shareInstance.fetchGankDataAtYear(components.year, month: components.month, day: components.day)
+    }
     func initTableView(){
-        topImageView = UIImageView(frame: CGRect(x: 0, y: -topImageHeight, width: self.view.frame.width, height: topImageHeight))
+        topImageHeight = self.view.bounds.width * 0.65
+        topImageView = UIImageView(frame: CGRect(x: 0, y: -topImageHeight, width: self.view.bounds.width, height: topImageHeight))
         topImageView.kf_setImageWithURL(NSURL(string: (girl?.url)!)!)
         topImageView.contentMode = .ScaleAspectFill
         topImageView.clipsToBounds = true
@@ -46,11 +53,13 @@ class GankViewController: BaseViewController ,GankHttpDelegate{
         let components = DateUtil.componentsFromDate(date)
         GankHttp.shareInstance.delegate = self
         GankHttp.shareInstance.fetchGankDataAtYear(components.year, month: components.month, day: components.day)
+        showProgress()
+    }
+    func showProgress(){
         hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
         hud!.labelText = "loading..."
         hud!.dimBackground = true
     }
-    
     func gankDataReceived(json: AnyObject) {
         debugPrint(json)
         hud?.hide(true)
@@ -112,6 +121,6 @@ extension GankViewController:UITableViewDelegate,UITableViewDataSource{
             topImageView.frame.origin.y = offsetY
             topImageView.frame.size.height = -offsetY
         }
-        
     }
+    
 }
