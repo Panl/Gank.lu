@@ -1,25 +1,25 @@
 PODS:
   - Alamofire (3.1.4)
+  - BubbleTransition (1.0.1)
   - Kingfisher (2.0.1)
   - MBProgressHUD (0.9.2)
   - MJRefresh (3.1.0)
-  - RainbowNavigation (1.0.0)
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
   - Alamofire (~> 3.0)
+  - BubbleTransition (~> 1.0.0)
   - Kingfisher (~> 2.0)
   - MBProgressHUD (~> 0.9.2)
   - MJRefresh
-  - RainbowNavigation (~> 1.0.0)
   - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: fbc829692f351fa1d8a31dd75fd7f7f56fea31fb
+  BubbleTransition: 76d5e306dbda0f622260ea7d082c971d976422ab
   Kingfisher: 3af2020040453f710507819e6aa5f5721da03d9b
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   MJRefresh: 743e6404967d1c2c688472ea3ecfde247d872db4
-  RainbowNavigation: f22e8fa746a5c9cee7bc8ef4a02352e2f06d34e7
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
 COCOAPODS: 0.39.0

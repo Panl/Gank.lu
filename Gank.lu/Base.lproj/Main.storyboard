@@ -94,13 +94,28 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a4Y-Xc-Y21">
+                                <rect key="frame" x="520" y="520" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="1Tg-hC-elV"/>
+                                    <constraint firstAttribute="width" constant="64" id="4fc-39-YZs"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="battery">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="IBW-nT-ewH" kind="presentation" identifier="showBattery" id="AZB-Db-6up"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Ry4-tv-fDi" firstAttribute="top" secondItem="sHS-Cp-sqR" secondAttribute="top" id="0YY-4a-MNF"/>
+                            <constraint firstItem="Jbf-5S-1Hu" firstAttribute="top" secondItem="a4Y-Xc-Y21" secondAttribute="bottom" constant="16" id="Lqe-ii-Db8"/>
                             <constraint firstAttribute="trailing" secondItem="Ry4-tv-fDi" secondAttribute="trailing" id="biH-k9-Uxd"/>
                             <constraint firstItem="Jbf-5S-1Hu" firstAttribute="top" secondItem="Ry4-tv-fDi" secondAttribute="bottom" id="guD-bS-kSY"/>
                             <constraint firstItem="Ry4-tv-fDi" firstAttribute="leading" secondItem="sHS-Cp-sqR" secondAttribute="leading" id="hIZ-0t-3VQ"/>
+                            <constraint firstAttribute="trailing" secondItem="a4Y-Xc-Y21" secondAttribute="trailing" constant="16" id="rtU-g2-Lqt"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Gank.lu" id="Ah9-SH-jbB">
@@ -111,6 +126,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="batteryButton" destination="a4Y-Xc-Y21" id="oMo-EB-g17"/>
                         <outlet property="tableView" destination="Ry4-tv-fDi" id="WB8-8e-wre"/>
                         <segue destination="1Cw-Cd-CMK" kind="show" identifier="showGank" id="jhz-Sn-aO9"/>
                     </connections>
@@ -135,7 +151,7 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7tY-OB-eig">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="720"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                                         <subviews>
                                             <view alpha="0.84999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iVu-19-aBC">
                                                 <rect key="frame" x="0.0" y="0.0" width="600" height="240"/>
@@ -200,7 +216,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nKf-vC-FuM">
-                                                <rect key="frame" x="8" y="431" width="584" height="150"/>
+                                                <rect key="frame" x="8" y="431" width="584" height="112"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="91" id="85R-R7-chL"/>
@@ -210,9 +226,7 @@
 pod 'SwiftyJSON'
 pod 'Kingfisher', '~&gt; 2.0'
 pod 'MJRefresh'
-pod 'MBProgressHUD', '~&gt; 0.9.2'
-pod 'RainbowNavigation', '~&gt; 1.0.0'
-pod 'SKPhotoBrowser'</string>
+pod 'MBProgressHUD', '~&gt; 0.9.2'</string>
                                                 <color key="textColor" red="0.30316840270000001" green="0.30316840270000001" blue="0.30316840270000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -229,6 +243,7 @@ pod 'SKPhotoBrowser'</string>
                                         <constraints>
                                             <constraint firstItem="BOX-f4-fWR" firstAttribute="top" secondItem="o6O-lt-BLQ" secondAttribute="bottom" constant="8" id="7JE-Fa-kf5"/>
                                             <constraint firstItem="nKf-vC-FuM" firstAttribute="leading" secondItem="7tY-OB-eig" secondAttribute="leading" constant="8" id="81N-nV-kkK"/>
+                                            <constraint firstAttribute="bottom" secondItem="nKf-vC-FuM" secondAttribute="bottom" constant="8" id="Alb-24-qLx"/>
                                             <constraint firstItem="BOX-f4-fWR" firstAttribute="leading" secondItem="7tY-OB-eig" secondAttribute="leading" constant="8" id="ERt-cw-4KK"/>
                                             <constraint firstItem="nKf-vC-FuM" firstAttribute="top" secondItem="BOX-f4-fWR" secondAttribute="bottom" constant="8" id="Jat-5q-nap"/>
                                             <constraint firstAttribute="trailing" secondItem="o6O-lt-BLQ" secondAttribute="trailing" constant="8" id="LoN-V3-Kke"/>
@@ -248,6 +263,7 @@ pod 'SKPhotoBrowser'</string>
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
+                                                <exclude reference="SiM-Lq-m1V"/>
                                                 <exclude reference="81N-nV-kkK"/>
                                                 <exclude reference="Jat-5q-nap"/>
                                                 <exclude reference="WJY-5Q-yna"/>
@@ -285,7 +301,33 @@ pod 'SKPhotoBrowser'</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FTo-f4-lMx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1882" y="359"/>
+            <point key="canvasLocation" x="1857" y="429"/>
+        </scene>
+        <!--干货集中营-->
+        <scene sceneID="ysd-Bd-90E">
+            <objects>
+                <viewController id="2QC-gN-rhI" customClass="BatteryViewController" customModule="Gank_lu" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="agd-wb-hOP"/>
+                        <viewControllerLayoutGuide type="bottom" id="N0g-ai-fKg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kQl-TR-FKv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="干货集中营" id="7fc-Y0-Iyk">
+                        <barButtonItem key="backBarButtonItem" title="gank" id="mBD-yE-wFl"/>
+                        <barButtonItem key="leftBarButtonItem" image="back_arrow" id="idD-c3-rfg">
+                            <connections>
+                                <action selector="backToGril:" destination="2QC-gN-rhI" id="9kl-Mq-fv8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="utd-SE-zf4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3336" y="429"/>
         </scene>
         <!--Gank-->
         <scene sceneID="qUd-aN-wyt">
@@ -389,8 +431,28 @@ pod 'SKPhotoBrowser'</string>
             </objects>
             <point key="canvasLocation" x="1070" y="-355"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ieR-zH-Aw7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IBW-nT-ewH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fWc-Zc-TvP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2QC-gN-rhI" kind="relationship" relationship="rootViewController" id="m1O-p2-vcS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="De4-LW-5d6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2524" y="429"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="back_arrow" width="17" height="17"/>
+        <image name="battery" width="52" height="52"/>
         <image name="battery_icon" width="291" height="249"/>
     </resources>
 </document>

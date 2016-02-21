@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5793259D04AE26C50315E7FB /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45B557E3385F2047EA8646D9 /* Pods.framework */; };
+		BE0DDA831C796CAF00B369E0 /* BatteryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0DDA821C796CAF00B369E0 /* BatteryViewController.swift */; };
 		BE2F0AC01C786D4A00A0CA63 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE2F0ABF1C786D4A00A0CA63 /* Images.xcassets */; };
 		BE2F0AC21C78740500A0CA63 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2F0AC11C78740500A0CA63 /* AboutViewController.swift */; };
 		BE3078B41C38272500B007EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3078B31C38272500B007EA /* AppDelegate.swift */; };
@@ -46,6 +47,7 @@
 		1B738C319521A4EC4231D580 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		45B557E3385F2047EA8646D9 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CDD4AD1C5DF42823A1B3660 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		BE0DDA821C796CAF00B369E0 /* BatteryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BatteryViewController.swift; sourceTree = "<group>"; };
 		BE2F0ABF1C786D4A00A0CA63 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BE2F0AC11C78740500A0CA63 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		BE3078B01C38272500B007EA /* Gank.lu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gank.lu.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -178,6 +180,7 @@
 				BEEF9EAC1C3D3D6F00125F03 /* GankViewController.swift */,
 				BEA575CA1C75582200696093 /* BaseViewController.swift */,
 				BE2F0AC11C78740500A0CA63 /* AboutViewController.swift */,
+				BE0DDA821C796CAF00B369E0 /* BatteryViewController.swift */,
 			);
 			name = UIControllers;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEC684761C42B3560036F73F /* GankHttpClient.swift in Sources */,
+				BE0DDA831C796CAF00B369E0 /* BatteryViewController.swift in Sources */,
 				BE3078B61C38272500B007EA /* ViewController.swift in Sources */,
 				BEEF9EAD1C3D3D6F00125F03 /* GankViewController.swift in Sources */,
 				BEA575D21C75ADE600696093 /* ToastUtil.swift in Sources */,

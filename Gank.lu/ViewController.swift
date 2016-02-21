@@ -11,15 +11,19 @@ import UIKit
 import MJRefresh
 import SwiftyJSON
 import MBProgressHUD
+import BubbleTransition
 
 class ViewController: BaseViewController ,GirlHttpDelegate{
     var data:[GirlFlow] = []
     var girlUrl:GirlFlow?
     var loadingMore = false
     var page:Int = 1
-    let tableFooterView = UIView()
     var loadMoreText = UILabel()
+    let transition = BubbleTransition()
+    var center = CGPointMake(0, 0)
+    let color = UIColor.redColor()
     
+    @IBOutlet weak var batteryButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +34,7 @@ class ViewController: BaseViewController ,GirlHttpDelegate{
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 420
         initMJRefresh()
+        center = batteryButton.center
     }
     
     func initMJRefresh(){
@@ -105,7 +110,7 @@ class ViewController: BaseViewController ,GirlHttpDelegate{
     
 }
 
-extension ViewController:UITableViewDataSource,UITableViewDelegate{
+extension ViewController:UITableViewDataSource,UITableViewDelegate,UIViewControllerTransitioningDelegate{
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -138,7 +143,26 @@ extension ViewController:UITableViewDataSource,UITableViewDelegate{
             let gankViewController = segue.destinationViewController as! GankViewController
             gankViewController.girl
                 = girlUrl
+        }else if segue.identifier == "showBattery"{
+            let batteryViewController = segue.destinationViewController
+            batteryViewController.transitioningDelegate = self
+            batteryViewController.modalPresentationStyle = .Custom
         }
+    }
+    
+    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionMode = .Present
+        transition.startingPoint = center
+        transition.bubbleColor = color
+        print(batteryButton.center)
+        return transition
+    }
+    
+    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionMode = .Dismiss
+        transition.startingPoint = center
+        transition.bubbleColor = color
+        return transition
     }
 }
 
