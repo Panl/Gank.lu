@@ -20,8 +20,7 @@ class ViewController: BaseViewController ,GirlHttpDelegate{
     var page:Int = 1
     var loadMoreText = UILabel()
     let transition = BubbleTransition()
-    var center = CGPointMake(0, 0)
-    let color = UIColor.redColor()
+    var batteryCenter = CGPointMake(0, 0)
     
     @IBOutlet weak var batteryButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
@@ -34,7 +33,8 @@ class ViewController: BaseViewController ,GirlHttpDelegate{
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 420
         initMJRefresh()
-        center = batteryButton.center
+        let frame = batteryButton.frame
+        batteryCenter = CGPointMake(frame.origin.x + frame.width/2, frame.origin.y + frame.height/2)
     }
     
     func initMJRefresh(){
@@ -151,17 +151,20 @@ extension ViewController:UITableViewDataSource,UITableViewDelegate,UIViewControl
     }
     
     func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        let frame = batteryButton.frame
+        batteryCenter = CGPointMake(frame.origin.x + frame.width/2, frame.origin.y + frame.height/2)
         transition.transitionMode = .Present
-        transition.startingPoint = center
-        transition.bubbleColor = color
-        print(batteryButton.center)
+        transition.startingPoint = batteryCenter
+        transition.bubbleColor = navColor
         return transition
     }
     
     func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        let frame = batteryButton.frame
+        batteryCenter = CGPointMake(frame.origin.x + frame.width/2, frame.origin.y + frame.height/2)
         transition.transitionMode = .Dismiss
-        transition.startingPoint = center
-        transition.bubbleColor = color
+        transition.startingPoint = batteryCenter
+        transition.bubbleColor = navColor
         return transition
     }
 }

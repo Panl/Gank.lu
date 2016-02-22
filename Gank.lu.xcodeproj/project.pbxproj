@@ -107,6 +107,17 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		BE0DDA841C79870300B369E0 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				BE3078B71C38272500B007EA /* Main.storyboard */,
+				BE3078BC1C38272500B007EA /* LaunchScreen.storyboard */,
+				BE3078BF1C38272500B007EA /* Info.plist */,
+				BE2F0ABF1C786D4A00A0CA63 /* Images.xcassets */,
+			);
+			name = resources;
+			sourceTree = "<group>";
+		};
 		BE3078A71C38272500B007EA = {
 			isa = PBXGroup;
 			children = (
@@ -138,10 +149,7 @@
 				BEA575D01C75A23800696093 /* utils */,
 				BEC684741C42B3010036F73F /* UIControllers */,
 				BEEF9EB01C3D42F900125F03 /* cells */,
-				BE3078B71C38272500B007EA /* Main.storyboard */,
-				BE3078BC1C38272500B007EA /* LaunchScreen.storyboard */,
-				BE3078BF1C38272500B007EA /* Info.plist */,
-				BE2F0ABF1C786D4A00A0CA63 /* Images.xcassets */,
+				BE0DDA841C79870300B369E0 /* resources */,
 			);
 			path = Gank.lu;
 			sourceTree = "<group>";
