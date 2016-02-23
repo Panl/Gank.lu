@@ -1,6 +1,14 @@
 # Gank.lu
->gan.io client for ios  
+>gank.io client for ios  
 >本项目用于记录ios开发的学习过程。跟着[Kevin](https://github.com/kevinzhow)大神的视频学习。
+
+![](screenshots/appIcon.png)
+
+####项目截图
+![](screenshots/gank_ios_1.png)
+![](screenshots/gank_ios_2.png)
+![](screenshots/gank_ios_3.png)
+![](screenshots/gank_ios_4.png)
 
 #####前期准备
 - Swift 2.1基本语法
