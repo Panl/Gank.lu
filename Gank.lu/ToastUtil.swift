@@ -9,10 +9,10 @@
 import Foundation
 import MBProgressHUD
 class ToastUtil {
-    static func showTextToast(view:UIView){
+    static func showTextToast(view:UIView,toastStr:String){
         let hud = MBProgressHUD.showHUDAddedTo(view, animated: true)
         hud.mode = MBProgressHUDMode.Text
-        hud.labelText = "数据加载失败..."
+        hud.labelText = toastStr
         hud.hide(true, afterDelay: 2.0)
     }
 }

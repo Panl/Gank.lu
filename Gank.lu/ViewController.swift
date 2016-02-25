@@ -29,6 +29,7 @@ class ViewController: BaseViewController ,GirlHttpDelegate{
         // Do any additional setup after loading the view, typically from a nib.
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.registerNib(UINib(nibName: "BeautyCell",bundle: nil), forCellReuseIdentifier: "BeautyCell")
         GankHttp.shareInstance.girlDelegate = self
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 420
@@ -73,7 +74,7 @@ class ViewController: BaseViewController ,GirlHttpDelegate{
     
     func girlFetchFailed() {
         print("gankReceived failed")
-        ToastUtil.showTextToast(self.view)
+        ToastUtil.showTextToast(self.view,toastStr: "数据加载失败...")
         if loadingMore {
             tableView.mj_footer.endRefreshing()
         }else{
@@ -117,8 +118,9 @@ extension ViewController:UITableViewDataSource,UITableViewDelegate,UIViewControl
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("girlCell",forIndexPath:indexPath) as! GirlCell
         let girlFlow = data[indexPath.row]
+        let cell = tableView.dequeueReusableCellWithIdentifier("BeautyCell", forIndexPath: indexPath) as! BeautyCell
+        cell.selectionStyle = UITableViewCellSelectionStyle.None
         cell.setCellViews(girlFlow)
         cell.addGirlAction(indexPath,target:self, action: Selector("showImage:"))
         return cell
@@ -126,7 +128,7 @@ extension ViewController:UITableViewDataSource,UITableViewDelegate,UIViewControl
     
     func showImage(sender:UIGestureRecognizer){
         let girl = sender.view as! UIImageView
-        print("点击了\(girl.tag)")
+        ToastUtil.showTextToast(girl,toastStr: "点击啦...")
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -134,8 +136,9 @@ extension ViewController:UITableViewDataSource,UITableViewDelegate,UIViewControl
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
         girlUrl = data[indexPath.row]
-        performSegueWithIdentifier("showGank", sender: nil)
+        //performSegueWithIdentifier("showGank", sender: nil)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

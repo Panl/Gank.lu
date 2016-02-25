@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'BF76069280360E8364A8FD17'
-               BlueprintName = 'BubbleTransition'
+               BlueprintIdentifier = '91CE339EBE444BFDD902EA45'
+               BlueprintName = 'AFDateHelper'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'BubbleTransition.framework'>
+               BuildableName = 'AFDateHelper.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

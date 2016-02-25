@@ -87,7 +87,7 @@ class GankViewController: BaseViewController ,GankHttpDelegate{
     func gankFetchFailed() {
         print("failed")
         hud?.hide(true)
-        ToastUtil.showTextToast(self.view)
+        ToastUtil.showTextToast(self.view,toastStr: "数据加载失败...")
     }
 
     override func didReceiveMemoryWarning() {

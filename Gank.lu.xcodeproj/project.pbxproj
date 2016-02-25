@@ -25,9 +25,9 @@
 		BEA575CD1C75765900696093 /* GankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA575CC1C75765900696093 /* GankCell.swift */; };
 		BEA575CF1C75A22C00696093 /* DateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA575CE1C75A22C00696093 /* DateUtil.swift */; };
 		BEA575D21C75ADE600696093 /* ToastUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA575D11C75ADE600696093 /* ToastUtil.swift */; };
+		BEB6B5A51C7F6771004C50F9 /* GankModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB6B5A41C7F6771004C50F9 /* GankModel.swift */; };
 		BEC684761C42B3560036F73F /* GankHttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC684751C42B3560036F73F /* GankHttpClient.swift */; };
 		BEEF9EAD1C3D3D6F00125F03 /* GankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF9EAC1C3D3D6F00125F03 /* GankViewController.swift */; };
-		BEEF9EAF1C3D42E500125F03 /* GirlCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF9EAE1C3D42E500125F03 /* GirlCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,9 +75,9 @@
 		BEA575CC1C75765900696093 /* GankCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GankCell.swift; sourceTree = "<group>"; };
 		BEA575CE1C75A22C00696093 /* DateUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateUtil.swift; sourceTree = "<group>"; };
 		BEA575D11C75ADE600696093 /* ToastUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastUtil.swift; sourceTree = "<group>"; };
+		BEB6B5A41C7F6771004C50F9 /* GankModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GankModel.swift; sourceTree = "<group>"; };
 		BEC684751C42B3560036F73F /* GankHttpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GankHttpClient.swift; sourceTree = "<group>"; };
 		BEEF9EAC1C3D3D6F00125F03 /* GankViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GankViewController.swift; sourceTree = "<group>"; };
-		BEEF9EAE1C3D42E500125F03 /* GirlCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GirlCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +154,7 @@
 				BE424F751C70D76A00F57CDE /* Gank.lu-Bridging-Header.h */,
 				BE3078B31C38272500B007EA /* AppDelegate.swift */,
 				BEC684751C42B3560036F73F /* GankHttpClient.swift */,
+				BEB6B5A41C7F6771004C50F9 /* GankModel.swift */,
 				BEA575D01C75A23800696093 /* utils */,
 				BEC684741C42B3010036F73F /* UIControllers */,
 				BEEF9EB01C3D42F900125F03 /* cells */,
@@ -205,7 +206,6 @@
 		BEEF9EB01C3D42F900125F03 /* cells */ = {
 			isa = PBXGroup;
 			children = (
-				BEEF9EAE1C3D42E500125F03 /* GirlCell.swift */,
 				BEA575CC1C75765900696093 /* GankCell.swift */,
 				BE0594F31C7E2CE300793611 /* CategoryCell.swift */,
 				BE30A24D1C7F49CB0072C1B2 /* BeautyCell.swift */,
@@ -409,13 +409,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE0594F41C7E2CE300793611 /* CategoryCell.swift in Sources */,
+				BEB6B5A51C7F6771004C50F9 /* GankModel.swift in Sources */,
 				BEC684761C42B3560036F73F /* GankHttpClient.swift in Sources */,
 				BE0DDA831C796CAF00B369E0 /* BatteryViewController.swift in Sources */,
 				BE3078B61C38272500B007EA /* ViewController.swift in Sources */,
 				BEEF9EAD1C3D3D6F00125F03 /* GankViewController.swift in Sources */,
 				BEA575D21C75ADE600696093 /* ToastUtil.swift in Sources */,
 				BE3078B41C38272500B007EA /* AppDelegate.swift in Sources */,
-				BEEF9EAF1C3D42E500125F03 /* GirlCell.swift in Sources */,
 				BEA575CF1C75A22C00696093 /* DateUtil.swift in Sources */,
 				BEA575CB1C75582200696093 /* BaseViewController.swift in Sources */,
 				BE0594F61C7E2D0500793611 /* CategoryViewController.swift in Sources */,
