@@ -1,4 +1,5 @@
 PODS:
+  - AFDateHelper (3.1.1)
   - Alamofire (3.1.4)
   - BubbleTransition (1.0.1)
   - Kingfisher (2.0.1)
@@ -7,6 +8,7 @@ PODS:
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
+  - AFDateHelper
   - Alamofire (~> 3.0)
   - BubbleTransition (~> 1.0.0)
   - Kingfisher (~> 2.0)
@@ -15,6 +17,7 @@ DEPENDENCIES:
   - SwiftyJSON
 
 SPEC CHECKSUMS:
+  AFDateHelper: 22d6439a3529a144c89b7e6aa214ebbe4d5c2337
   Alamofire: fbc829692f351fa1d8a31dd75fd7f7f56fea31fb
   BubbleTransition: 76d5e306dbda0f622260ea7d082c971d976422ab
   Kingfisher: 3af2020040453f710507819e6aa5f5721da03d9b

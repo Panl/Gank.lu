@@ -7,12 +7,13 @@
 //
 
 import Foundation
+import AFDateHelper
+
 class DateUtil {
     static let calendar = NSCalendar.currentCalendar()
     static let dateFormatter = NSDateFormatter()
     static func stringToDate(dateStr:String)->NSDate{
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
-        return dateFormatter.dateFromString(dateStr)!
+        return NSDate(fromString:  dateStr, format: .ISO8601(nil))
     }
     
     static func dateToString(date:NSDate,dateFormat:String)->String{
