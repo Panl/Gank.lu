@@ -29,6 +29,7 @@ class ViewController: BaseViewController ,GirlHttpDelegate{
         // Do any additional setup after loading the view, typically from a nib.
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.registerNib(UINib(nibName: "BeautyCell",bundle: nil), forCellReuseIdentifier: "BeautyCell")
         GankHttp.shareInstance.girlDelegate = self
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 420
@@ -91,7 +92,7 @@ class ViewController: BaseViewController ,GirlHttpDelegate{
             let girl = GirlFlow(item: item)
             data.append(girl)
         }
-        tableView.reloadData()
+        //tableView.reloadData()
     }
     
     func loadMoreData(json:JSON){
@@ -104,7 +105,7 @@ class ViewController: BaseViewController ,GirlHttpDelegate{
             let girl = GirlFlow(item: item)
             data.append(girl)
         }
-        tableView.reloadData()
+        //tableView.reloadData()
     }
     
     
@@ -117,10 +118,11 @@ extension ViewController:UITableViewDataSource,UITableViewDelegate,UIViewControl
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("girlCell",forIndexPath:indexPath) as! GirlCell
-        let girlFlow = data[indexPath.row]
-        cell.setCellViews(girlFlow)
-        cell.addGirlAction(indexPath,target:self, action: Selector("showImage:"))
+        //let cell = tableView.dequeueReusableCellWithIdentifier("girlCell",forIndexPath:indexPath) as! GirlCell
+        //let girlFlow = data[indexPath.row]
+        //cell.setCellViews(girlFlow)
+        //cell.addGirlAction(indexPath,target:self, action: Selector("showImage:"))
+        let cell = tableView.dequeueReusableCellWithIdentifier("BeautyCell", forIndexPath: indexPath)
         return cell
     }
     
@@ -130,7 +132,7 @@ extension ViewController:UITableViewDataSource,UITableViewDelegate,UIViewControl
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
+        return 10
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
