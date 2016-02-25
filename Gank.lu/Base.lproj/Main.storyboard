@@ -305,6 +305,59 @@ pod 'MBProgressHUD', '~&gt; 0.9.2'</string>
             </objects>
             <point key="canvasLocation" x="1857" y="429"/>
         </scene>
+        <!--Category View Controller-->
+        <scene sceneID="Z1n-Bh-zgW">
+            <objects>
+                <tableViewController storyboardIdentifier="category" id="Wer-Vr-bL4" customClass="CategoryViewController" customModule="Gank_lu" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="51" sectionHeaderHeight="28" sectionFooterHeight="28" id="WoN-Zp-wYx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="categoryCell" rowHeight="51" id="fGb-1O-LUY" customClass="CategoryCell" customModule="Gank_lu" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="600" height="51"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fGb-1O-LUY" id="6Em-se-SvR">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3J-5a-OBF">
+                                            <rect key="frame" x="40" y="10" width="550" height="30"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C6s-n0-cse">
+                                            <rect key="frame" x="22" y="15" width="10" height="21"/>
+                                            <string key="text">ø
+
+</string>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="C6s-n0-cse" firstAttribute="centerY" secondItem="e3J-5a-OBF" secondAttribute="centerY" id="UM0-ez-1RB"/>
+                                        <constraint firstItem="e3J-5a-OBF" firstAttribute="leading" secondItem="6Em-se-SvR" secondAttribute="leading" constant="40" id="hpA-jU-P8h"/>
+                                        <constraint firstItem="e3J-5a-OBF" firstAttribute="leading" secondItem="C6s-n0-cse" secondAttribute="trailing" constant="8" id="mSB-JM-uNU"/>
+                                        <constraint firstItem="e3J-5a-OBF" firstAttribute="top" secondItem="6Em-se-SvR" secondAttribute="top" constant="10" id="nhh-4D-5Lf"/>
+                                        <constraint firstAttribute="bottom" secondItem="e3J-5a-OBF" secondAttribute="bottom" constant="10" id="si1-97-VQE"/>
+                                        <constraint firstAttribute="trailing" secondItem="e3J-5a-OBF" secondAttribute="trailing" constant="10" id="yGn-hz-kq4"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Wer-Vr-bL4" id="cWk-oq-npZ"/>
+                            <outlet property="delegate" destination="Wer-Vr-bL4" id="HaR-vW-5ib"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lh9-bX-PfP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3390" y="-346"/>
+        </scene>
         <!--干货集中营-->
         <scene sceneID="ysd-Bd-90E">
             <objects>

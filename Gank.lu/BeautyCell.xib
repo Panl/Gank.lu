@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10109" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10083"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BeautyCell" rowHeight="388" id="KGk-i7-Jjw" customClass="BeautyCell" customModule="Gank_lu" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="388"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="387"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ES9-lS-Mzr">
+                        <rect key="frame" x="8" y="8" width="304" height="371"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scene" translatesAutoresizingMaskIntoConstraints="NO" id="xzr-K7-j8d">
+                                <rect key="frame" x="0.0" y="0.0" width="304" height="304"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="xzr-K7-j8d" secondAttribute="height" multiplier="1:1" id="BRf-aQ-nh2"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2EO-Se-2pD">
+                                <rect key="frame" x="8" y="312" width="39" height="22"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xeI-SA-pU1">
+                                <rect key="frame" x="55" y="316" width="30" height="17"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
+                                <color key="textColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xco-yK-l3o">
+                                <rect key="frame" x="8" y="342" width="288" height="20"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                <color key="textColor" red="0.12941176469999999" green="0.1843137255" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="xzr-K7-j8d" secondAttribute="trailing" id="2km-ik-qW0"/>
+                            <constraint firstItem="xco-yK-l3o" firstAttribute="top" secondItem="2EO-Se-2pD" secondAttribute="bottom" constant="8" id="BIo-aa-Q4V"/>
+                            <constraint firstItem="2EO-Se-2pD" firstAttribute="top" secondItem="xzr-K7-j8d" secondAttribute="bottom" constant="8" id="EpR-O0-Ene"/>
+                            <constraint firstItem="xzr-K7-j8d" firstAttribute="top" secondItem="ES9-lS-Mzr" secondAttribute="top" id="FYJ-99-BSd"/>
+                            <constraint firstItem="2EO-Se-2pD" firstAttribute="leading" secondItem="ES9-lS-Mzr" secondAttribute="leading" constant="8" id="X02-gU-OVv"/>
+                            <constraint firstItem="xzr-K7-j8d" firstAttribute="leading" secondItem="ES9-lS-Mzr" secondAttribute="leading" id="XKQ-02-xht"/>
+                            <constraint firstAttribute="bottom" secondItem="xco-yK-l3o" secondAttribute="bottom" constant="9" id="caz-SG-3dW"/>
+                            <constraint firstItem="xeI-SA-pU1" firstAttribute="leading" secondItem="2EO-Se-2pD" secondAttribute="trailing" constant="8" id="jVE-f4-bJL"/>
+                            <constraint firstAttribute="trailing" secondItem="xco-yK-l3o" secondAttribute="trailing" constant="8" id="k8F-0R-vlc"/>
+                            <constraint firstItem="xeI-SA-pU1" firstAttribute="baseline" secondItem="2EO-Se-2pD" secondAttribute="baseline" id="pic-Dm-yA7"/>
+                            <constraint firstItem="xco-yK-l3o" firstAttribute="leading" secondItem="ES9-lS-Mzr" secondAttribute="leading" constant="8" id="z0g-RA-JVe"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.12941176469999999" green="0.1843137255" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="ES9-lS-Mzr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="0vd-Fz-le3"/>
+                    <constraint firstAttribute="bottom" secondItem="ES9-lS-Mzr" secondAttribute="bottom" constant="8" id="5Iq-14-hHi"/>
+                    <constraint firstItem="ES9-lS-Mzr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="7RJ-WO-EvZ"/>
+                    <constraint firstAttribute="trailing" secondItem="ES9-lS-Mzr" secondAttribute="trailing" constant="8" id="AXX-LM-N2n"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="beautyImageView" destination="xzr-K7-j8d" id="Qzj-eW-9uh"/>
+                <outlet property="cardView" destination="ES9-lS-Mzr" id="IM2-36-Jsr"/>
+                <outlet property="descLabel" destination="xco-yK-l3o" id="brH-Kq-p2G"/>
+                <outlet property="nickNameLabel" destination="2EO-Se-2pD" id="Jrv-gt-iwH"/>
+                <outlet property="timeLabel" destination="xeI-SA-pU1" id="l8k-AQ-clJ"/>
+            </connections>
+            <point key="canvasLocation" x="316" y="367"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="scene" width="480" height="426"/>
+    </resources>
+</document>

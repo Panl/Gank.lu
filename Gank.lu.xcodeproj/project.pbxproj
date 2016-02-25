@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5793259D04AE26C50315E7FB /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45B557E3385F2047EA8646D9 /* Pods.framework */; };
+		BE0594F41C7E2CE300793611 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0594F31C7E2CE300793611 /* CategoryCell.swift */; };
+		BE0594F61C7E2D0500793611 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0594F51C7E2D0500793611 /* CategoryViewController.swift */; };
 		BE0DDA831C796CAF00B369E0 /* BatteryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0DDA821C796CAF00B369E0 /* BatteryViewController.swift */; };
 		BE2F0AC01C786D4A00A0CA63 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE2F0ABF1C786D4A00A0CA63 /* Images.xcassets */; };
 		BE2F0AC21C78740500A0CA63 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2F0AC11C78740500A0CA63 /* AboutViewController.swift */; };
@@ -17,6 +19,8 @@
 		BE3078BE1C38272500B007EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE3078BC1C38272500B007EA /* LaunchScreen.storyboard */; };
 		BE3078C91C38272500B007EA /* Gank_luTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3078C81C38272500B007EA /* Gank_luTests.swift */; };
 		BE3078D41C38272500B007EA /* Gank_luUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3078D31C38272500B007EA /* Gank_luUITests.swift */; };
+		BE30A24F1C7F49CB0072C1B2 /* BeautyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE30A24D1C7F49CB0072C1B2 /* BeautyCell.swift */; };
+		BE30A2501C7F49CB0072C1B2 /* BeautyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE30A24E1C7F49CB0072C1B2 /* BeautyCell.xib */; };
 		BEA575CB1C75582200696093 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA575CA1C75582200696093 /* BaseViewController.swift */; };
 		BEA575CD1C75765900696093 /* GankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA575CC1C75765900696093 /* GankCell.swift */; };
 		BEA575CF1C75A22C00696093 /* DateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA575CE1C75A22C00696093 /* DateUtil.swift */; };
@@ -47,6 +51,8 @@
 		1B738C319521A4EC4231D580 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		45B557E3385F2047EA8646D9 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CDD4AD1C5DF42823A1B3660 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		BE0594F31C7E2CE300793611 /* CategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		BE0594F51C7E2D0500793611 /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		BE0DDA821C796CAF00B369E0 /* BatteryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BatteryViewController.swift; sourceTree = "<group>"; };
 		BE2F0ABF1C786D4A00A0CA63 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BE2F0AC11C78740500A0CA63 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +68,8 @@
 		BE3078CF1C38272500B007EA /* Gank.luUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Gank.luUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE3078D31C38272500B007EA /* Gank_luUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gank_luUITests.swift; sourceTree = "<group>"; };
 		BE3078D51C38272500B007EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE30A24D1C7F49CB0072C1B2 /* BeautyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeautyCell.swift; sourceTree = "<group>"; };
+		BE30A24E1C7F49CB0072C1B2 /* BeautyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BeautyCell.xib; sourceTree = "<group>"; };
 		BE424F751C70D76A00F57CDE /* Gank.lu-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Gank.lu-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		BEA575CA1C75582200696093 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		BEA575CC1C75765900696093 /* GankCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GankCell.swift; sourceTree = "<group>"; };
@@ -189,6 +197,7 @@
 				BEA575CA1C75582200696093 /* BaseViewController.swift */,
 				BE2F0AC11C78740500A0CA63 /* AboutViewController.swift */,
 				BE0DDA821C796CAF00B369E0 /* BatteryViewController.swift */,
+				BE0594F51C7E2D0500793611 /* CategoryViewController.swift */,
 			);
 			name = UIControllers;
 			sourceTree = "<group>";
@@ -198,6 +207,9 @@
 			children = (
 				BEEF9EAE1C3D42E500125F03 /* GirlCell.swift */,
 				BEA575CC1C75765900696093 /* GankCell.swift */,
+				BE0594F31C7E2CE300793611 /* CategoryCell.swift */,
+				BE30A24D1C7F49CB0072C1B2 /* BeautyCell.swift */,
+				BE30A24E1C7F49CB0072C1B2 /* BeautyCell.xib */,
 			);
 			name = cells;
 			sourceTree = "<group>";
@@ -321,6 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE2F0AC01C786D4A00A0CA63 /* Images.xcassets in Resources */,
+				BE30A2501C7F49CB0072C1B2 /* BeautyCell.xib in Resources */,
 				BE3078BE1C38272500B007EA /* LaunchScreen.storyboard in Resources */,
 				BE3078B91C38272500B007EA /* Main.storyboard in Resources */,
 			);
@@ -395,6 +408,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE0594F41C7E2CE300793611 /* CategoryCell.swift in Sources */,
 				BEC684761C42B3560036F73F /* GankHttpClient.swift in Sources */,
 				BE0DDA831C796CAF00B369E0 /* BatteryViewController.swift in Sources */,
 				BE3078B61C38272500B007EA /* ViewController.swift in Sources */,
@@ -404,6 +418,8 @@
 				BEEF9EAF1C3D42E500125F03 /* GirlCell.swift in Sources */,
 				BEA575CF1C75A22C00696093 /* DateUtil.swift in Sources */,
 				BEA575CB1C75582200696093 /* BaseViewController.swift in Sources */,
+				BE0594F61C7E2D0500793611 /* CategoryViewController.swift in Sources */,
+				BE30A24F1C7F49CB0072C1B2 /* BeautyCell.swift in Sources */,
 				BE2F0AC21C78740500A0CA63 /* AboutViewController.swift in Sources */,
 				BEA575CD1C75765900696093 /* GankCell.swift in Sources */,
 			);

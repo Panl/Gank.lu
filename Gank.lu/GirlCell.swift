@@ -46,6 +46,7 @@ class GirlCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
@@ -58,8 +59,8 @@ class GirlCell: UITableViewCell {
     func setCellViews(girlFlow:GirlFlow){
         self.girlImageView.kf_setImageWithURL(NSURL(string: girlFlow.url)!)
         self.nickNameLabel.text = girlFlow.who
-        let date = DateUtil.stringToDate(girlFlow.publishedAt)
-        self.timeLabel.text = DateUtil.dateToString(date, dateFormat: "yyyy年MM月dd日")
+        //let date = DateUtil.stringToDate(girlFlow.publishedAt)
+        //self.timeLabel.text = DateUtil.dateToString(date, dateFormat: "yyyy年MM月dd日")
         self.contentLabel.text = girlFlow.desc
     }
     

@@ -8,9 +8,14 @@
 
 import UIKit
 
-class BatteryViewController: BaseViewController {
-
+class BatteryViewController:BaseViewController{
+    
+    override func viewDidLoad(){
+        super.viewDidLoad()
+    }
+    
     @IBAction func backToGril(sender: UIBarButtonItem) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
 }
+
