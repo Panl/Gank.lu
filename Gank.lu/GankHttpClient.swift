@@ -17,7 +17,8 @@ protocol GirlHttpDelegate{
     func girlFetchFailed()
 }
 class GankHttp {
-    
+    let baseUrl = "http://gank.avosapps.com/api/"
+    let requestNumber = 20
     private static let singleInstance = GankHttp()
     var delegate:GankHttpDelegate?
     var girlDelegate:GirlHttpDelegate?
@@ -26,7 +27,7 @@ class GankHttp {
     }
     
     func fetchGirlData(page:Int){
-        let requestUrl = "http://gank.avosapps.com/api/data/福利/20/\(page)".stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLFragmentAllowedCharacterSet())
+        let requestUrl = (baseUrl + "data/福利/\(requestNumber)/\(page)").stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLFragmentAllowedCharacterSet())
         Alamofire.request(.GET, requestUrl!).responseJSON(){
             response in
             guard let json = response.result.value else{
@@ -38,7 +39,7 @@ class GankHttp {
     }
     
     func fetchGankDataAtYear(year:Int,month:Int,day:Int){
-        let requestUrl = "http://gank.avosapps.com/api/day/\(year)/\(month)/\(day)"
+        let requestUrl = baseUrl + "day/\(year)/\(month)/\(day)"
         print(requestUrl)
         Alamofire.request(.GET, requestUrl).responseJSON(){
             response in
@@ -47,6 +48,19 @@ class GankHttp {
                 return
             }
             self.delegate?.gankDataReceived(json)
+        }
+    }
+    
+    func fetchGankWithCategory(category:String,page:Int,complete:(success:Bool,result:AnyObject?)->Void){
+        let url = baseUrl + "data/\(category)/\(requestNumber)/\(page)"
+        let requestUrl = url.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLFragmentAllowedCharacterSet())
+        debugPrint(requestUrl)
+        Alamofire.request(.GET, requestUrl!).responseJSON{response in
+            guard let json = response.result.value else {
+                complete(success:false, result: nil)
+                return
+            }
+            complete(success: true, result: json)
         }
     }
 }

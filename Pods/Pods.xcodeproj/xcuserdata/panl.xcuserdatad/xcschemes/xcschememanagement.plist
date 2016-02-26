@@ -2,49 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>SchemeUserState</key>
-	<dict>
-		<key>AFDateHelper.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Alamofire.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>BubbleTransition.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Kingfisher.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>MBProgressHUD.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>MJRefresh.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>SwiftyJSON.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>175892047F5D57D69AC9D102FB92A2F2</key>
@@ -82,17 +39,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6DEC605F93F775266797146028B8E8CA</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>7372CA79CE92E7AC032175441663EBE4</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>94D11CC80A79A785D4B8091D69029E3D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

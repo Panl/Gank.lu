@@ -35,15 +35,17 @@ class ViewController: BaseViewController ,GirlHttpDelegate{
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 420
         initMJRefresh()
-        let frame = batteryButton.frame
-        batteryCenter = CGPointMake(frame.origin.x + frame.width/2, frame.origin.y + frame.height/2)
     }
     
     func initMJRefresh(){
-        tableView.mj_header = MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: "pullToRefresh")
+        let mjHeader = MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: "pullToRefresh")
+        mjHeader.lastUpdatedTimeLabel.hidden = true
+        mjHeader.stateLabel.textColor = UIColor.whiteColor()
+        tableView.mj_header = mjHeader
         tableView.mj_header.beginRefreshing()
-
-        tableView.mj_footer = MJRefreshAutoFooter(refreshingTarget: self, refreshingAction: "pullToLoadMore")
+        let mjFooter = MJRefreshBackNormalFooter(refreshingTarget: self, refreshingAction: "pullToLoadMore")
+        mjFooter.stateLabel.textColor = UIColor.whiteColor()
+        tableView.mj_footer = mjFooter
     }
     
     override func didReceiveMemoryWarning() {
@@ -86,6 +88,7 @@ class ViewController: BaseViewController ,GirlHttpDelegate{
     
     
     func refreshData(json:JSON){
+        tableView.mj_footer.resetNoMoreData()
         tableView.mj_header.endRefreshing()
         data.removeAll()
         let result = json["results"].array

@@ -2,7 +2,7 @@
 //  CategoryCell.swift
 //  Gank.lu
 //
-//  Created by FIND.ME on 16/2/25.
+//  Created by FIND.ME on 16/2/26.
 //  Copyright © 2016年 smartalker. All rights reserved.
 //
 
@@ -10,6 +10,7 @@ import UIKit
 
 class CategoryCell: UITableViewCell {
 
+    @IBOutlet weak var gankDescLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,5 +21,5 @@ class CategoryCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
 }
