@@ -21,7 +21,7 @@ class BeautyCell: UITableViewCell {
         
         super.awakeFromNib()
         // Initialization code
-        cardView.layer.cornerRadius = 8
+        cardView.layer.cornerRadius = 5
         cardView.layer.masksToBounds = true
         
     }

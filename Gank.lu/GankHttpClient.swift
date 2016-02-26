@@ -39,6 +39,7 @@ class GankHttp {
     
     func fetchGankDataAtYear(year:Int,month:Int,day:Int){
         let requestUrl = "http://gank.avosapps.com/api/day/\(year)/\(month)/\(day)"
+        print(requestUrl)
         Alamofire.request(.GET, requestUrl).responseJSON(){
             response in
             guard let json = response.result.value else {

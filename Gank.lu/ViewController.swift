@@ -21,6 +21,7 @@ class ViewController: BaseViewController ,GirlHttpDelegate{
     var loadMoreText = UILabel()
     let transition = BubbleTransition()
     var batteryCenter = CGPointMake(0, 0)
+    var showedPosition = 0
     
     @IBOutlet weak var batteryButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
@@ -123,6 +124,12 @@ extension ViewController:UITableViewDataSource,UITableViewDelegate,UIViewControl
         cell.selectionStyle = UITableViewCellSelectionStyle.None
         cell.setCellViews(girlFlow)
         cell.addGirlAction(indexPath,target:self, action: Selector("showImage:"))
+        if indexPath.row > showedPosition {
+            UIView.animateWithDuration(0.5){
+                cell.cardView.center.y -= cell.cardView.bounds.height/1.5
+            }
+        }
+        showedPosition = indexPath.row
         return cell
     }
     
@@ -138,7 +145,7 @@ extension ViewController:UITableViewDataSource,UITableViewDelegate,UIViewControl
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         girlUrl = data[indexPath.row]
-        //performSegueWithIdentifier("showGank", sender: nil)
+        performSegueWithIdentifier("showGank", sender: nil)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
