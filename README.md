@@ -37,3 +37,6 @@
 当然还有一些细节问题，花费了很多时间，作为学习swift以及ios开发的练手项目，到此就基本完成了，由于是新手，项目中难免有许多纰漏，欢迎批评指正。
 
 **当然这个项目会一直维护的，为了进一步学习，将来会添加各种炫酷的动画效果，敬请期待。。。**
+
+###LICENSE 
+Gank.lu is released under the GPL v3 license. See [LICENSE](LICENSE) for details.
