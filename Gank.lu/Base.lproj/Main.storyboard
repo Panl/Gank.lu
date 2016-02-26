@@ -22,18 +22,24 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DeY-RU-pVM">
-                                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="600" id="HJF-cB-tRi"/>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="HJF-cB-tRi"/>
+                                            </mask>
+                                        </variation>
                                     </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="DeY-RU-pVM" firstAttribute="top" secondItem="Bxz-N1-xWZ" secondAttribute="top" constant="64" id="bX4-nH-Uxt"/>
+                                    <constraint firstItem="DeY-RU-pVM" firstAttribute="top" secondItem="Bxz-N1-xWZ" secondAttribute="top" id="bX4-nH-Uxt"/>
                                     <constraint firstItem="DeY-RU-pVM" firstAttribute="leading" secondItem="Bxz-N1-xWZ" secondAttribute="leading" id="bf1-Lh-5fy"/>
                                     <constraint firstAttribute="trailing" secondItem="DeY-RU-pVM" secondAttribute="trailing" id="m6x-2w-Ptv"/>
-                                    <constraint firstAttribute="bottom" secondItem="DeY-RU-pVM" secondAttribute="bottom" constant="-64" id="qSw-IO-iy9"/>
+                                    <constraint firstAttribute="bottom" secondItem="DeY-RU-pVM" secondAttribute="bottom" id="qSw-IO-iy9"/>
                                     <constraint firstItem="DeY-RU-pVM" firstAttribute="centerX" secondItem="Bxz-N1-xWZ" secondAttribute="centerX" id="sHm-qP-G6x"/>
+                                    <constraint firstItem="DeY-RU-pVM" firstAttribute="height" secondItem="Bxz-N1-xWZ" secondAttribute="height" id="uBf-ga-8Vy"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
