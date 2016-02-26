@@ -24,7 +24,6 @@ class AboutViewController: BaseViewController {
     }
     
     func initAboutViews(){
-        self.automaticallyAdjustsScrollViewInsets = false
         navigationItem.title = "About"
         batteryBgView.backgroundColor = navColor
         introduceTextView.text = introduce

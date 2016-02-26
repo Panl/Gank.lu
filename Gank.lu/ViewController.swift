@@ -15,7 +15,8 @@ import BubbleTransition
 
 class ViewController: BaseViewController ,GirlHttpDelegate{
     var data:[GirlFlow] = []
-    var girlUrl:GirlFlow?
+    var girlFlow:GirlFlow?
+    var girlUrl:String?
     var loadingMore = false
     var page:Int = 1
     var loadMoreText = UILabel()
@@ -137,8 +138,10 @@ extension ViewController:UITableViewDataSource,UITableViewDelegate,UIViewControl
     }
     
     func showImage(sender:UIGestureRecognizer){
-        let girl = sender.view as! UIImageView
-        ToastUtil.showTextToast(girl,toastStr: "点击啦...")
+        let girlImage = sender.view as! UIImageView
+        girlUrl = data[girlImage.tag].url
+        performSegueWithIdentifier("showImage", sender: nil)
+
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -147,7 +150,7 @@ extension ViewController:UITableViewDataSource,UITableViewDelegate,UIViewControl
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        girlUrl = data[indexPath.row]
+        girlFlow = data[indexPath.row]
         performSegueWithIdentifier("showGank", sender: nil)
     }
     
@@ -155,12 +158,16 @@ extension ViewController:UITableViewDataSource,UITableViewDelegate,UIViewControl
         if segue.identifier == "showGank" {
             let gankViewController = segue.destinationViewController as! GankViewController
             gankViewController.girl
-                = girlUrl
+                = girlFlow
         }else if segue.identifier == "showBattery"{
             let batteryViewController = segue.destinationViewController
             batteryViewController.transitioningDelegate = self
             batteryViewController.modalPresentationStyle = .Custom
+        }else if segue.identifier == "showImage"{
+            let girlViewController = segue.destinationViewController as! GirlViewController
+            girlViewController.girlUrl = girlUrl
         }
+            
     }
     
     func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {

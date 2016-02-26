@@ -13,7 +13,7 @@ class DateUtil {
     static let calendar = NSCalendar.currentCalendar()
     static let dateFormatter = NSDateFormatter()
     static func stringToDate(dateStr:String)->NSDate{
-        return NSDate(fromString:  dateStr, format: .ISO8601(ISO8601Format.DateTimeSec))
+        return NSDate(fromString:  dateStr, format: .ISO8601(ISO8601Format.DateTimeMilliSec))
     }
     
     static func dateToString(date:NSDate,dateFormat:String)->String{

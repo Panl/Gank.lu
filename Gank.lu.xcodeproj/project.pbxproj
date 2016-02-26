@@ -27,6 +27,7 @@
 		BEAA9C7D1C8049AE00DD7EAD /* CategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEAA9C7B1C8049AE00DD7EAD /* CategoryViewController.xib */; };
 		BEAA9C821C804A3900DD7EAD /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAA9C801C804A3900DD7EAD /* CategoryCell.swift */; };
 		BEAA9C831C804A3900DD7EAD /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEAA9C811C804A3900DD7EAD /* CategoryCell.xib */; };
+		BEAA9C851C80865E00DD7EAD /* GirlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAA9C841C80865E00DD7EAD /* GirlViewController.swift */; };
 		BEB6B5A51C7F6771004C50F9 /* GankModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB6B5A41C7F6771004C50F9 /* GankModel.swift */; };
 		BEC684761C42B3560036F73F /* GankHttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC684751C42B3560036F73F /* GankHttpClient.swift */; };
 		BEEF9EAD1C3D3D6F00125F03 /* GankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF9EAC1C3D3D6F00125F03 /* GankViewController.swift */; };
@@ -79,6 +80,7 @@
 		BEAA9C7B1C8049AE00DD7EAD /* CategoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryViewController.xib; sourceTree = "<group>"; };
 		BEAA9C801C804A3900DD7EAD /* CategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		BEAA9C811C804A3900DD7EAD /* CategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
+		BEAA9C841C80865E00DD7EAD /* GirlViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GirlViewController.swift; sourceTree = "<group>"; };
 		BEB6B5A41C7F6771004C50F9 /* GankModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GankModel.swift; sourceTree = "<group>"; };
 		BEC684751C42B3560036F73F /* GankHttpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GankHttpClient.swift; sourceTree = "<group>"; };
 		BEEF9EAC1C3D3D6F00125F03 /* GankViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GankViewController.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 				BE2F0AC11C78740500A0CA63 /* AboutViewController.swift */,
 				BE0DDA821C796CAF00B369E0 /* BatteryViewController.swift */,
 				BEAA9C7A1C8049AE00DD7EAD /* CategoryViewController.swift */,
+				BEAA9C841C80865E00DD7EAD /* GirlViewController.swift */,
 				BEAA9C7B1C8049AE00DD7EAD /* CategoryViewController.xib */,
 			);
 			name = UIControllers;
@@ -430,6 +433,7 @@
 				BE30A24F1C7F49CB0072C1B2 /* BeautyCell.swift in Sources */,
 				BE2F0AC21C78740500A0CA63 /* AboutViewController.swift in Sources */,
 				BEA575CD1C75765900696093 /* GankCell.swift in Sources */,
+				BEAA9C851C80865E00DD7EAD /* GirlViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
