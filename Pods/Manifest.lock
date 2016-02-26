@@ -5,6 +5,7 @@ PODS:
   - Kingfisher (2.0.1)
   - MBProgressHUD (0.9.2)
   - MJRefresh (3.1.0)
+  - PagingMenuController (0.8.0)
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
@@ -14,6 +15,7 @@ DEPENDENCIES:
   - Kingfisher (~> 2.0)
   - MBProgressHUD (~> 0.9.2)
   - MJRefresh
+  - PagingMenuController
   - SwiftyJSON
 
 SPEC CHECKSUMS:
@@ -23,6 +25,7 @@ SPEC CHECKSUMS:
   Kingfisher: 3af2020040453f710507819e6aa5f5721da03d9b
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   MJRefresh: 743e6404967d1c2c688472ea3ecfde247d872db4
+  PagingMenuController: 1a9ff8ad0ab9704f215706997c1a624bc951f508
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
 COCOAPODS: 0.39.0
