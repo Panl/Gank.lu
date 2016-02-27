@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import RainbowNavigation
 
 class BaseViewController: UIViewController{
     let navColor = UIColor(red: 44/255.0, green: 62/255.0, blue: 80/255.0, alpha: 1.0)
