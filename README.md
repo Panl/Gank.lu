@@ -1,6 +1,9 @@
 # Gank.lu
->gank.io client for ios  
+>**gank.io client for ios**  
 >本项目用于记录ios开发的学习过程。跟着[Kevin](https://github.com/kevinzhow)大神的视频学习。
+
+
+- Android版本的客户端请移步[Gank.io](https://github.com/Panl/Gank.io)
 
 ![](screenshots/appIcon.png)
 
@@ -32,7 +35,7 @@
 #####第三阶段
 - 使用[AFDateHelper](https://github.com/melvitax/AFDateHelper)进行日期处理(2016.2.26)
 - 使用[PagingMenuController](https://github.com/kitasuke/PagingMenuController)实现类似Android上面ViewPager的效果，实现分类浏览干货功能(2016.2.26)
-- 使用ScrollView和ImageView相结合实现了图片的课缩放效果(2016.2.26)
+- 使用ScrollView和ImageView相结合实现了图片的缩放效果(2016.2.26)
 
 当然还有一些细节问题，花费了很多时间，作为学习swift以及ios开发的练手项目，到此就基本完成了，由于是新手，项目中难免有许多纰漏，欢迎批评指正。
 
