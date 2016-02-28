@@ -1,6 +1,7 @@
 # Gank.lu
 >**gank.io client for ios**  
->本项目用于记录ios开发的学习过程。跟着[Kevin](https://github.com/kevinzhow)大神的视频学习。
+>本项目用于记录ios开发的学习过程。跟着[Kevin](https://github.com/kevinzhow)大神的视频学习。  
+>[给女朋友的iOS开发教程](http://www.bilibili.com/video/av2953140/)
 
 
 - Android版本的客户端请移步[Gank.io](https://github.com/Panl/Gank.io)
@@ -40,6 +41,14 @@
 当然还有一些细节问题，花费了很多时间，作为学习swift以及ios开发的练手项目，到此就基本完成了，由于是新手，项目中难免有许多纰漏，欢迎批评指正。
 
 **当然这个项目会一直维护的，为了进一步学习，将来会添加各种炫酷的动画效果，敬请期待。。。**
+
+#####2.28日更新
+- 去掉无用代码
+- 添加.ignore文件忽略Pods文件夹
+
+
+#####Contributors
+- [DianQK](https://github.com/DianQK)
 
 ###LICENSE 
 Gank.lu is released under the GPL v3 license. See [LICENSE](LICENSE) for details.
