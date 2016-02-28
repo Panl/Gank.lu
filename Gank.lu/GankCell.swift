@@ -9,7 +9,6 @@
 import UIKit
 import SwiftyJSON
 
-
 class GankCell: UITableViewCell {
     
     @IBOutlet weak var typeLabel: UILabel!

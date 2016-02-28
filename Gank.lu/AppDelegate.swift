@@ -8,6 +8,8 @@
 
 import UIKit
 
+let navColor = UIColor(red: 44/255.0, green: 62/255.0, blue: 80/255.0, alpha: 1.0)
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -18,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         let navBar = UINavigationBar.appearance()
-        navBar.barTintColor = UIColor(red: 44/255.0, green: 62/255.0, blue: 80/255.0, alpha: 1.0)
+        navBar.barTintColor = navColor
         navBar.tintColor = UIColor.whiteColor()
         navBar.barStyle = .BlackTranslucent
         navBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]

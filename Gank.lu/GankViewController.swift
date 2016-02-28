@@ -11,7 +11,7 @@ import SwiftyJSON
 import MBProgressHUD
 import SafariServices
 
-class GankViewController: BaseViewController ,GankHttpDelegate{
+class GankViewController: UIViewController ,GankHttpDelegate{
 
     @IBOutlet weak var tableView: UITableView!
     var topImageHeight:CGFloat = 220

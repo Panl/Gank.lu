@@ -9,7 +9,7 @@
 import UIKit
 import PagingMenuController
 
-class BatteryViewController:BaseViewController{
+class BatteryViewController: UIViewController {
 
     
     let tabTitles = ["Android","iOS","前端","瞎推荐","拓展资源","App"]

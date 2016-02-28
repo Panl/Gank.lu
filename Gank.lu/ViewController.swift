@@ -13,7 +13,7 @@ import SwiftyJSON
 import MBProgressHUD
 import BubbleTransition
 
-class ViewController: BaseViewController ,GirlHttpDelegate{
+class ViewController: UIViewController, GirlHttpDelegate {
     var data:[GirlFlow] = []
     var girlFlow:GirlFlow?
     var girlUrl:String?

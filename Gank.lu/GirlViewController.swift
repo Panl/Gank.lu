@@ -9,11 +9,14 @@
 import UIKit
 import Kingfisher
 
-class GirlViewController: BaseViewController,UIScrollViewDelegate
-{
+class GirlViewController: UIViewController, UIScrollViewDelegate {
+    
     var girlUrl:String?
+    
     @IBOutlet weak var scrollView: UIScrollView!
+    
     @IBOutlet weak var girlImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //self.automaticallyAdjustsScrollViewInsets = false
