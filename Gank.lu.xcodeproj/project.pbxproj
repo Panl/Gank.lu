@@ -19,7 +19,6 @@
 		BE3078D41C38272500B007EA /* Gank_luUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3078D31C38272500B007EA /* Gank_luUITests.swift */; };
 		BE30A24F1C7F49CB0072C1B2 /* BeautyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE30A24D1C7F49CB0072C1B2 /* BeautyCell.swift */; };
 		BE30A2501C7F49CB0072C1B2 /* BeautyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE30A24E1C7F49CB0072C1B2 /* BeautyCell.xib */; };
-		BEA575CB1C75582200696093 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA575CA1C75582200696093 /* BaseViewController.swift */; };
 		BEA575CD1C75765900696093 /* GankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA575CC1C75765900696093 /* GankCell.swift */; };
 		BEA575CF1C75A22C00696093 /* DateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA575CE1C75A22C00696093 /* DateUtil.swift */; };
 		BEA575D21C75ADE600696093 /* ToastUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA575D11C75ADE600696093 /* ToastUtil.swift */; };
@@ -31,6 +30,7 @@
 		BEB6B5A51C7F6771004C50F9 /* GankModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB6B5A41C7F6771004C50F9 /* GankModel.swift */; };
 		BEC684761C42B3560036F73F /* GankHttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC684751C42B3560036F73F /* GankHttpClient.swift */; };
 		BEEF9EAD1C3D3D6F00125F03 /* GankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF9EAC1C3D3D6F00125F03 /* GankViewController.swift */; };
+		FEDBE9D21A287E2E8EFFB4AA /* Pods_Gank_lu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D28F4D072E067E5013C50BC2 /* Pods_Gank_lu.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +52,7 @@
 
 /* Begin PBXFileReference section */
 		1B738C319521A4EC4231D580 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		35A7F52EECB87B5E69D59509 /* Pods-Gank.lu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gank.lu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gank.lu/Pods-Gank.lu.debug.xcconfig"; sourceTree = "<group>"; };
 		45B557E3385F2047EA8646D9 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CDD4AD1C5DF42823A1B3660 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		BE0DDA821C796CAF00B369E0 /* BatteryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BatteryViewController.swift; sourceTree = "<group>"; };
@@ -72,7 +73,6 @@
 		BE30A24D1C7F49CB0072C1B2 /* BeautyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeautyCell.swift; sourceTree = "<group>"; };
 		BE30A24E1C7F49CB0072C1B2 /* BeautyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BeautyCell.xib; sourceTree = "<group>"; };
 		BE424F751C70D76A00F57CDE /* Gank.lu-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Gank.lu-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
-		BEA575CA1C75582200696093 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		BEA575CC1C75765900696093 /* GankCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GankCell.swift; sourceTree = "<group>"; };
 		BEA575CE1C75A22C00696093 /* DateUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateUtil.swift; sourceTree = "<group>"; };
 		BEA575D11C75ADE600696093 /* ToastUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastUtil.swift; sourceTree = "<group>"; };
@@ -84,6 +84,8 @@
 		BEB6B5A41C7F6771004C50F9 /* GankModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GankModel.swift; sourceTree = "<group>"; };
 		BEC684751C42B3560036F73F /* GankHttpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GankHttpClient.swift; sourceTree = "<group>"; };
 		BEEF9EAC1C3D3D6F00125F03 /* GankViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GankViewController.swift; sourceTree = "<group>"; };
+		CA4513CF16E7299339BCDB9D /* Pods-Gank.lu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gank.lu.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gank.lu/Pods-Gank.lu.release.xcconfig"; sourceTree = "<group>"; };
+		D28F4D072E067E5013C50BC2 /* Pods_Gank_lu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gank_lu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5793259D04AE26C50315E7FB /* Pods.framework in Frameworks */,
+				FEDBE9D21A287E2E8EFFB4AA /* Pods_Gank_lu.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +120,8 @@
 			children = (
 				8CDD4AD1C5DF42823A1B3660 /* Pods.debug.xcconfig */,
 				1B738C319521A4EC4231D580 /* Pods.release.xcconfig */,
+				35A7F52EECB87B5E69D59509 /* Pods-Gank.lu.debug.xcconfig */,
+				CA4513CF16E7299339BCDB9D /* Pods-Gank.lu.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -201,7 +206,6 @@
 			children = (
 				BE3078B51C38272500B007EA /* ViewController.swift */,
 				BEEF9EAC1C3D3D6F00125F03 /* GankViewController.swift */,
-				BEA575CA1C75582200696093 /* BaseViewController.swift */,
 				BE2F0AC11C78740500A0CA63 /* AboutViewController.swift */,
 				BE0DDA821C796CAF00B369E0 /* BatteryViewController.swift */,
 				BEAA9C7A1C8049AE00DD7EAD /* CategoryViewController.swift */,
@@ -227,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				45B557E3385F2047EA8646D9 /* Pods.framework */,
+				D28F4D072E067E5013C50BC2 /* Pods_Gank_lu.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -379,7 +384,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gank.lu/Pods-Gank.lu-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C6C1FF9A9AA95837A3FFC627 /* Check Pods Manifest.lock */ = {
@@ -409,7 +414,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gank.lu/Pods-Gank.lu-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -429,7 +434,6 @@
 				BEA575D21C75ADE600696093 /* ToastUtil.swift in Sources */,
 				BE3078B41C38272500B007EA /* AppDelegate.swift in Sources */,
 				BEA575CF1C75A22C00696093 /* DateUtil.swift in Sources */,
-				BEA575CB1C75582200696093 /* BaseViewController.swift in Sources */,
 				BE30A24F1C7F49CB0072C1B2 /* BeautyCell.swift in Sources */,
 				BE2F0AC21C78740500A0CA63 /* AboutViewController.swift in Sources */,
 				BEA575CD1C75765900696093 /* GankCell.swift in Sources */,
@@ -524,7 +528,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -563,7 +567,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -573,7 +577,7 @@
 		};
 		BE3078D91C38272500B007EA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8CDD4AD1C5DF42823A1B3660 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 35A7F52EECB87B5E69D59509 /* Pods-Gank.lu.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -589,7 +593,7 @@
 		};
 		BE3078DA1C38272500B007EA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1B738C319521A4EC4231D580 /* Pods.release.xcconfig */;
+			baseConfigurationReference = CA4513CF16E7299339BCDB9D /* Pods-Gank.lu.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

@@ -1,6 +1,0 @@
-framework module BubbleTransition {
-  umbrella header "BubbleTransition-umbrella.h"
-
-  export *
-  module * { export * }
-}

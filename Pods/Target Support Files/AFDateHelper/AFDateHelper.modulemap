@@ -1,6 +1,0 @@
-framework module AFDateHelper {
-  umbrella header "AFDateHelper-umbrella.h"
-
-  export *
-  module * { export * }
-}
