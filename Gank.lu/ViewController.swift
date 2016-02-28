@@ -40,12 +40,12 @@ class ViewController: BaseViewController ,GirlHttpDelegate{
     
     func initMJRefresh(){
         let mjHeader = MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: "pullToRefresh")
-        mjHeader.lastUpdatedTimeLabel.hidden = true
-        mjHeader.stateLabel.textColor = UIColor.whiteColor()
+        mjHeader.lastUpdatedTimeLabel!.hidden = true
+        mjHeader.stateLabel!.textColor = UIColor.whiteColor()
         tableView.mj_header = mjHeader
         tableView.mj_header.beginRefreshing()
         let mjFooter = MJRefreshBackNormalFooter(refreshingTarget: self, refreshingAction: "pullToLoadMore")
-        mjFooter.stateLabel.textColor = UIColor.whiteColor()
+        mjFooter.stateLabel!.textColor = UIColor.whiteColor()
         tableView.mj_footer = mjFooter
     }
     
