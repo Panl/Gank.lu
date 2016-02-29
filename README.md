@@ -1,5 +1,5 @@
 # Gank.lu
-[英文版](README-EN.md)
+[English](README-EN.md)
 >**gank.io ios客户端**  
 >本项目用于记录ios开发的学习过程。跟着[Kevin](https://github.com/kevinzhow)大神的视频学习。  
 >[给女朋友的iOS开发教程](http://www.bilibili.com/video/av2953140/)
