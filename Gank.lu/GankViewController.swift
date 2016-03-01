@@ -111,8 +111,9 @@ extension GankViewController:UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let url = gankData[indexPath.row].url
-        let SFSafari = SFSafariViewController(URL: NSURL(string:url)!, entersReaderIfAvailable: true)
+        let gankUrl = gankData[indexPath.row].url.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLFragmentAllowedCharacterSet())!
+        print(gankUrl)
+        let SFSafari = SFSafariViewController(URL: NSURL(string:gankUrl)!, entersReaderIfAvailable: true)
         self.presentViewController(SFSafari, animated: true, completion: nil)
     }
     

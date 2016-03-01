@@ -28,6 +28,9 @@ class GankHttp {
     
     func fetchGirlData(page:Int){
         let requestUrl = (baseUrl + "data/福利/\(requestNumber)/\(page)").stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLFragmentAllowedCharacterSet())
+        
+        print(requestUrl)
+        
         Alamofire.request(.GET, requestUrl!).responseJSON(){
             response in
             guard let json = response.result.value else{
