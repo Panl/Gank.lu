@@ -5,6 +5,7 @@
 >[给女朋友的iOS开发教程](http://www.bilibili.com/video/av2953140/)
 
 - Android版本的客户端请移步[Gank.io](https://github.com/Panl/Gank.io)
+- 作者的学习经历已经写成了一篇文章 [一个android程序猿的iOS学习之路](https://panl.github.io/2016/03/02/android-to-ios/)
 
 ![](screenshots/appIcon.png)
 
