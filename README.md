@@ -1,7 +1,7 @@
 # Gank.lu
 [English](README-EN.md)
->**gank.io ios客户端**  
->本项目用于记录ios开发的学习过程。跟着[Kevin](https://github.com/kevinzhow)大神的视频学习。  
+>**gank.io iOS客户端**  
+>本项目用于记录iOS开发的学习过程。跟着[Kevin](https://github.com/kevinzhow)大神的视频学习。  
 >[给女朋友的iOS开发教程](http://www.bilibili.com/video/av2953140/)
 
 - Android版本的客户端请移步[Gank.io](https://github.com/Panl/Gank.io)
@@ -20,7 +20,7 @@
 #####前期准备
 - Swift 2.1基本语法
 - Xcode 的基本操作
-- ios 开发的基本流程
+- iOS 开发的基本流程
 
 
 #####第一阶段
@@ -39,7 +39,7 @@
 - 使用[PagingMenuController](https://github.com/kitasuke/PagingMenuController)实现类似Android上面ViewPager的效果，实现分类浏览干货功能(2016.2.26)
 - 使用UIScrollView和UIImageView相结合实现了图片的缩放效果(2016.2.26)
 
-当然还有一些细节问题，花费了很多时间，作为学习swift以及ios开发的练手项目，到此就基本完成了，由于是新手，项目中难免有许多纰漏，欢迎批评指正。
+当然还有一些细节问题，花费了很多时间，作为学习swift以及iOS开发的练手项目，到此就基本完成了，由于是新手，项目中难免有许多纰漏，欢迎批评指正。
 
 **当然这个项目会一直维护的，为了进一步学习，将来会添加各种炫酷的动画效果，敬请期待。。。**
 
@@ -52,5 +52,5 @@
 #####贡献者
 - [DianQK](https://github.com/DianQK)
 
-###LICENSE 
+###LICENSE
 Gank.lu is released under the GPL v3 license. See [LICENSE](LICENSE) for details.
