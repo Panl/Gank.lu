@@ -132,8 +132,8 @@ extension ViewController:UITableViewDataSource,UITableViewDelegate,UIViewControl
             UIView.animateWithDuration(0.5){
                 cell.cardView.center.y -= cell.cardView.bounds.height/1.5
             }
+            showedPosition = indexPath.row
         }
-        showedPosition = indexPath.row
         return cell
     }
     

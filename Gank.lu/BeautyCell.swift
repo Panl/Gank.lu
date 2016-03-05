@@ -27,6 +27,7 @@ class BeautyCell: UITableViewCell {
     }
     
     func setCellViews(girlFlow:GirlFlow){
+        self.beautyImageView.backgroundColor = UIColor.randomColor()
         self.beautyImageView.kf_setImageWithURL(NSURL(string: girlFlow.url)!)
         self.nickNameLabel.text = girlFlow.who
         let date = DateUtil.stringToDate(girlFlow.publishedAt)
@@ -47,4 +48,13 @@ class BeautyCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+}
+
+extension UIColor{
+    static func randomColor()->UIColor{
+        let red = CGFloat(arc4random_uniform(255))
+        let green = CGFloat(arc4random_uniform(255))
+        let blue = CGFloat(arc4random_uniform(255))
+        return UIColor(red: red/255, green: green/255, blue: blue/255, alpha: 0.8)
+    }
 }

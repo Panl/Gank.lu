@@ -18,7 +18,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ES9-lS-Mzr">
                         <rect key="frame" x="5" y="8" width="310" height="303"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scene" translatesAutoresizingMaskIntoConstraints="NO" id="xzr-K7-j8d">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xzr-K7-j8d">
                                 <rect key="frame" x="0.0" y="0.0" width="310" height="248"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="xzr-K7-j8d" secondAttribute="height" multiplier="5:4" id="BRf-aQ-nh2"/>
@@ -113,7 +113,4 @@
             <point key="canvasLocation" x="182" y="330"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="scene" width="480" height="426"/>
-    </resources>
 </document>
