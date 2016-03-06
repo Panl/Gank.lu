@@ -1,6 +1,6 @@
 # Gank.lu 
 [中文版](README.md)
-> **gank.io client for ios**  
+> **gank.io client for iOS**  
 > This project recorded the process of learning iOS development  
 > follow [Kevin's](https://github.com/kevinzhow) video guide -> [iOS With Girlfriend](http://www.bilibili.com/video/av2953140/)
 
