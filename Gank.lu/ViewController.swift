@@ -23,7 +23,8 @@ class ViewController: UIViewController, GirlHttpDelegate {
     let transition = BubbleTransition()
     var batteryCenter = CGPointMake(0, 0)
     var showedPosition = 0
-    
+    var lastContentY:CGFloat = 0
+
     @IBOutlet weak var batteryButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
@@ -36,7 +37,10 @@ class ViewController: UIViewController, GirlHttpDelegate {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 420
         initMJRefresh()
+        batteryButton.layoutIfNeeded()
+        batteryCenter = batteryButton.center
     }
+    
     
     func initMJRefresh(){
         let mjHeader = MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: "pullToRefresh")
@@ -187,6 +191,22 @@ extension ViewController:UITableViewDataSource,UITableViewDelegate,UIViewControl
         transition.bubbleColor = navColor
         return transition
     }
+    func scrollViewWillBeginDragging(scrollView: UIScrollView) {
+        lastContentY = scrollView.contentOffset.y
+    }
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        if lastContentY < scrollView.contentOffset.y {
+                UIView.animateWithDuration(0.15, animations: {
+                self.batteryButton.center.y = self.view.bounds.height + self.batteryButton.frame.height/2 }, completion:nil)
+        }else{
+            //if self.batteryButton.hidden{
+                UIView.animateWithDuration(0.15, animations: {
+                    self.batteryButton.center = self.batteryCenter
+                    }, completion: nil)
+            //}
+        }
+    }
+    
 }
 
 

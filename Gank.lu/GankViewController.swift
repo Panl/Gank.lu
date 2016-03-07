@@ -19,7 +19,6 @@ class GankViewController: UIViewController ,GankHttpDelegate{
     var topImageView:UIImageView!
     var gankData:[Gank] = []
     var hud:MBProgressHUD?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         initTableView()
@@ -116,13 +115,14 @@ extension GankViewController:UITableViewDelegate,UITableViewDataSource{
         let SFSafari = SFSafariViewController(URL: NSURL(string:gankUrl)!, entersReaderIfAvailable: true)
         self.presentViewController(SFSafari, animated: true, completion: nil)
     }
-    
+   
     func scrollViewDidScroll(scrollView: UIScrollView) {
         let offsetY = scrollView.contentOffset.y
         if offsetY < -topImageHeight{
             topImageView.frame.origin.y = offsetY
             topImageView.frame.size.height = -offsetY
         }
+        
     }
     
 }
