@@ -133,7 +133,7 @@ extension ViewController:UITableViewDataSource,UITableViewDelegate,UIViewControl
         cell.setCellViews(girlFlow)
         cell.addGirlAction(indexPath,target:self, action: Selector("showImage:"))
         if indexPath.row > showedPosition {
-            UIView.animateWithDuration(0.5){
+            UIView.animateWithDuration(0.35){
                 cell.cardView.center.y -= cell.cardView.bounds.height/1.5
             }
             showedPosition = indexPath.row
@@ -196,14 +196,12 @@ extension ViewController:UITableViewDataSource,UITableViewDelegate,UIViewControl
     }
     func scrollViewDidScroll(scrollView: UIScrollView) {
         if lastContentY < scrollView.contentOffset.y {
-                UIView.animateWithDuration(0.15, animations: {
+            UIView.animateWithDuration(0.15, animations: {
                 self.batteryButton.center.y = self.view.bounds.height + self.batteryButton.frame.height/2 }, completion:nil)
         }else{
-            //if self.batteryButton.hidden{
-                UIView.animateWithDuration(0.15, animations: {
+            UIView.animateWithDuration(0.15, animations: {
                     self.batteryButton.center = self.batteryCenter
                     }, completion: nil)
-            //}
         }
     }
     
