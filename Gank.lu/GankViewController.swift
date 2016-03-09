@@ -19,6 +19,9 @@ class GankViewController: UIViewController ,GankHttpDelegate{
     var topImageView:UIImageView!
     var gankData:[Gank] = []
     var hud:MBProgressHUD?
+    let gankCell = "gankCell"
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initTableView()
@@ -84,7 +87,6 @@ class GankViewController: UIViewController ,GankHttpDelegate{
     }
     
     func gankFetchFailed() {
-        print("failed")
         hud?.hide(true)
         ToastUtil.showTextToast(self.view,toastStr: "数据加载失败...")
     }
@@ -100,7 +102,7 @@ extension GankViewController:UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-         let cell = tableView.dequeueReusableCellWithIdentifier("gankCell",forIndexPath:indexPath) as! GankCell
+         let cell = tableView.dequeueReusableCellWithIdentifier(gankCell,forIndexPath:indexPath) as! GankCell
         cell.setGankViews(gankData[indexPath.row])
         return cell
     }

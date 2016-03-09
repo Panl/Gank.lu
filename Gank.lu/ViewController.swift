@@ -24,6 +24,10 @@ class ViewController: UIViewController, GirlHttpDelegate {
     var batteryCenter = CGPointMake(0, 0)
     var showedPosition = 0
     var lastContentY:CGFloat = 0
+    let showGank = "showGank"
+    let showImage = "showImage"
+    let beautyCell = "BeautyCell"
+    let showBattery = "showBattery"
 
     @IBOutlet weak var batteryButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
@@ -32,7 +36,7 @@ class ViewController: UIViewController, GirlHttpDelegate {
         // Do any additional setup after loading the view, typically from a nib.
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.registerNib(UINib(nibName: "BeautyCell",bundle: nil), forCellReuseIdentifier: "BeautyCell")
+        tableView.registerNib(UINib(nibName: beautyCell,bundle: nil), forCellReuseIdentifier: beautyCell)
         GankHttp.shareInstance.girlDelegate = self
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 420
@@ -128,7 +132,7 @@ extension ViewController:UITableViewDataSource,UITableViewDelegate,UIViewControl
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let girlFlow = data[indexPath.row]
-        let cell = tableView.dequeueReusableCellWithIdentifier("BeautyCell", forIndexPath: indexPath) as! BeautyCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(beautyCell, forIndexPath: indexPath) as! BeautyCell
         cell.selectionStyle = UITableViewCellSelectionStyle.None
         cell.setCellViews(girlFlow)
         cell.addGirlAction(indexPath,target:self, action: Selector("showImage:"))
@@ -144,7 +148,7 @@ extension ViewController:UITableViewDataSource,UITableViewDelegate,UIViewControl
     func showImage(sender:UIGestureRecognizer){
         let girlImage = sender.view as! UIImageView
         girlUrl = data[girlImage.tag].url
-        performSegueWithIdentifier("showImage", sender: nil)
+        performSegueWithIdentifier(showImage, sender: nil)
 
     }
     
@@ -155,19 +159,19 @@ extension ViewController:UITableViewDataSource,UITableViewDelegate,UIViewControl
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         girlFlow = data[indexPath.row]
-        performSegueWithIdentifier("showGank", sender: nil)
+        performSegueWithIdentifier(showGank, sender: nil)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "showGank" {
+        if segue.identifier == showGank {
             let gankViewController = segue.destinationViewController as! GankViewController
             gankViewController.girl
                 = girlFlow
-        }else if segue.identifier == "showBattery"{
+        }else if segue.identifier == showBattery{
             let batteryViewController = segue.destinationViewController
             batteryViewController.transitioningDelegate = self
             batteryViewController.modalPresentationStyle = .Custom
-        }else if segue.identifier == "showImage"{
+        }else if segue.identifier == showImage{
             let girlViewController = segue.destinationViewController as! GirlViewController
             girlViewController.girlUrl = girlUrl
         }
