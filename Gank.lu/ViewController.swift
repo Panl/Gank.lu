@@ -16,7 +16,6 @@ import BubbleTransition
 class ViewController: UIViewController, GirlHttpDelegate {
     var data:[GirlFlow] = []
     var girlFlow:GirlFlow?
-    var girlUrl:String?
     var loadingMore = false
     var page:Int = 1
     var loadMoreText = UILabel()
@@ -147,7 +146,7 @@ extension ViewController:UITableViewDataSource,UITableViewDelegate,UIViewControl
     
     func showImage(sender:UIGestureRecognizer){
         let girlImage = sender.view as! UIImageView
-        girlUrl = data[girlImage.tag].url
+        girlFlow = data[girlImage.tag]
         performSegueWithIdentifier(showImage, sender: nil)
 
     }
@@ -173,7 +172,7 @@ extension ViewController:UITableViewDataSource,UITableViewDelegate,UIViewControl
             batteryViewController.modalPresentationStyle = .Custom
         }else if segue.identifier == showImage{
             let girlViewController = segue.destinationViewController as! GirlViewController
-            girlViewController.girlUrl = girlUrl
+            girlViewController.girl = girlFlow
         }
             
     }

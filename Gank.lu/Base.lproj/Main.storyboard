@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Girl View Controller-->
+        <!--Title-->
         <scene sceneID="Ckk-t0-chv">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="cod-GI-dIR" customClass="GirlViewController" customModule="Gank_lu" customModuleProvider="target" sceneMemberID="viewController">
@@ -51,6 +51,13 @@
                             <constraint firstItem="Bxz-N1-xWZ" firstAttribute="leading" secondItem="w8a-Lg-pI3" secondAttribute="leading" id="crB-RN-uol"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="uPM-hS-OCl">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="2Gf-MK-qPg">
+                            <connections>
+                                <action selector="saveGirl:" destination="cod-GI-dIR" id="YUE-s7-3S2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="girlImageView" destination="DeY-RU-pVM" id="0Wi-uo-05V"/>
                         <outlet property="scrollView" destination="Bxz-N1-xWZ" id="bsK-XN-zsj"/>

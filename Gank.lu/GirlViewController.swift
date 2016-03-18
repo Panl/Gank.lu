@@ -11,7 +11,7 @@ import Kingfisher
 
 class GirlViewController: UIViewController, UIScrollViewDelegate {
     
-    var girlUrl:String?
+    var girl:GirlFlow?
     
     @IBOutlet weak var scrollView: UIScrollView!
     
@@ -19,13 +19,22 @@ class GirlViewController: UIViewController, UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.automaticallyAdjustsScrollViewInsets = false
         self.scrollView.minimumZoomScale = 1.0
         self.scrollView.maximumZoomScale = 4.0
         self.scrollView.delegate = self
-        girlImageView.kf_setImageWithURL(NSURL(string: girlUrl!)!)
+        girlImageView.kf_setImageWithURL(NSURL(string: (girl?.url)!)!)
+        let date = DateUtil.stringToDate((girl?.publishedAt)!)
+        self.title = DateUtil.dateToString(date, dateFormat: "yyyy/MM/dd")
+
     }
 
+    @IBAction func saveGirl(sender: AnyObject) {
+        UIImageWriteToSavedPhotosAlbum(girlImageView.image!, self, Selector("image:didFinishSavingWithError:contextInfo:"), nil)
+    }
+    
+    func image(image:UIImage,didFinishSavingWithError:NSError,contextInfo:AnyObject){
+        ToastUtil.showTextToast(self.scrollView, toastStr: "保存成功")
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
