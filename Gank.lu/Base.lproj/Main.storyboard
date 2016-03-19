@@ -4,9 +4,10 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10083"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
-        <!--Title-->
+        <!--girl-->
         <scene sceneID="Ckk-t0-chv">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="cod-GI-dIR" customClass="GirlViewController" customModule="Gank_lu" customModuleProvider="target" sceneMemberID="viewController">
@@ -51,12 +52,19 @@
                             <constraint firstItem="Bxz-N1-xWZ" firstAttribute="leading" secondItem="w8a-Lg-pI3" secondAttribute="leading" id="crB-RN-uol"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="uPM-hS-OCl">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="2Gf-MK-qPg">
-                            <connections>
-                                <action selector="saveGirl:" destination="cod-GI-dIR" id="YUE-s7-3S2"/>
-                            </connections>
-                        </barButtonItem>
+                    <navigationItem key="navigationItem" title="girl" id="uPM-hS-OCl">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="save" id="2Gf-MK-qPg">
+                                <connections>
+                                    <action selector="saveGirl:" destination="cod-GI-dIR" id="YUE-s7-3S2"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="action" id="0xd-fb-CU9">
+                                <connections>
+                                    <action selector="shareAction:" destination="cod-GI-dIR" id="a8g-nx-v29"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="girlImageView" destination="DeY-RU-pVM" id="0Wi-uo-05V"/>
