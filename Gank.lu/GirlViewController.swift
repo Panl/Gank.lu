@@ -39,6 +39,7 @@ class GirlViewController: UIViewController, UIScrollViewDelegate {
     }
     
     func image(image:UIImage,didFinishSavingWithError:NSError,contextInfo:AnyObject){
+        //TODO 判断一些事情
         ToastUtil.showTextToast(self.scrollView, toastStr: "保存成功")
     }
     override func didReceiveMemoryWarning() {
