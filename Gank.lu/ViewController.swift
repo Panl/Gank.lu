@@ -46,12 +46,12 @@ class ViewController: UIViewController, GirlHttpDelegate {
     
     
     func initMJRefresh(){
-        let mjHeader = MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: "pullToRefresh")
+        let mjHeader = MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: #selector(ViewController.pullToRefresh))
         mjHeader.lastUpdatedTimeLabel!.hidden = true
         mjHeader.stateLabel!.textColor = UIColor.whiteColor()
         tableView.mj_header = mjHeader
         tableView.mj_header.beginRefreshing()
-        let mjFooter = MJRefreshBackNormalFooter(refreshingTarget: self, refreshingAction: "pullToLoadMore")
+        let mjFooter = MJRefreshBackNormalFooter(refreshingTarget: self, refreshingAction: #selector(ViewController.pullToLoadMore))
         mjFooter.stateLabel!.textColor = UIColor.whiteColor()
         tableView.mj_footer = mjFooter
     }
@@ -134,7 +134,7 @@ extension ViewController:UITableViewDataSource,UITableViewDelegate,UIViewControl
         let cell = tableView.dequeueReusableCellWithIdentifier(beautyCell, forIndexPath: indexPath) as! BeautyCell
         cell.selectionStyle = UITableViewCellSelectionStyle.None
         cell.setCellViews(girlFlow)
-        cell.addGirlAction(indexPath,target:self, action: Selector("showImage:"))
+        cell.addGirlAction(indexPath,target:self, action: #selector(ViewController.showImage(_:)))
         if indexPath.row > showedPosition {
             UIView.animateWithDuration(0.35){
                 cell.cardView.center.y -= cell.cardView.bounds.height/1.5

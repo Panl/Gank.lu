@@ -35,7 +35,7 @@ class GirlViewController: UIViewController, UIScrollViewDelegate {
         self.presentViewController(vc, animated: true, completion: nil)
     }
     @IBAction func saveGirl(sender: AnyObject) {
-        UIImageWriteToSavedPhotosAlbum(girlImageView.image!, self, Selector("image:didFinishSavingWithError:contextInfo:"), nil)
+        UIImageWriteToSavedPhotosAlbum(girlImageView.image!, self, #selector(GirlViewController.image(_:didFinishSavingWithError:contextInfo:)), nil)
     }
     
     func image(image:UIImage,didFinishSavingWithError:NSError,contextInfo:AnyObject){

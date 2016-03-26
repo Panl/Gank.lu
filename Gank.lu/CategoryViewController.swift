@@ -32,12 +32,12 @@ class CategoryViewController: UITableViewController {
     }
     
     func initMJRefresh(){
-        let MJHeader = MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: "pullToRefresh")
+        let MJHeader = MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: #selector(CategoryViewController.pullToRefresh))
         MJHeader.lastUpdatedTimeLabel!.hidden = true
         tableView.mj_header = MJHeader
         tableView.mj_header.beginRefreshing()
         
-        tableView.mj_footer = MJRefreshBackNormalFooter(refreshingTarget: self, refreshingAction: "pullToLoadMore")
+        tableView.mj_footer = MJRefreshBackNormalFooter(refreshingTarget: self, refreshingAction: #selector(CategoryViewController.pullToLoadMore))
     }
     
     func pullToRefresh(){
