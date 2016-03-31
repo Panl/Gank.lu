@@ -29,7 +29,7 @@ class GirlViewController: UIViewController, UIScrollViewDelegate {
 
     }
     @IBAction func shareAction(sender: UIBarButtonItem) {
-        let message = "发现了一款看妹子的小app「Gank.lu」,  同时有很多程序员干货哦，^_^"
+        let message = "发现了一款看妹子的小app「Gank.lu」, 同时有很多程序员干货哦，^_^"
         let urlToShare = NSURL(string: "https://github.com/Panl/Gank.lu")
         let vc = UIActivityViewController(activityItems: [message,girlImageView.image!,urlToShare!], applicationActivities: nil)
         self.presentViewController(vc, animated: true, completion: nil)
