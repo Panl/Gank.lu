@@ -453,16 +453,10 @@ pod 'PagingMenuController'</string>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <outlet property="delegate" destination="QCe-QZ-YNj" id="n3p-PD-1Ii"/>
                         <segue destination="P3c-Fr-euO" kind="relationship" relationship="rootViewController" id="baf-wr-oOR"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="anf-MM-8GH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="QCe-QZ-YNj" customClass="RippleNavigationDelegate" customModule="Gank_lu" customModuleProvider="target">
-                    <connections>
-                        <outlet property="navigationController" destination="lcz-WJ-P4Z" id="ma5-SN-rgT"/>
-                    </connections>
-                </customObject>
             </objects>
             <point key="canvasLocation" x="1070" y="-355"/>
         </scene>

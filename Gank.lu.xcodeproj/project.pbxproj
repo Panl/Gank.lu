@@ -18,8 +18,6 @@
 		BE3078D41C38272500B007EA /* Gank_luUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3078D31C38272500B007EA /* Gank_luUITests.swift */; };
 		BE30A24F1C7F49CB0072C1B2 /* BeautyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE30A24D1C7F49CB0072C1B2 /* BeautyCell.swift */; };
 		BE30A2501C7F49CB0072C1B2 /* BeautyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE30A24E1C7F49CB0072C1B2 /* BeautyCell.xib */; };
-		BE4FD3851CB6A5CA0070D136 /* RippleNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4FD3841CB6A5CA0070D136 /* RippleNavigationDelegate.swift */; };
-		BE4FD3871CB6A78C0070D136 /* RippleTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4FD3861CB6A78C0070D136 /* RippleTransitionAnimator.swift */; };
 		BEA575CD1C75765900696093 /* GankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA575CC1C75765900696093 /* GankCell.swift */; };
 		BEA575CF1C75A22C00696093 /* DateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA575CE1C75A22C00696093 /* DateUtil.swift */; };
 		BEA575D21C75ADE600696093 /* ToastUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA575D11C75ADE600696093 /* ToastUtil.swift */; };
@@ -73,8 +71,6 @@
 		BE30A24D1C7F49CB0072C1B2 /* BeautyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeautyCell.swift; sourceTree = "<group>"; };
 		BE30A24E1C7F49CB0072C1B2 /* BeautyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BeautyCell.xib; sourceTree = "<group>"; };
 		BE424F751C70D76A00F57CDE /* Gank.lu-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Gank.lu-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
-		BE4FD3841CB6A5CA0070D136 /* RippleNavigationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RippleNavigationDelegate.swift; sourceTree = "<group>"; };
-		BE4FD3861CB6A78C0070D136 /* RippleTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RippleTransitionAnimator.swift; sourceTree = "<group>"; };
 		BEA575CC1C75765900696093 /* GankCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GankCell.swift; sourceTree = "<group>"; };
 		BEA575CE1C75A22C00696093 /* DateUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateUtil.swift; sourceTree = "<group>"; };
 		BEA575D11C75ADE600696093 /* ToastUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastUtil.swift; sourceTree = "<group>"; };
@@ -167,8 +163,6 @@
 				BE3078B31C38272500B007EA /* AppDelegate.swift */,
 				BEC684751C42B3560036F73F /* GankHttpClient.swift */,
 				BEB6B5A41C7F6771004C50F9 /* GankModel.swift */,
-				BE4FD3841CB6A5CA0070D136 /* RippleNavigationDelegate.swift */,
-				BE4FD3861CB6A78C0070D136 /* RippleTransitionAnimator.swift */,
 				BEA575D01C75A23800696093 /* utils */,
 				BEC684741C42B3010036F73F /* UIControllers */,
 				BEEF9EB01C3D42F900125F03 /* cells */,
@@ -437,10 +431,8 @@
 				BE3078B41C38272500B007EA /* AppDelegate.swift in Sources */,
 				BEA575CF1C75A22C00696093 /* DateUtil.swift in Sources */,
 				BE30A24F1C7F49CB0072C1B2 /* BeautyCell.swift in Sources */,
-				BE4FD3871CB6A78C0070D136 /* RippleTransitionAnimator.swift in Sources */,
 				BE2F0AC21C78740500A0CA63 /* AboutViewController.swift in Sources */,
 				BEA575CD1C75765900696093 /* GankCell.swift in Sources */,
-				BE4FD3851CB6A5CA0070D136 /* RippleNavigationDelegate.swift in Sources */,
 				BEAA9C851C80865E00DD7EAD /* GirlViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
