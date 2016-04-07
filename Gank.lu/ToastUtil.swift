@@ -14,6 +14,5 @@ class ToastUtil {
         hud.mode = MBProgressHUDMode.Text
         hud.labelText = toastStr
         hud.hide(true, afterDelay: 2.0)
-        
     }
 }
