@@ -17,7 +17,7 @@ protocol GirlHttpDelegate{
     func girlFetchFailed()
 }
 class GankHttp {
-    let baseUrl = "http://gank.avosapps.com/api/"
+    let baseUrl = "http://gank.io/api/"
     let requestNumber = 20
     private static let singleInstance = GankHttp()
     var delegate:GankHttpDelegate?
