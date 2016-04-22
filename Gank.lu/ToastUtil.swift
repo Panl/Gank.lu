@@ -8,6 +8,7 @@
 
 import Foundation
 import MBProgressHUD
+
 class ToastUtil {
     static func showTextToast(view:UIView,toastStr:String){
         let hud = MBProgressHUD.showHUDAddedTo(view, animated: true)
