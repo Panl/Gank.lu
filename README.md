@@ -48,6 +48,9 @@
 - 去掉无用代码
 - 添加.ignore文件忽略Pods文件夹
 
+#####TODO
+- post gank
+
 
 #####贡献者
 - [DianQK](https://github.com/DianQK)
