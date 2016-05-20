@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1EE357411CEEF31F0028D4D7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1EE357401CEEF31F0028D4D7 /* GoogleService-Info.plist */; };
 		BE0DDA831C796CAF00B369E0 /* BatteryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0DDA821C796CAF00B369E0 /* BatteryViewController.swift */; };
 		BE2F0AC01C786D4A00A0CA63 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE2F0ABF1C786D4A00A0CA63 /* Images.xcassets */; };
 		BE2F0AC21C78740500A0CA63 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2F0AC11C78740500A0CA63 /* AboutViewController.swift */; };
@@ -51,6 +52,7 @@
 
 /* Begin PBXFileReference section */
 		1B738C319521A4EC4231D580 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		1EE357401CEEF31F0028D4D7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		35A7F52EECB87B5E69D59509 /* Pods-Gank.lu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gank.lu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gank.lu/Pods-Gank.lu.debug.xcconfig"; sourceTree = "<group>"; };
 		8CDD4AD1C5DF42823A1B3660 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		BE0DDA821C796CAF00B369E0 /* BatteryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BatteryViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				BE3078B31C38272500B007EA /* AppDelegate.swift */,
 				BEC684751C42B3560036F73F /* GankHttpClient.swift */,
 				BEB6B5A41C7F6771004C50F9 /* GankModel.swift */,
+				1EE357401CEEF31F0028D4D7 /* GoogleService-Info.plist */,
 				BEA575D01C75A23800696093 /* utils */,
 				BEC684741C42B3010036F73F /* UIControllers */,
 				BEEF9EB01C3D42F900125F03 /* cells */,
@@ -348,6 +351,7 @@
 				BE3078BE1C38272500B007EA /* LaunchScreen.storyboard in Resources */,
 				BEAA9C7D1C8049AE00DD7EAD /* CategoryViewController.xib in Resources */,
 				BE3078B91C38272500B007EA /* Main.storyboard in Resources */,
+				1EE357411CEEF31F0028D4D7 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

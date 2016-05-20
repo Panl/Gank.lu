@@ -11,4 +11,5 @@ target 'Gank.lu' do
   pod 'BubbleTransition', '~> 1.0.0'
   pod 'AFDateHelper'
   pod 'PagingMenuController'
+  pod 'Firebase'
 end

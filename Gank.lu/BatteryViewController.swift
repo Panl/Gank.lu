@@ -30,7 +30,7 @@ class BatteryViewController: UIViewController {
         options.selectedTextColor = UIColor.whiteColor()
         options.menuItemMode = .Underline(height: 3, color: UIColor.redColor(), horizontalPadding: 0, verticalPadding: 0)
         let pagingMenuController = self.childViewControllers.first as! PagingMenuController
-        pagingMenuController.setup(viewControllers: viewControllers, options: options)
+        pagingMenuController.setup(viewControllers, options: options)
     }
     
     

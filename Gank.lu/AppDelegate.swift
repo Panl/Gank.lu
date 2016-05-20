@@ -8,6 +8,7 @@
 //
 
 import UIKit
+import Firebase
 
 let navColor = UIColor(red: 44/255.0, green: 62/255.0, blue: 80/255.0, alpha: 1.0)
 
@@ -25,6 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navBar.tintColor = UIColor.whiteColor()
         navBar.barStyle = .BlackTranslucent
         navBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        
+        FIRApp.configure()
         
         return true
     }
