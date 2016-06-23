@@ -4,7 +4,7 @@
 > This project recorded the process of learning iOS development  
 > follow [Kevin's](https://github.com/kevinzhow) video guide -> [iOS With Girlfriend](http://www.bilibili.com/video/av2953140/)
 
-- I also develop the client for android,please see [Gank.io](https://github.com/Panl/Gank.io)  
+- I also develop the client for Android,please click [Gank.io](https://github.com/Panl/Gank.io)  
 
 ![](screenshots/appIcon.png)
 
