@@ -7,23 +7,22 @@
 //
 
 import Foundation
-import AFDateHelper
 
 class DateUtil {
     
-    static let calendar = NSCalendar.currentCalendar()
-    static let dateFormatter = NSDateFormatter()
+    static let calendar = Calendar.current
+    static let dateFormatter = DateFormatter()
     
-    static func stringToDate(dateStr:String)->NSDate{
-        return NSDate(fromString:  dateStr, format: .ISO8601(ISO8601Format.DateTimeMilliSec))
+    static func stringToDate(_ dateStr:String)->Date{
+        return Date()
     }
     
-    static func dateToString(date:NSDate,dateFormat:String)->String{
+    static func dateToString(_ date:Date,dateFormat:String)->String{
         dateFormatter.dateFormat = dateFormat
-        return dateFormatter.stringFromDate(date)
+        return dateFormatter.string(from: date)
     }
     
-    static func componentsFromDate(date:NSDate)->NSDateComponents{
-        return calendar.components([NSCalendarUnit.Day, NSCalendarUnit.Month, NSCalendarUnit.Year], fromDate: date)
+    static func componentsFromDate(_ date:Date)->DateComponents{
+        return (calendar as NSCalendar).components([NSCalendar.Unit.day, NSCalendar.Unit.month, NSCalendar.Unit.year], from: date)
     }
 }

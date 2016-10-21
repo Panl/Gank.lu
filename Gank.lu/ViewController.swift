@@ -11,7 +11,17 @@ import UIKit
 import MJRefresh
 import SwiftyJSON
 import MBProgressHUD
-import BubbleTransition
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l < r
+  case (nil, _?):
+    return true
+  default:
+    return false
+  }
+}
+
 
 class ViewController: UIViewController, GirlHttpDelegate {
     var data:[GirlFlow] = []
@@ -19,8 +29,7 @@ class ViewController: UIViewController, GirlHttpDelegate {
     var loadingMore = false
     var page:Int = 1
     var loadMoreText = UILabel()
-    let transition = BubbleTransition()
-    var batteryCenter = CGPointMake(0, 0)
+    var batteryCenter = CGPoint(x: 0, y: 0)
     var showedPosition = 0
     var lastContentY:CGFloat = 0
     let showGank = "showGank"
@@ -35,7 +44,7 @@ class ViewController: UIViewController, GirlHttpDelegate {
         // Do any additional setup after loading the view, typically from a nib.
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.registerNib(UINib(nibName: beautyCell,bundle: nil), forCellReuseIdentifier: beautyCell)
+        tableView.register(UINib(nibName: beautyCell,bundle: nil), forCellReuseIdentifier: beautyCell)
         GankHttp.shareInstance.girlDelegate = self
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 420
@@ -47,12 +56,12 @@ class ViewController: UIViewController, GirlHttpDelegate {
     
     func initMJRefresh(){
         let mjHeader = MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: #selector(ViewController.pullToRefresh))
-        mjHeader.lastUpdatedTimeLabel!.hidden = true
-        mjHeader.stateLabel!.textColor = UIColor.whiteColor()
+        mjHeader?.lastUpdatedTimeLabel!.isHidden = true
+        mjHeader?.stateLabel!.textColor = UIColor.white
         tableView.mj_header = mjHeader
         tableView.mj_header.beginRefreshing()
         let mjFooter = MJRefreshBackNormalFooter(refreshingTarget: self, refreshingAction: #selector(ViewController.pullToLoadMore))
-        mjFooter.stateLabel!.textColor = UIColor.whiteColor()
+        mjFooter?.stateLabel!.textColor = UIColor.white
         tableView.mj_footer = mjFooter
     }
     
@@ -64,13 +73,13 @@ class ViewController: UIViewController, GirlHttpDelegate {
     func pullToRefresh(){
         loadingMore = false
         page = 1
-        GankHttp.shareInstance.fetchGirlData(page)
+        GankHttp.shareInstance.fetchGirlData(page: page)
     }
     
     func pullToLoadMore(){
         loadingMore = true
         tableView.mj_footer.beginRefreshing()
-        GankHttp.shareInstance.fetchGirlData(page)
+        GankHttp.shareInstance.fetchGirlData(page: page)
     }
     
     func girlDataReceived(json: AnyObject) {
@@ -95,7 +104,7 @@ class ViewController: UIViewController, GirlHttpDelegate {
     
     
     
-    func refreshData(json:JSON){
+    func refreshData(_ json:JSON){
         tableView.mj_footer.resetNoMoreData()
         tableView.mj_header.endRefreshing()
         data.removeAll()
@@ -107,7 +116,7 @@ class ViewController: UIViewController, GirlHttpDelegate {
         tableView.reloadData()
     }
     
-    func loadMoreData(json:JSON){
+    func loadMoreData(_ json:JSON){
         tableView.mj_footer.endRefreshing()
         let result = json["results"].array
         if result?.count < 20{
@@ -125,84 +134,67 @@ class ViewController: UIViewController, GirlHttpDelegate {
 
 extension ViewController:UITableViewDataSource,UITableViewDelegate,UIViewControllerTransitioningDelegate{
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let girlFlow = data[indexPath.row]
-        let cell = tableView.dequeueReusableCellWithIdentifier(beautyCell, forIndexPath: indexPath) as! BeautyCell
-        cell.selectionStyle = UITableViewCellSelectionStyle.None
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let girlFlow = data[(indexPath as NSIndexPath).row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: beautyCell, for: indexPath) as! BeautyCell
+        cell.selectionStyle = UITableViewCellSelectionStyle.none
         cell.setCellViews(girlFlow)
         cell.addGirlAction(indexPath,target:self, action: #selector(ViewController.showImage(_:)))
-        if indexPath.row > showedPosition {
-            UIView.animateWithDuration(0.35){
+        if (indexPath as NSIndexPath).row > showedPosition {
+            UIView.animate(withDuration: 0.35, animations: {
                 cell.cardView.center.y -= cell.cardView.bounds.height/1.5
-            }
-            showedPosition = indexPath.row
+            })
+            showedPosition = (indexPath as NSIndexPath).row
         }
         return cell
     }
     
-    func showImage(sender:UIGestureRecognizer){
+    func showImage(_ sender:UIGestureRecognizer){
         let girlImage = sender.view as! UIImageView
         girlFlow = data[girlImage.tag]
-        performSegueWithIdentifier(showImage, sender: nil)
+        performSegue(withIdentifier: showImage, sender: nil)
 
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        girlFlow = data[indexPath.row]
-        performSegueWithIdentifier(showGank, sender: nil)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        girlFlow = data[(indexPath as NSIndexPath).row]
+        performSegue(withIdentifier: showGank, sender: nil)
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == showGank {
-            let gankViewController = segue.destinationViewController as! GankViewController
+            let gankViewController = segue.destination as! GankViewController
             gankViewController.girl
                 = girlFlow
         }else if segue.identifier == showBattery{
-            let batteryViewController = segue.destinationViewController
+            let batteryViewController = segue.destination
             batteryViewController.transitioningDelegate = self
-            batteryViewController.modalPresentationStyle = .Custom
+            batteryViewController.modalPresentationStyle = .custom
         }else if segue.identifier == showImage{
-            let girlViewController = segue.destinationViewController as! GirlViewController
+            let girlViewController = segue.destination as! GirlViewController
             girlViewController.girl = girlFlow
         }
             
     }
     
-    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        let frame = batteryButton.frame
-        batteryCenter = CGPointMake(frame.origin.x + frame.width/2, frame.origin.y + frame.height/2)
-        transition.transitionMode = .Present
-        transition.startingPoint = batteryCenter
-        transition.bubbleColor = navColor
-        return transition
-    }
-    
-    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        let frame = batteryButton.frame
-        batteryCenter = CGPointMake(frame.origin.x + frame.width/2, frame.origin.y + frame.height/2)
-        transition.transitionMode = .Dismiss
-        transition.startingPoint = batteryCenter
-        transition.bubbleColor = navColor
-        return transition
-    }
-    func scrollViewWillBeginDragging(scrollView: UIScrollView) {
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         lastContentY = scrollView.contentOffset.y
     }
-    func scrollViewDidScroll(scrollView: UIScrollView) {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if lastContentY < scrollView.contentOffset.y {
-            UIView.animateWithDuration(0.15, animations: {
+            UIView.animate(withDuration: 0.15, animations: {
                 self.batteryButton.center.y = self.view.bounds.height + self.batteryButton.frame.height/2 }, completion:nil)
         }else{
-            UIView.animateWithDuration(0.15, animations: {
+            UIView.animate(withDuration: 0.15, animations: {
                     self.batteryButton.center = self.batteryCenter
                     }, completion: nil)
         }

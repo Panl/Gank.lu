@@ -17,7 +17,7 @@ class GankCell: UITableViewCell {
         super.awakeFromNib()
     }
     
-    func setGankViews(gank:Gank){
+    func setGankViews(_ gank:Gank){
         typeLabel.text = gank.type
         descLabel.text = gank.desc
     }

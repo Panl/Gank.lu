@@ -10,6 +10,17 @@ import UIKit
 import SwiftyJSON
 import MJRefresh
 import SafariServices
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l < r
+  case (nil, _?):
+    return true
+  default:
+    return false
+  }
+}
+
 
 class CategoryViewController: UITableViewController {
     let reuseableIndentifier = "categoryCell"
@@ -25,7 +36,7 @@ class CategoryViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.registerNib(UINib(nibName: "CategoryCell",bundle: nil), forCellReuseIdentifier: reuseableIndentifier)
+        tableView.register(UINib(nibName: "CategoryCell",bundle: nil), forCellReuseIdentifier: reuseableIndentifier)
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 40
         initMJRefresh()
@@ -33,7 +44,7 @@ class CategoryViewController: UITableViewController {
     
     func initMJRefresh(){
         let MJHeader = MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: #selector(CategoryViewController.pullToRefresh))
-        MJHeader.lastUpdatedTimeLabel!.hidden = true
+        MJHeader?.lastUpdatedTimeLabel!.isHidden = true
         tableView.mj_header = MJHeader
         tableView.mj_header.beginRefreshing()
         
@@ -43,7 +54,7 @@ class CategoryViewController: UITableViewController {
     func pullToRefresh(){
         loadingMore = false
         page = 1
-        GankHttp.shareInstance.fetchGankWithCategory(category, page: page){
+        GankHttp.shareInstance.fetchGankWithCategory(category: category, page: page){
             success,result in
             if success{
                 self.page += 1
@@ -60,7 +71,7 @@ class CategoryViewController: UITableViewController {
     func pullToLoadMore(){
         loadingMore = true
         tableView.mj_footer.beginRefreshing()
-        GankHttp.shareInstance.fetchGankWithCategory(category, page: page){
+        GankHttp.shareInstance.fetchGankWithCategory(category: category, page: page){
             success,result in
             if success{
                 self.page += 1
@@ -75,7 +86,7 @@ class CategoryViewController: UITableViewController {
     }
 
     
-    func refreshData(json:JSON){
+    func refreshData(_ json:JSON){
         tableView.mj_header.endRefreshing()
         gankData.removeAll()
         let result = json["results"].array
@@ -86,7 +97,7 @@ class CategoryViewController: UITableViewController {
         tableView.reloadData()
     }
     
-    func loadMoreData(json:JSON){
+    func loadMoreData(_ json:JSON){
         tableView.mj_footer.endRefreshing()
         let result = json["results"].array
         if result?.count < 20{
@@ -105,25 +116,25 @@ class CategoryViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return gankData.count
     }
 
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(reuseableIndentifier, forIndexPath: indexPath) as! CategoryCell
-        cell.gankDescLabel.text = gankData[indexPath.row].desc
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseableIndentifier, for: indexPath) as! CategoryCell
+        cell.gankDescLabel.text = gankData[(indexPath as NSIndexPath).row].desc
         return cell
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let url = gankData[indexPath.row].url
-        let SFSafari = SFSafariViewController(URL: NSURL(string:url)!, entersReaderIfAvailable: true)
-        self.presentViewController(SFSafari, animated: true, completion: nil)
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let url = gankData[(indexPath as NSIndexPath).row].url
+        let SFSafari = SFSafariViewController(url: URL(string:url)!, entersReaderIfAvailable: true)
+        self.present(SFSafari, animated: true, completion: nil)
     }
     
 }

@@ -28,17 +28,17 @@ class GankViewController: UIViewController ,GankHttpDelegate{
         initGankHttp()
     }
     
-    @IBAction func refreshGank(sender: AnyObject) {
+    @IBAction func refreshGank(_ sender: AnyObject) {
         showProgress()
         let date = DateUtil.stringToDate((girl?.publishedAt)!)
         let components = DateUtil.componentsFromDate(date)
-        GankHttp.shareInstance.fetchGankDataAtYear(components.year, month: components.month, day: components.day)
+        GankHttp.shareInstance.fetchGankDataAtYear(year: components.year!, month: components.month!, day: components.day!)
     }
     func initTableView(){
         topImageHeight = self.view.bounds.width * 0.65
         topImageView = UIImageView(frame: CGRect(x: 0, y: -topImageHeight, width: self.view.bounds.width, height: topImageHeight))
-        topImageView.kf_setImageWithURL(NSURL(string: (girl?.url)!)!)
-        topImageView.contentMode = .ScaleAspectFill
+        topImageView.kf.setImage(with: (URL(string: (girl?.url)!)!))
+        topImageView.contentMode = .scaleAspectFill
         topImageView.clipsToBounds = true
         tableView.delegate = self
         tableView.dataSource = self
@@ -54,11 +54,11 @@ class GankViewController: UIViewController ,GankHttpDelegate{
         let date = DateUtil.stringToDate((girl?.publishedAt)!)
         let components = DateUtil.componentsFromDate(date)
         GankHttp.shareInstance.delegate = self
-        GankHttp.shareInstance.fetchGankDataAtYear(components.year, month: components.month, day: components.day)
+        GankHttp.shareInstance.fetchGankDataAtYear(year: components.year!, month: components.month!, day: components.day!)
         showProgress()
     }
     func showProgress(){
-        hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        hud = MBProgressHUD.showAdded(to: self.view, animated: true)
         hud!.labelText = "loading..."
         hud!.dimBackground = true
     }
@@ -69,7 +69,7 @@ class GankViewController: UIViewController ,GankHttpDelegate{
         refreshData(resultJosn)
     }
 
-    func refreshData(json:JSON){
+    func refreshData(_ json:JSON){
         gankData.removeAll()
         let categorys = json["category"].array
         let result = json["results"]
@@ -97,28 +97,28 @@ class GankViewController: UIViewController ,GankHttpDelegate{
 }
 
 extension GankViewController:UITableViewDelegate,UITableViewDataSource{
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return gankData.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-         let cell = tableView.dequeueReusableCellWithIdentifier(gankCell,forIndexPath:indexPath) as! GankCell
-        cell.setGankViews(gankData[indexPath.row])
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+         let cell = tableView.dequeueReusableCell(withIdentifier: gankCell,for:indexPath) as! GankCell
+        cell.setGankViews(gankData[(indexPath as NSIndexPath).row])
         return cell
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let gankUrl = gankData[indexPath.row].url.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLFragmentAllowedCharacterSet())!
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let gankUrl = gankData[(indexPath as NSIndexPath).row].url.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlFragmentAllowed)!
         print(gankUrl)
-        let SFSafari = SFSafariViewController(URL: NSURL(string:gankUrl)!, entersReaderIfAvailable: true)
-        self.presentViewController(SFSafari, animated: true, completion: nil)
+        let SFSafari = SFSafariViewController(url: URL(string:gankUrl)!, entersReaderIfAvailable: true)
+        self.present(SFSafari, animated: true, completion: nil)
     }
    
-    func scrollViewDidScroll(scrollView: UIScrollView) {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offsetY = scrollView.contentOffset.y
         if offsetY < -topImageHeight{
             topImageView.frame.origin.y = offsetY

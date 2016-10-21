@@ -22,23 +22,23 @@ class GirlViewController: UIViewController, UIScrollViewDelegate {
         self.scrollView.minimumZoomScale = 1.0
         self.scrollView.maximumZoomScale = 4.0
         self.scrollView.delegate = self
-        girlImageView.kf_setImageWithURL(NSURL(string: (girl?.url)!)!)
+        girlImageView.kf.setImage(with: URL(string: (girl?.url)!)!)
        
         let date = DateUtil.stringToDate((girl?.publishedAt)!)
         self.title = DateUtil.dateToString(date, dateFormat: "yyyy/MM/dd")
 
     }
-    @IBAction func shareAction(sender: UIBarButtonItem) {
+    @IBAction func shareAction(_ sender: UIBarButtonItem) {
         let message = "发现了一款看妹子的小app「Gank.lu」, 同时有很多程序员干货哦，^_^"
-        let urlToShare = NSURL(string: "https://github.com/Panl/Gank.lu")
+        let urlToShare = URL(string: "https://github.com/Panl/Gank.lu")
         let vc = UIActivityViewController(activityItems: [message,girlImageView.image!,urlToShare!], applicationActivities: nil)
-        self.presentViewController(vc, animated: true, completion: nil)
+        self.present(vc, animated: true, completion: nil)
     }
-    @IBAction func saveGirl(sender: AnyObject) {
+    @IBAction func saveGirl(_ sender: AnyObject) {
         UIImageWriteToSavedPhotosAlbum(girlImageView.image!, self, #selector(GirlViewController.image(_:didFinishSavingWithError:contextInfo:)), nil)
     }
     
-    func image(image:UIImage,didFinishSavingWithError:NSError,contextInfo:AnyObject){
+    func image(_ image:UIImage,didFinishSavingWithError:NSError,contextInfo:AnyObject){
         //TODO 判断一些事情
         ToastUtil.showTextToast(self.scrollView, toastStr: "保存成功")
     }
@@ -46,7 +46,7 @@ class GirlViewController: UIViewController, UIScrollViewDelegate {
         super.didReceiveMemoryWarning()
     }
     
-    func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         return self.girlImageView
     }
 

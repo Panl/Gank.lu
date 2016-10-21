@@ -26,23 +26,23 @@ class BeautyCell: UITableViewCell {
         
     }
     
-    func setCellViews(girlFlow:GirlFlow){
+    func setCellViews(_ girlFlow:GirlFlow){
         self.beautyImageView.backgroundColor = UIColor.randomColor()
-        self.beautyImageView.kf_setImageWithURL(NSURL(string: girlFlow.url)!)
+        self.beautyImageView.kf.setImage(with: URL(string: girlFlow.url)!)
         self.nickNameLabel.text = girlFlow.who
         let date = DateUtil.stringToDate(girlFlow.publishedAt)
         self.timeLabel.text = DateUtil.dateToString(date, dateFormat: "yyyy年MM月dd日")
         self.descLabel.text = girlFlow.desc
     }
     
-    func addGirlAction(indexPath:NSIndexPath,target:AnyObject,action:Selector){
-        beautyImageView.userInteractionEnabled = true
-        beautyImageView.tag = indexPath.row
+    func addGirlAction(_ indexPath:IndexPath,target:AnyObject,action:Selector){
+        beautyImageView.isUserInteractionEnabled = true
+        beautyImageView.tag = (indexPath as NSIndexPath).row
         let tap = UITapGestureRecognizer(target: target, action: action)
         beautyImageView.addGestureRecognizer(tap)
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state

@@ -13,11 +13,11 @@ let tabTitles = ["Android","iOS","前端","瞎推荐","拓展资源","App"]
 
 private struct PagingMenuOptions : PagingMenuControllerCustomizable {
     
-    private var componentType: ComponentType {
-        return .All(menuOptions: MenuOptions(), pagingControllers: pagingControllers)
+    fileprivate var componentType: ComponentType {
+        return .all(menuOptions: MenuOptions(), pagingControllers: pagingControllers)
     }
     
-    private var pagingControllers: [UIViewController] {
+    fileprivate var pagingControllers: [UIViewController] {
         var viewControllers = [UIViewController]()
         for title in tabTitles {
             let viewController = CategoryViewController(category: title)
@@ -28,9 +28,9 @@ private struct PagingMenuOptions : PagingMenuControllerCustomizable {
     }
     
     
-    private struct MenuOptions: MenuViewCustomizable {
+    fileprivate struct MenuOptions: MenuViewCustomizable {
         var displayMode: MenuDisplayMode {
-            return .SegmentedControl
+            return .segmentedControl
         }
         var backgroundColor: UIColor {
             return navColor
@@ -51,13 +51,13 @@ private struct PagingMenuOptions : PagingMenuControllerCustomizable {
         }
     }
     
-    private struct MenuItem: MenuItemViewCustomizable {
+    fileprivate struct MenuItem: MenuItemViewCustomizable {
         var displayTitle = ""
         init(displayTitle:String){
             self.displayTitle = displayTitle
         }
         var displayMode: MenuItemDisplayMode {
-            return .Text(title: MenuItemText(text: displayTitle, selectedColor: UIColor.whiteColor()))
+            return .text(title: MenuItemText(text: displayTitle, selectedColor: UIColor.white))
         }
     }
 }
@@ -75,12 +75,12 @@ class BatteryViewController: UIViewController {
         
         addChildViewController(pagingMenuController)
         view.addSubview(pagingMenuController.view)
-        pagingMenuController.didMoveToParentViewController(self)
+        pagingMenuController.didMove(toParentViewController: self)
     }
     
     
-    @IBAction func backToGril(sender: UIBarButtonItem) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func backToGril(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
     }
     
 }
