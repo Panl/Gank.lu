@@ -28,7 +28,7 @@ class GankHttp {
     
     func fetchGirlData(page:Int){
         let requestUrl = (baseUrl + "data/福利/\(requestNumber)/\(page)").addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)
-        print(requestUrl)
+        print(requestUrl ?? "")
         
         Alamofire.request(requestUrl!, method: .get).responseJSON{
             response in
@@ -44,7 +44,7 @@ class GankHttp {
     
     func fetchGankDataAtYear(year:Int,month:Int,day:Int){
         let requestUrl = (baseUrl + "day/\(year)/\(month)/\(day)").addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)
-        print(requestUrl)
+        print(requestUrl ?? "")
         Alamofire.request(requestUrl!, method: .get).responseJSON(){
             response in
             guard let json = response.result.value else {
@@ -57,7 +57,7 @@ class GankHttp {
     
     func fetchGankWithCategory(category:String,page:Int,complete:@escaping (_ success:Bool,_ result:AnyObject?)->Void){
         let url = (baseUrl + "data/\(category)/\(requestNumber)/\(page)").addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)
-        debugPrint(url)
+        debugPrint(url ?? "")
         Alamofire.request(url!, method: .get).responseJSON{response in
             guard let json = response.result.value else {
                 complete(false, nil)
