@@ -32,7 +32,7 @@ class GankViewController: UIViewController ,GankHttpDelegate{
         showProgress()
         let date = DateUtil.stringToDate((girl?.publishedAt)!)
         let components = DateUtil.componentsFromDate(date)
-        GankHttp.shareInstance.fetchGankDataAtYear(year: components.year!, month: components.month!, day: components.day!)
+        GankHttp.shareInstance.fetchGankDataAtYear(components.year!, month: components.month!, day: components.day!)
     }
     func initTableView(){
         topImageHeight = self.view.bounds.width * 0.65
@@ -54,7 +54,7 @@ class GankViewController: UIViewController ,GankHttpDelegate{
         let date = DateUtil.stringToDate((girl?.publishedAt)!)
         let components = DateUtil.componentsFromDate(date)
         GankHttp.shareInstance.delegate = self
-        GankHttp.shareInstance.fetchGankDataAtYear(year: components.year!, month: components.month!, day: components.day!)
+        GankHttp.shareInstance.fetchGankDataAtYear(components.year!, month: components.month!, day: components.day!)
         showProgress()
     }
     func showProgress(){
@@ -62,7 +62,7 @@ class GankViewController: UIViewController ,GankHttpDelegate{
         hud!.labelText = "loading..."
         hud!.dimBackground = true
     }
-    func gankDataReceived(json: AnyObject) {
+    func gankDataReceived(_ json: AnyObject) {
         debugPrint(json)
         hud?.hide(true)
         let resultJosn = JSON(json)

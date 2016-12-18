@@ -73,16 +73,16 @@ class ViewController: UIViewController, GirlHttpDelegate {
     func pullToRefresh(){
         loadingMore = false
         page = 1
-        GankHttp.shareInstance.fetchGirlData(page: page)
+        GankHttp.shareInstance.fetchGirlData(page)
     }
     
     func pullToLoadMore(){
         loadingMore = true
         tableView.mj_footer.beginRefreshing()
-        GankHttp.shareInstance.fetchGirlData(page: page)
+        GankHttp.shareInstance.fetchGirlData(page)
     }
     
-    func girlDataReceived(json: AnyObject) {
+    func girlDataReceived(_ json: AnyObject) {
         page += 1
         let jsonResult = JSON(json)
         if loadingMore {

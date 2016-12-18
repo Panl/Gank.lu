@@ -54,7 +54,7 @@ class CategoryViewController: UITableViewController {
     func pullToRefresh(){
         loadingMore = false
         page = 1
-        GankHttp.shareInstance.fetchGankWithCategory(category: category, page: page){
+        GankHttp.shareInstance.fetchGankWithCategory(category, page: page){
             success,result in
             if success{
                 self.page += 1
@@ -71,7 +71,7 @@ class CategoryViewController: UITableViewController {
     func pullToLoadMore(){
         loadingMore = true
         tableView.mj_footer.beginRefreshing()
-        GankHttp.shareInstance.fetchGankWithCategory(category: category, page: page){
+        GankHttp.shareInstance.fetchGankWithCategory(category, page: page){
             success,result in
             if success{
                 self.page += 1

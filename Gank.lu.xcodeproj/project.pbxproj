@@ -307,18 +307,18 @@
 					BE3078AF1C38272500B007EA = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = BG63VCU95W;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0820;
 					};
 					BE3078C31C38272500B007EA = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = BG63VCU95W;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0820;
 						TestTargetID = BE3078AF1C38272500B007EA;
 					};
 					BE3078CE1C38272500B007EA = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = BG63VCU95W;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0820;
 						TestTargetID = BE3078AF1C38272500B007EA;
 					};
 				};
@@ -402,7 +402,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		C7352F21A16693FCA7116475 /* [CP] Embed Pods Frameworks */ = {

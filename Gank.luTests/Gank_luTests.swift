@@ -7,7 +7,6 @@
 //
 
 import XCTest
-@testable import Gank_lu
 
 class Gank_luTests: XCTestCase {
     
