@@ -14,7 +14,15 @@ class DateUtil {
     static let dateFormatter = DateFormatter()
     
     static func stringToDate(_ dateStr:String)->Date{
-        return Date()
+        dateFormatter.timeZone = TimeZone(identifier: "UTC")
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+        return dateFormatter.date(from: dateStr)!
+    }
+    
+    static func stringToDate(_ dateStr:String, dateFormat:String)->Date {
+        dateFormatter.timeZone = TimeZone(identifier: "UTC")
+        dateFormatter.dateFormat = dateFormat
+        return dateFormatter.date(from: dateStr)!
     }
     
     static func dateToString(_ date:Date,dateFormat:String)->String{

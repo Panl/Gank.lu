@@ -186,20 +186,6 @@ extension ViewController:UITableViewDataSource,UITableViewDelegate,UIViewControl
             
     }
     
-    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-        lastContentY = scrollView.contentOffset.y
-    }
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if lastContentY < scrollView.contentOffset.y {
-            UIView.animate(withDuration: 0.15, animations: {
-                self.batteryButton.center.y = self.view.bounds.height + self.batteryButton.frame.height/2 }, completion:nil)
-        }else{
-            UIView.animate(withDuration: 0.15, animations: {
-                    self.batteryButton.center = self.batteryCenter
-                    }, completion: nil)
-        }
-    }
-    
 }
 
 
