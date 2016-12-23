@@ -29,7 +29,6 @@ class ViewController: UIViewController, GirlHttpDelegate {
     var loadingMore = false
     var page:Int = 1
     var loadMoreText = UILabel()
-    var batteryCenter = CGPoint(x: 0, y: 0)
     var showedPosition = 0
     var lastContentY:CGFloat = 0
     let showGank = "showGank"
@@ -50,7 +49,6 @@ class ViewController: UIViewController, GirlHttpDelegate {
         tableView.estimatedRowHeight = 420
         initMJRefresh()
         batteryButton.layoutIfNeeded()
-        batteryCenter = batteryButton.center
     }
     
     

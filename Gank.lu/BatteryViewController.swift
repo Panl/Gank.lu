@@ -27,10 +27,13 @@ private struct PagingMenuOptions : PagingMenuControllerCustomizable {
         return viewControllers
     }
     
+    fileprivate var isScrollEnabled: Bool {
+        return true
+    }
     
     fileprivate struct MenuOptions: MenuViewCustomizable {
         var displayMode: MenuDisplayMode {
-            return .segmentedControl
+            return .standard(widthMode: .flexible, centerItem: false, scrollingMode: .scrollEnabled)
         }
         var backgroundColor: UIColor {
             return navColor
@@ -48,6 +51,10 @@ private struct PagingMenuOptions : PagingMenuControllerCustomizable {
                 menuItems.append(MenuItem(displayTitle: title))
             }
             return menuItems
+        }
+        
+        var focusMode: MenuFocusMode {
+            return .underline(height: 3, color: UIColor.red, horizontalPadding: 0, verticalPadding: 0)
         }
     }
     

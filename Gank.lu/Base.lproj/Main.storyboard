@@ -154,7 +154,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7tY-OB-eig">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="661"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="项目介绍" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iQa-XX-G8c">
                                                 <rect key="frame" x="8" y="248" width="61.5" height="18"/>
@@ -187,7 +187,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nKf-vC-FuM">
-                                                <rect key="frame" x="8" y="484" width="359" height="169"/>
+                                                <rect key="frame" x="8" y="484" width="359" height="131"/>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="91" id="85R-R7-chL"/>
@@ -198,8 +198,6 @@ pod 'SwiftyJSON'
 pod 'Kingfisher', '~&gt; 2.0'
 pod 'MJRefresh'
 pod 'MBProgressHUD', '~&gt; 0.9.2'
-pod 'BubbleTransition', '~&gt; 1.0.0'
-pod 'AFDateHelper'
 pod 'PagingMenuController'</string>
                                                 <color key="textColor" red="0.30316840270000001" green="0.30316840270000001" blue="0.30316840270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
@@ -386,18 +384,18 @@ pod 'PagingMenuController'</string>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Android" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dP4-ph-GbP">
-                                                    <rect key="frame" x="20" y="8" width="68" height="23"/>
+                                                    <rect key="frame" x="20" y="8" width="68" height="21.5"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Android 逆向分析（1）反编译看看手机qq口令红包的实现原理" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iuf-nj-0hQ">
-                                                    <rect key="frame" x="40" y="39" width="545" height="17"/>
+                                                    <rect key="frame" x="40" y="37.5" width="320" height="18.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.30316840270000001" green="0.30316840270000001" blue="0.30316840270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="»" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6C7-4w-f6B">
-                                                    <rect key="frame" x="22" y="36" width="10" height="24"/>
+                                                    <rect key="frame" x="22" y="34.5" width="10" height="25.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" red="0.30316840270000001" green="0.30316840270000001" blue="0.30316840270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -506,5 +504,4 @@ pod 'PagingMenuController'</string>
         <image name="battery" width="52" height="52"/>
         <image name="battery_icon" width="291" height="249"/>
     </resources>
-    <color key="tintColor" red="1" green="0.38007961938374279" blue="0.010586578555995874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
