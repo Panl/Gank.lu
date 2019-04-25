@@ -54,12 +54,3 @@
 
 ##### 贡献者
 - [DianQK](https://github.com/DianQK)
-
-##### 注意
-由于我集成了 Firebase ，Google 的 App 分析工具，所以会有文件没有放在版本控制力，在 Podfile 里删除 ```
-Pod 'Firebase'
-``` 即可。
-
-
-### LICENSE
-Gank.lu is released under the GPL v3 license. See [LICENSE](LICENSE) for details.
