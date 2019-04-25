@@ -52,11 +52,3 @@ The project for learning Swift and iOS development is fundamentally completed, A
 
 #### Contributors
 - [DianQK](https://github.com/DianQK)
-
-#### Attention
-Due to usage of Firebase, GoogleService-Info.plist is ignored, you should delete ```
-Pod 'Firebase'
-``` in Podfile  
-
-### LICENSE
-Gank.lu is released under the GPL v3 license. See [LICENSE](LICENSE) for details.
