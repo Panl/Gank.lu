@@ -27,7 +27,7 @@ class AboutViewController: UIViewController {
         navigationItem.title = "About"
         batteryBgView.backgroundColor = navColor
         introduceTextView.text = introduce
-        scrollView.contentInset = UIEdgeInsetsMake(0, 0, 30, 0)
+      scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 30, right: 0)
     }
     
     

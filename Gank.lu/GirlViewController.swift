@@ -38,7 +38,7 @@ class GirlViewController: UIViewController, UIScrollViewDelegate {
         UIImageWriteToSavedPhotosAlbum(girlImageView.image!, self, #selector(GirlViewController.image(_:didFinishSavingWithError:contextInfo:)), nil)
     }
     
-    func image(_ image:UIImage,didFinishSavingWithError:NSError,contextInfo:AnyObject){
+    @objc func image(_ image:UIImage,didFinishSavingWithError:NSError,contextInfo:AnyObject){
         //TODO 判断一些事情
         ToastUtil.showTextToast(self.scrollView, toastStr: "保存成功")
     }

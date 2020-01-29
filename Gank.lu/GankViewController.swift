@@ -42,9 +42,9 @@ class GankViewController: UIViewController ,GankHttpDelegate{
         topImageView.clipsToBounds = true
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.contentInset = UIEdgeInsetsMake(topImageHeight, 0, 30, 0)
+      tableView.contentInset = UIEdgeInsets(top: topImageHeight, left: 0, bottom: 30, right: 0)
         tableView.addSubview(topImageView)
-        tableView.rowHeight = UITableViewAutomaticDimension
+      tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 180
         let date = DateUtil.stringToDate((girl?.publishedAt)!)
         self.navigationItem.title = DateUtil.dateToString(date, dateFormat: "yyyy/MM/dd")
@@ -59,12 +59,10 @@ class GankViewController: UIViewController ,GankHttpDelegate{
     }
     func showProgress(){
         hud = MBProgressHUD.showAdded(to: self.view, animated: true)
-        hud!.labelText = "loading..."
-        hud!.dimBackground = true
     }
     func gankDataReceived(_ json: AnyObject) {
         debugPrint(json)
-        hud?.hide(true)
+      hud?.hide(animated: true)
         let resultJosn = JSON(json)
         refreshData(resultJosn)
     }
@@ -87,7 +85,7 @@ class GankViewController: UIViewController ,GankHttpDelegate{
     }
     
     func gankFetchFailed() {
-        hud?.hide(true)
+      hud?.hide(animated: true)
         ToastUtil.showTextToast(self.view,toastStr: "数据加载失败...")
     }
 

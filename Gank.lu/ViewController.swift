@@ -45,7 +45,7 @@ class ViewController: UIViewController, GirlHttpDelegate {
         tableView.delegate = self
         tableView.register(UINib(nibName: beautyCell,bundle: nil), forCellReuseIdentifier: beautyCell)
         GankHttp.shareInstance.girlDelegate = self
-        tableView.rowHeight = UITableViewAutomaticDimension
+      tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 420
         initMJRefresh()
         batteryButton.layoutIfNeeded()
@@ -54,12 +54,12 @@ class ViewController: UIViewController, GirlHttpDelegate {
     
     func initMJRefresh(){
         let mjHeader = MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: #selector(ViewController.pullToRefresh))
-        mjHeader?.lastUpdatedTimeLabel!.isHidden = true
-        mjHeader?.stateLabel!.textColor = UIColor.white
+      mjHeader.lastUpdatedTimeLabel!.isHidden = true
+      mjHeader.stateLabel!.textColor = UIColor.white
         tableView.mj_header = mjHeader
-        tableView.mj_header.beginRefreshing()
+      tableView.mj_header?.beginRefreshing()
         let mjFooter = MJRefreshBackNormalFooter(refreshingTarget: self, refreshingAction: #selector(ViewController.pullToLoadMore))
-        mjFooter?.stateLabel!.textColor = UIColor.white
+      mjFooter.stateLabel!.textColor = UIColor.white
         tableView.mj_footer = mjFooter
     }
     
@@ -68,15 +68,15 @@ class ViewController: UIViewController, GirlHttpDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func pullToRefresh(){
+  @objc func pullToRefresh(){
         loadingMore = false
         page = 1
         GankHttp.shareInstance.fetchGirlData(page)
     }
     
-    func pullToLoadMore(){
+  @objc func pullToLoadMore(){
         loadingMore = true
-        tableView.mj_footer.beginRefreshing()
+    tableView.mj_footer?.beginRefreshing()
         GankHttp.shareInstance.fetchGirlData(page)
     }
     
@@ -94,17 +94,17 @@ class ViewController: UIViewController, GirlHttpDelegate {
         print("gankReceived failed")
         ToastUtil.showTextToast(self.view,toastStr: "数据加载失败...")
         if loadingMore {
-            tableView.mj_footer.endRefreshing()
+          tableView.mj_footer?.endRefreshing()
         }else{
-            tableView.mj_header.endRefreshing()
+          tableView.mj_header?.endRefreshing()
         }
     }
     
     
     
     func refreshData(_ json:JSON){
-        tableView.mj_footer.resetNoMoreData()
-        tableView.mj_header.endRefreshing()
+      tableView.mj_footer?.resetNoMoreData()
+      tableView.mj_header?.endRefreshing()
         data.removeAll()
         let result = json["results"].array
         for item in result!{
@@ -115,10 +115,10 @@ class ViewController: UIViewController, GirlHttpDelegate {
     }
     
     func loadMoreData(_ json:JSON){
-        tableView.mj_footer.endRefreshing()
+      tableView.mj_footer?.endRefreshing()
         let result = json["results"].array
         if result?.count < 20{
-           tableView.mj_footer.endRefreshingWithNoMoreData()
+          tableView.mj_footer?.endRefreshingWithNoMoreData()
         }
         for item in result!{
             let girl = GirlFlow(item: item)
@@ -139,7 +139,7 @@ extension ViewController:UITableViewDataSource,UITableViewDelegate,UIViewControl
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let girlFlow = data[(indexPath as NSIndexPath).row]
         let cell = tableView.dequeueReusableCell(withIdentifier: beautyCell, for: indexPath) as! BeautyCell
-        cell.selectionStyle = UITableViewCellSelectionStyle.none
+      cell.selectionStyle = UITableViewCell.SelectionStyle.none
         cell.setCellViews(girlFlow)
         cell.addGirlAction(indexPath,target:self, action: #selector(ViewController.showImage(_:)))
         if (indexPath as NSIndexPath).row > showedPosition {
@@ -151,7 +151,7 @@ extension ViewController:UITableViewDataSource,UITableViewDelegate,UIViewControl
         return cell
     }
     
-    func showImage(_ sender:UIGestureRecognizer){
+  @objc func showImage(_ sender:UIGestureRecognizer){
         let girlImage = sender.view as! UIImageView
         girlFlow = data[girlImage.tag]
         performSegue(withIdentifier: showImage, sender: nil)

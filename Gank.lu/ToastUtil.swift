@@ -12,8 +12,6 @@ import MBProgressHUD
 class ToastUtil {
     static func showTextToast(_ view:UIView,toastStr:String){
         let hud = MBProgressHUD.showAdded(to: view, animated: true)
-        hud?.mode = MBProgressHUDMode.text
-        hud?.labelText = toastStr
-        hud?.hide(true, afterDelay: 2.0)
+      hud.mode = MBProgressHUDMode.text
     }
 }

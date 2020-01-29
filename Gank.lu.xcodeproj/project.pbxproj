@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1EE357411CEEF31F0028D4D7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1EE357401CEEF31F0028D4D7 /* GoogleService-Info.plist */; };
 		BE0DDA831C796CAF00B369E0 /* BatteryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0DDA821C796CAF00B369E0 /* BatteryViewController.swift */; };
 		BE2F0AC01C786D4A00A0CA63 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE2F0ABF1C786D4A00A0CA63 /* Images.xcassets */; };
 		BE2F0AC21C78740500A0CA63 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2F0AC11C78740500A0CA63 /* AboutViewController.swift */; };
@@ -52,7 +51,6 @@
 
 /* Begin PBXFileReference section */
 		1B738C319521A4EC4231D580 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		1EE357401CEEF31F0028D4D7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		35A7F52EECB87B5E69D59509 /* Pods-Gank.lu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gank.lu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gank.lu/Pods-Gank.lu.debug.xcconfig"; sourceTree = "<group>"; };
 		8CDD4AD1C5DF42823A1B3660 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		BE0DDA821C796CAF00B369E0 /* BatteryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BatteryViewController.swift; sourceTree = "<group>"; };
@@ -165,7 +163,6 @@
 				BE3078B31C38272500B007EA /* AppDelegate.swift */,
 				BEC684751C42B3560036F73F /* GankHttpClient.swift */,
 				BEB6B5A41C7F6771004C50F9 /* GankModel.swift */,
-				1EE357401CEEF31F0028D4D7 /* GoogleService-Info.plist */,
 				BEA575D01C75A23800696093 /* utils */,
 				BEC684741C42B3010036F73F /* UIControllers */,
 				BEEF9EB01C3D42F900125F03 /* cells */,
@@ -247,7 +244,6 @@
 				BE3078AD1C38272500B007EA /* Frameworks */,
 				BE3078AE1C38272500B007EA /* Resources */,
 				C7352F21A16693FCA7116475 /* [CP] Embed Pods Frameworks */,
-				5E254A5758DB2B0F4A2BC480 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -328,6 +324,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -354,7 +351,6 @@
 				BE3078BE1C38272500B007EA /* LaunchScreen.storyboard in Resources */,
 				BEAA9C7D1C8049AE00DD7EAD /* CategoryViewController.xib in Resources */,
 				BE3078B91C38272500B007EA /* Main.storyboard in Resources */,
-				1EE357411CEEF31F0028D4D7 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,34 +371,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5E254A5758DB2B0F4A2BC480 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gank.lu/Pods-Gank.lu-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		C6C1FF9A9AA95837A3FFC627 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Gank.lu-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C7352F21A16693FCA7116475 /* [CP] Embed Pods Frameworks */ = {
@@ -411,13 +395,32 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Gank.lu/Pods-Gank.lu-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/PagingKit/PagingKit.framework",
+				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PagingKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gank.lu/Pods-Gank.lu-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Gank.lu/Pods-Gank.lu-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -598,7 +601,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Gank.lu-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -615,7 +618,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.smartalker.Gank-lu";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Gank.lu-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

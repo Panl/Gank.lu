@@ -3,11 +3,11 @@ platform :ios, '9.0'
 use_frameworks!
 
 target 'Gank.lu' do
-  pod 'Alamofire', '~> 4.0'
-  pod 'SwiftyJSON', '3.0.0'
-  pod 'Kingfisher', '~> 3.0'
+  pod 'Alamofire'
+  pod 'SwiftyJSON'
+  pod 'Kingfisher'
   pod 'MJRefresh'
-  pod 'MBProgressHUD', '~> 0.9.2'
-  pod 'PagingMenuController','~>2.1.1'
+  pod 'MBProgressHUD'
+  pod "PagingKit"
   pod 'Firebase'
 end

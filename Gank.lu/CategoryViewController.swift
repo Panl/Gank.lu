@@ -37,21 +37,21 @@ class CategoryViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib(nibName: "CategoryCell",bundle: nil), forCellReuseIdentifier: reuseableIndentifier)
-        tableView.rowHeight = UITableViewAutomaticDimension
+      tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 40
         initMJRefresh()
     }
     
     func initMJRefresh(){
         let MJHeader = MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: #selector(CategoryViewController.pullToRefresh))
-        MJHeader?.lastUpdatedTimeLabel!.isHidden = true
+      MJHeader.lastUpdatedTimeLabel!.isHidden = true
         tableView.mj_header = MJHeader
-        tableView.mj_header.beginRefreshing()
+      tableView.mj_header?.beginRefreshing()
         
         tableView.mj_footer = MJRefreshBackNormalFooter(refreshingTarget: self, refreshingAction: #selector(CategoryViewController.pullToLoadMore))
     }
     
-    func pullToRefresh(){
+  @objc func pullToRefresh(){
         loadingMore = false
         page = 1
         GankHttp.shareInstance.fetchGankWithCategory(category, page: page){
@@ -61,16 +61,16 @@ class CategoryViewController: UITableViewController {
                 let jsonResult = JSON(result!)
                 self.refreshData(jsonResult)
             }else{
-                self.tableView.mj_header.endRefreshing()
+              self.tableView.mj_header?.endRefreshing()
                 ToastUtil.showTextToast(self.view, toastStr: "数据加载失败...")
             }
-            self.tableView.mj_footer.resetNoMoreData()
+          self.tableView.mj_footer?.resetNoMoreData()
         }
     }
     
-    func pullToLoadMore(){
+  @objc func pullToLoadMore(){
         loadingMore = true
-        tableView.mj_footer.beginRefreshing()
+    tableView.mj_footer?.beginRefreshing()
         GankHttp.shareInstance.fetchGankWithCategory(category, page: page){
             success,result in
             if success{
@@ -78,7 +78,7 @@ class CategoryViewController: UITableViewController {
                 let jsonResult = JSON(result!)
                 self.loadMoreData(jsonResult)
             }else{
-                self.tableView.mj_footer.endRefreshing()
+              self.tableView.mj_footer?.endRefreshing()
                 ToastUtil.showTextToast(self.view, toastStr: "数据加载失败...")
             }
         }
@@ -87,7 +87,7 @@ class CategoryViewController: UITableViewController {
 
     
     func refreshData(_ json:JSON){
-        tableView.mj_header.endRefreshing()
+      tableView.mj_header?.endRefreshing()
         gankData.removeAll()
         let result = json["results"].array
         for item in result!{
@@ -98,10 +98,10 @@ class CategoryViewController: UITableViewController {
     }
     
     func loadMoreData(_ json:JSON){
-        tableView.mj_footer.endRefreshing()
+      tableView.mj_footer?.endRefreshing()
         let result = json["results"].array
         if result?.count < 20{
-            tableView.mj_footer.endRefreshingWithNoMoreData()
+          tableView.mj_footer?.endRefreshingWithNoMoreData()
         }
         for item in result!{
             let gank = Gank(item: item)
