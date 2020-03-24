@@ -1,13 +1,8 @@
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '9.0'
+platform :ios, '13.0'
 use_frameworks!
 
 target 'Gank.lu' do
-  pod 'Alamofire'
-  pod 'SwiftyJSON'
-  pod 'Kingfisher'
-  pod 'MJRefresh'
-  pod 'MBProgressHUD'
-  pod "PagingKit"
-  pod 'Firebase'
+  pod 'Alamofire', '~> 5.0'
+  pod 'Kingfisher/SwiftUI'
 end

@@ -9,26 +9,19 @@
 
 import UIKit
 
-let navColor = UIColor(red: 44/255.0, green: 62/255.0, blue: 80/255.0, alpha: 1.0)
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?
-
-
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        
-        let navBar = UINavigationBar.appearance()
-        navBar.barTintColor = navColor
-        navBar.tintColor = UIColor.white
-        navBar.barStyle = .blackTranslucent
-    navBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        
-        
-        return true
-    }
+    // Override point for customization after application launch.
+    return true
+  }
+
+  func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
+    // Called when a new scene session is being created.
+    // Use this method to select a configuration to create the new scene with.
+    return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
+  }
 
 }
 

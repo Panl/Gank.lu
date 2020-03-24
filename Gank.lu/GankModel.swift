@@ -6,54 +6,39 @@
 //  Copyright © 2016年 smartalker. All rights reserved.
 //
 
-import SwiftyJSON
-
-class GirlFlow {
-    let updatedAt:String
-    let who:String
-    let publishedAt:String
-    let objectId:String
-    let used:Bool
-    let type:String
-    let createdAt:String
-    let desc:String
-    let url:String
-    
-    init(item:JSON){
-        updatedAt = item["updateAt"].stringValue
-        who = item["who"].stringValue
-        objectId = item["objectId"].stringValue
-        publishedAt = item["publishedAt"].stringValue
-        used = item["used"].boolValue
-        createdAt = item["createdAt"].stringValue
-        url = item["url"].stringValue
-        desc = item["desc"].stringValue
-        type = item["type"].stringValue
-    }
-    
+struct BannerData: Codable {
+  var image: String
+  var title: String
+  var url: String
 }
 
-class Gank {
-    let updatedAt:String
-    let who:String
-    let publishedAt:String
-    let objectId:String
-    let used:Bool
-    let type:String
-    let createdAt:String
-    let desc:String
-    let url:String
-    
-    init(item:JSON){
-        updatedAt = item["updateAt"].stringValue
-        who = item["who"].stringValue
-        objectId = item["objectId"].stringValue
-        publishedAt = item["publishedAt"].stringValue
-        used = item["used"].boolValue
-        createdAt = item["createdAt"].stringValue
-        url = item["url"].stringValue
-        desc = item["desc"].stringValue
-        type = item["type"].stringValue
-    }
-    
+struct BannerResult: Codable {
+  var data: [BannerData]
+  var status: Int
 }
+
+struct GankData: Codable {
+  var _id: String
+  var author: String
+  var category: String
+  var content: String
+  var createAt: String
+  var desc: String
+  var images: [String]
+  var likeCounts: Int
+  var publishedAt: String
+  var stars: Int
+  var title: String
+  var type: String
+  var url: String
+  var views: Int
+}
+
+struct GankResult: Codable {
+  var data: [GankData]
+  var status: Int
+}
+
+
+
+

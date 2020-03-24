@@ -7,28 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BE0DDA831C796CAF00B369E0 /* BatteryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0DDA821C796CAF00B369E0 /* BatteryViewController.swift */; };
+		3690D50523E1DD13005427C9 /* RootTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3690D50423E1DD13005427C9 /* RootTabView.swift */; };
+		3690D50723E1DF88005427C9 /* TodayListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3690D50623E1DF88005427C9 /* TodayListView.swift */; };
+		3690D50923E1DFC6005427C9 /* GirlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3690D50823E1DFC6005427C9 /* GirlsView.swift */; };
+		36BAFC43242A36B600E37DA3 /* PageViewUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BAFC42242A36B600E37DA3 /* PageViewUI.swift */; };
+		36BAFC45242A417000E37DA3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BAFC44242A417000E37DA3 /* SceneDelegate.swift */; };
+		36BAFC47242A491000E37DA3 /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BAFC46242A491000E37DA3 /* PageControl.swift */; };
+		36BAFC49242A6C3F00E37DA3 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BAFC48242A6C3F00E37DA3 /* Models.swift */; };
 		BE2F0AC01C786D4A00A0CA63 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE2F0ABF1C786D4A00A0CA63 /* Images.xcassets */; };
-		BE2F0AC21C78740500A0CA63 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2F0AC11C78740500A0CA63 /* AboutViewController.swift */; };
 		BE3078B41C38272500B007EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3078B31C38272500B007EA /* AppDelegate.swift */; };
-		BE3078B61C38272500B007EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3078B51C38272500B007EA /* ViewController.swift */; };
-		BE3078B91C38272500B007EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE3078B71C38272500B007EA /* Main.storyboard */; };
 		BE3078BE1C38272500B007EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE3078BC1C38272500B007EA /* LaunchScreen.storyboard */; };
 		BE3078C91C38272500B007EA /* Gank_luTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3078C81C38272500B007EA /* Gank_luTests.swift */; };
 		BE3078D41C38272500B007EA /* Gank_luUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3078D31C38272500B007EA /* Gank_luUITests.swift */; };
-		BE30A24F1C7F49CB0072C1B2 /* BeautyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE30A24D1C7F49CB0072C1B2 /* BeautyCell.swift */; };
-		BE30A2501C7F49CB0072C1B2 /* BeautyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE30A24E1C7F49CB0072C1B2 /* BeautyCell.xib */; };
-		BEA575CD1C75765900696093 /* GankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA575CC1C75765900696093 /* GankCell.swift */; };
 		BEA575CF1C75A22C00696093 /* DateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA575CE1C75A22C00696093 /* DateUtil.swift */; };
-		BEA575D21C75ADE600696093 /* ToastUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA575D11C75ADE600696093 /* ToastUtil.swift */; };
-		BEAA9C7C1C8049AE00DD7EAD /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAA9C7A1C8049AE00DD7EAD /* CategoryViewController.swift */; };
-		BEAA9C7D1C8049AE00DD7EAD /* CategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEAA9C7B1C8049AE00DD7EAD /* CategoryViewController.xib */; };
-		BEAA9C821C804A3900DD7EAD /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAA9C801C804A3900DD7EAD /* CategoryCell.swift */; };
-		BEAA9C831C804A3900DD7EAD /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEAA9C811C804A3900DD7EAD /* CategoryCell.xib */; };
-		BEAA9C851C80865E00DD7EAD /* GirlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAA9C841C80865E00DD7EAD /* GirlViewController.swift */; };
 		BEB6B5A51C7F6771004C50F9 /* GankModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB6B5A41C7F6771004C50F9 /* GankModel.swift */; };
 		BEC684761C42B3560036F73F /* GankHttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC684751C42B3560036F73F /* GankHttpClient.swift */; };
-		BEEF9EAD1C3D3D6F00125F03 /* GankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF9EAC1C3D3D6F00125F03 /* GankViewController.swift */; };
 		FEDBE9D21A287E2E8EFFB4AA /* Pods_Gank_lu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D28F4D072E067E5013C50BC2 /* Pods_Gank_lu.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,14 +45,17 @@
 /* Begin PBXFileReference section */
 		1B738C319521A4EC4231D580 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		35A7F52EECB87B5E69D59509 /* Pods-Gank.lu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gank.lu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gank.lu/Pods-Gank.lu.debug.xcconfig"; sourceTree = "<group>"; };
+		3690D50423E1DD13005427C9 /* RootTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabView.swift; sourceTree = "<group>"; };
+		3690D50623E1DF88005427C9 /* TodayListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayListView.swift; sourceTree = "<group>"; };
+		3690D50823E1DFC6005427C9 /* GirlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GirlsView.swift; sourceTree = "<group>"; };
+		36BAFC42242A36B600E37DA3 /* PageViewUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewUI.swift; sourceTree = "<group>"; };
+		36BAFC44242A417000E37DA3 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		36BAFC46242A491000E37DA3 /* PageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
+		36BAFC48242A6C3F00E37DA3 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		8CDD4AD1C5DF42823A1B3660 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		BE0DDA821C796CAF00B369E0 /* BatteryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BatteryViewController.swift; sourceTree = "<group>"; };
 		BE2F0ABF1C786D4A00A0CA63 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		BE2F0AC11C78740500A0CA63 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
-		BE3078B01C38272500B007EA /* Gank.lu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gank.lu.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE3078B01C38272500B007EA /* Gank.learn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gank.learn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE3078B31C38272500B007EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BE3078B51C38272500B007EA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BE3078B81C38272500B007EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BE3078BD1C38272500B007EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE3078BF1C38272500B007EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE3078C41C38272500B007EA /* Gank.luTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Gank.luTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,20 +64,9 @@
 		BE3078CF1C38272500B007EA /* Gank.luUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Gank.luUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE3078D31C38272500B007EA /* Gank_luUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gank_luUITests.swift; sourceTree = "<group>"; };
 		BE3078D51C38272500B007EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BE30A24D1C7F49CB0072C1B2 /* BeautyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeautyCell.swift; sourceTree = "<group>"; };
-		BE30A24E1C7F49CB0072C1B2 /* BeautyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BeautyCell.xib; sourceTree = "<group>"; };
-		BE424F751C70D76A00F57CDE /* Gank.lu-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Gank.lu-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
-		BEA575CC1C75765900696093 /* GankCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GankCell.swift; sourceTree = "<group>"; };
 		BEA575CE1C75A22C00696093 /* DateUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateUtil.swift; sourceTree = "<group>"; };
-		BEA575D11C75ADE600696093 /* ToastUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastUtil.swift; sourceTree = "<group>"; };
-		BEAA9C7A1C8049AE00DD7EAD /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
-		BEAA9C7B1C8049AE00DD7EAD /* CategoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryViewController.xib; sourceTree = "<group>"; };
-		BEAA9C801C804A3900DD7EAD /* CategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
-		BEAA9C811C804A3900DD7EAD /* CategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
-		BEAA9C841C80865E00DD7EAD /* GirlViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GirlViewController.swift; sourceTree = "<group>"; };
 		BEB6B5A41C7F6771004C50F9 /* GankModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GankModel.swift; sourceTree = "<group>"; };
 		BEC684751C42B3560036F73F /* GankHttpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GankHttpClient.swift; sourceTree = "<group>"; };
-		BEEF9EAC1C3D3D6F00125F03 /* GankViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GankViewController.swift; sourceTree = "<group>"; };
 		CA4513CF16E7299339BCDB9D /* Pods-Gank.lu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gank.lu.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gank.lu/Pods-Gank.lu.release.xcconfig"; sourceTree = "<group>"; };
 		D28F4D072E067E5013C50BC2 /* Pods_Gank_lu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gank_lu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -112,6 +97,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3690D50323E1DCAA005427C9 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				3690D50423E1DD13005427C9 /* RootTabView.swift */,
+				3690D50623E1DF88005427C9 /* TodayListView.swift */,
+				3690D50823E1DFC6005427C9 /* GirlsView.swift */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		36BAFC41242A369200E37DA3 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				36BAFC42242A36B600E37DA3 /* PageViewUI.swift */,
+				36BAFC46242A491000E37DA3 /* PageControl.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
 		4516832C8CCC85D1BF58E606 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,7 +130,6 @@
 		BE0DDA841C79870300B369E0 /* resources */ = {
 			isa = PBXGroup;
 			children = (
-				BE3078B71C38272500B007EA /* Main.storyboard */,
 				BE3078BC1C38272500B007EA /* LaunchScreen.storyboard */,
 				BE3078BF1C38272500B007EA /* Info.plist */,
 				BE2F0ABF1C786D4A00A0CA63 /* Images.xcassets */,
@@ -149,7 +152,7 @@
 		BE3078B11C38272500B007EA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BE3078B01C38272500B007EA /* Gank.lu.app */,
+				BE3078B01C38272500B007EA /* Gank.learn.app */,
 				BE3078C41C38272500B007EA /* Gank.luTests.xctest */,
 				BE3078CF1C38272500B007EA /* Gank.luUITests.xctest */,
 			);
@@ -159,13 +162,14 @@
 		BE3078B21C38272500B007EA /* Gank.lu */ = {
 			isa = PBXGroup;
 			children = (
-				BE424F751C70D76A00F57CDE /* Gank.lu-Bridging-Header.h */,
+				36BAFC44242A417000E37DA3 /* SceneDelegate.swift */,
+				36BAFC41242A369200E37DA3 /* UIKit */,
+				3690D50323E1DCAA005427C9 /* SwiftUI */,
 				BE3078B31C38272500B007EA /* AppDelegate.swift */,
 				BEC684751C42B3560036F73F /* GankHttpClient.swift */,
 				BEB6B5A41C7F6771004C50F9 /* GankModel.swift */,
+				36BAFC48242A6C3F00E37DA3 /* Models.swift */,
 				BEA575D01C75A23800696093 /* utils */,
-				BEC684741C42B3010036F73F /* UIControllers */,
-				BEEF9EB01C3D42F900125F03 /* cells */,
 				BE0DDA841C79870300B369E0 /* resources */,
 			);
 			path = Gank.lu;
@@ -193,35 +197,8 @@
 			isa = PBXGroup;
 			children = (
 				BEA575CE1C75A22C00696093 /* DateUtil.swift */,
-				BEA575D11C75ADE600696093 /* ToastUtil.swift */,
 			);
 			name = utils;
-			sourceTree = "<group>";
-		};
-		BEC684741C42B3010036F73F /* UIControllers */ = {
-			isa = PBXGroup;
-			children = (
-				BE3078B51C38272500B007EA /* ViewController.swift */,
-				BEEF9EAC1C3D3D6F00125F03 /* GankViewController.swift */,
-				BE2F0AC11C78740500A0CA63 /* AboutViewController.swift */,
-				BE0DDA821C796CAF00B369E0 /* BatteryViewController.swift */,
-				BEAA9C7A1C8049AE00DD7EAD /* CategoryViewController.swift */,
-				BEAA9C841C80865E00DD7EAD /* GirlViewController.swift */,
-				BEAA9C7B1C8049AE00DD7EAD /* CategoryViewController.xib */,
-			);
-			name = UIControllers;
-			sourceTree = "<group>";
-		};
-		BEEF9EB01C3D42F900125F03 /* cells */ = {
-			isa = PBXGroup;
-			children = (
-				BEA575CC1C75765900696093 /* GankCell.swift */,
-				BE30A24D1C7F49CB0072C1B2 /* BeautyCell.swift */,
-				BE30A24E1C7F49CB0072C1B2 /* BeautyCell.xib */,
-				BEAA9C801C804A3900DD7EAD /* CategoryCell.swift */,
-				BEAA9C811C804A3900DD7EAD /* CategoryCell.xib */,
-			);
-			name = cells;
 			sourceTree = "<group>";
 		};
 		C3E44B280380C4F6AD391E68 /* Frameworks */ = {
@@ -251,7 +228,7 @@
 			);
 			name = Gank.lu;
 			productName = Gank.lu;
-			productReference = BE3078B01C38272500B007EA /* Gank.lu.app */;
+			productReference = BE3078B01C38272500B007EA /* Gank.learn.app */;
 			productType = "com.apple.product-type.application";
 		};
 		BE3078C31C38272500B007EA /* Gank.luTests */ = {
@@ -346,11 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE2F0AC01C786D4A00A0CA63 /* Images.xcassets in Resources */,
-				BEAA9C831C804A3900DD7EAD /* CategoryCell.xib in Resources */,
-				BE30A2501C7F49CB0072C1B2 /* BeautyCell.xib in Resources */,
 				BE3078BE1C38272500B007EA /* LaunchScreen.storyboard in Resources */,
-				BEAA9C7D1C8049AE00DD7EAD /* CategoryViewController.xib in Resources */,
-				BE3078B91C38272500B007EA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,26 +370,12 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Gank.lu/Pods-Gank.lu-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
-				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
-				"${BUILT_PRODUCTS_DIR}/PagingKit/PagingKit.framework",
-				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PagingKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -431,19 +390,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEB6B5A51C7F6771004C50F9 /* GankModel.swift in Sources */,
-				BEAA9C7C1C8049AE00DD7EAD /* CategoryViewController.swift in Sources */,
+				3690D50523E1DD13005427C9 /* RootTabView.swift in Sources */,
 				BEC684761C42B3560036F73F /* GankHttpClient.swift in Sources */,
-				BEAA9C821C804A3900DD7EAD /* CategoryCell.swift in Sources */,
-				BE0DDA831C796CAF00B369E0 /* BatteryViewController.swift in Sources */,
-				BE3078B61C38272500B007EA /* ViewController.swift in Sources */,
-				BEEF9EAD1C3D3D6F00125F03 /* GankViewController.swift in Sources */,
-				BEA575D21C75ADE600696093 /* ToastUtil.swift in Sources */,
+				36BAFC49242A6C3F00E37DA3 /* Models.swift in Sources */,
+				3690D50723E1DF88005427C9 /* TodayListView.swift in Sources */,
+				3690D50923E1DFC6005427C9 /* GirlsView.swift in Sources */,
+				36BAFC47242A491000E37DA3 /* PageControl.swift in Sources */,
 				BE3078B41C38272500B007EA /* AppDelegate.swift in Sources */,
 				BEA575CF1C75A22C00696093 /* DateUtil.swift in Sources */,
-				BE30A24F1C7F49CB0072C1B2 /* BeautyCell.swift in Sources */,
-				BE2F0AC21C78740500A0CA63 /* AboutViewController.swift in Sources */,
-				BEA575CD1C75765900696093 /* GankCell.swift in Sources */,
-				BEAA9C851C80865E00DD7EAD /* GirlViewController.swift in Sources */,
+				36BAFC45242A417000E37DA3 /* SceneDelegate.swift in Sources */,
+				36BAFC43242A36B600E37DA3 /* PageViewUI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,14 +435,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		BE3078B71C38272500B007EA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BE3078B81C38272500B007EA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BE3078BC1C38272500B007EA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -536,7 +484,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -577,7 +525,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -596,10 +544,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Gank.lu/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.smartalker.Gank-lu";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Gank.lu-Bridging-Header.h";
+				PRODUCT_BUNDLE_IDENTIFIER = com.panlei.gank;
+				PRODUCT_NAME = Gank.learn;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
@@ -614,10 +562,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Gank.lu/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.smartalker.Gank-lu";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Gank.lu-Bridging-Header.h";
+				PRODUCT_BUNDLE_IDENTIFIER = com.panlei.gank;
+				PRODUCT_NAME = Gank.learn;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -630,7 +578,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.smartalker.Gank-luTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gank.lu.app/Gank.lu";
 			};
 			name = Debug;
@@ -643,7 +591,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.smartalker.Gank-luTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gank.lu.app/Gank.lu";
 			};
 			name = Release;
@@ -655,7 +603,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.smartalker.Gank-luUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = Gank.lu;
 				USES_XCTRUNNER = YES;
 			};
@@ -668,7 +616,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.smartalker.Gank-luUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = Gank.lu;
 				USES_XCTRUNNER = YES;
 			};
