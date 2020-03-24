@@ -17,8 +17,6 @@
 		BE2F0AC01C786D4A00A0CA63 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE2F0ABF1C786D4A00A0CA63 /* Images.xcassets */; };
 		BE3078B41C38272500B007EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3078B31C38272500B007EA /* AppDelegate.swift */; };
 		BE3078BE1C38272500B007EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE3078BC1C38272500B007EA /* LaunchScreen.storyboard */; };
-		BE3078C91C38272500B007EA /* Gank_luTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3078C81C38272500B007EA /* Gank_luTests.swift */; };
-		BE3078D41C38272500B007EA /* Gank_luUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3078D31C38272500B007EA /* Gank_luUITests.swift */; };
 		BEA575CF1C75A22C00696093 /* DateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA575CE1C75A22C00696093 /* DateUtil.swift */; };
 		BEB6B5A51C7F6771004C50F9 /* GankModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB6B5A41C7F6771004C50F9 /* GankModel.swift */; };
 		BEC684761C42B3560036F73F /* GankHttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC684751C42B3560036F73F /* GankHttpClient.swift */; };
@@ -59,11 +57,7 @@
 		BE3078BD1C38272500B007EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE3078BF1C38272500B007EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE3078C41C38272500B007EA /* Gank.luTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Gank.luTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BE3078C81C38272500B007EA /* Gank_luTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gank_luTests.swift; sourceTree = "<group>"; };
-		BE3078CA1C38272500B007EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE3078CF1C38272500B007EA /* Gank.luUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Gank.luUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BE3078D31C38272500B007EA /* Gank_luUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gank_luUITests.swift; sourceTree = "<group>"; };
-		BE3078D51C38272500B007EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BEA575CE1C75A22C00696093 /* DateUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateUtil.swift; sourceTree = "<group>"; };
 		BEB6B5A41C7F6771004C50F9 /* GankModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GankModel.swift; sourceTree = "<group>"; };
 		BEC684751C42B3560036F73F /* GankHttpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GankHttpClient.swift; sourceTree = "<group>"; };
@@ -141,8 +135,6 @@
 			isa = PBXGroup;
 			children = (
 				BE3078B21C38272500B007EA /* Gank.lu */,
-				BE3078C71C38272500B007EA /* Gank.luTests */,
-				BE3078D21C38272500B007EA /* Gank.luUITests */,
 				BE3078B11C38272500B007EA /* Products */,
 				4516832C8CCC85D1BF58E606 /* Pods */,
 				C3E44B280380C4F6AD391E68 /* Frameworks */,
@@ -173,24 +165,6 @@
 				BE0DDA841C79870300B369E0 /* resources */,
 			);
 			path = Gank.lu;
-			sourceTree = "<group>";
-		};
-		BE3078C71C38272500B007EA /* Gank.luTests */ = {
-			isa = PBXGroup;
-			children = (
-				BE3078C81C38272500B007EA /* Gank_luTests.swift */,
-				BE3078CA1C38272500B007EA /* Info.plist */,
-			);
-			path = Gank.luTests;
-			sourceTree = "<group>";
-		};
-		BE3078D21C38272500B007EA /* Gank.luUITests */ = {
-			isa = PBXGroup;
-			children = (
-				BE3078D31C38272500B007EA /* Gank_luUITests.swift */,
-				BE3078D51C38272500B007EA /* Info.plist */,
-			);
-			path = Gank.luUITests;
 			sourceTree = "<group>";
 		};
 		BEA575D01C75A23800696093 /* utils */ = {
@@ -407,7 +381,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE3078C91C38272500B007EA /* Gank_luTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,7 +388,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE3078D41C38272500B007EA /* Gank_luUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

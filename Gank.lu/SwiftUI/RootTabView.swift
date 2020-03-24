@@ -10,6 +10,7 @@ import SwiftUI
 
 struct RootTabView: View {
   @ObservedObject var observed = BannerObserver()
+  @ObservedObject var gankObserved = GankObserver()
 
   var body: some View {
     ScrollView(.vertical, showsIndicators: false) {
@@ -21,13 +22,12 @@ struct RootTabView: View {
         }
       }.onAppear {
         self.observed.fetchBanners()
+        self.gankObserved.fetchGanks()
       }
-      GirlView().padding(EdgeInsets(top: 16, leading: 16, bottom: 0, trailing: 16))
-      GirlView().padding(EdgeInsets(top: 16, leading: 16, bottom: 0, trailing: 16))
-      GirlView().padding(EdgeInsets(top: 16, leading: 16, bottom: 0, trailing: 16))
-      GirlView().padding(EdgeInsets(top: 16, leading: 16, bottom: 0, trailing: 16))
+      ForEach(gankObserved.ganks, id: \.self) { gank in
+        GirlView(gank: gank).padding(EdgeInsets(top: 12, leading: 16, bottom: 0, trailing: 16))
+      }
     }
-
   }
 }
 

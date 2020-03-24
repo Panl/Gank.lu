@@ -17,12 +17,12 @@ struct BannerResult: Codable {
   var status: Int
 }
 
-struct GankData: Codable {
+struct GankData: Codable, Hashable {
   var _id: String
   var author: String
   var category: String
   var content: String
-  var createAt: String
+  var createdAt: String
   var desc: String
   var images: [String]
   var likeCounts: Int

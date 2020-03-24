@@ -29,7 +29,7 @@ class BannerObserver: ObservableObject {
 class GankObserver: ObservableObject {
   @Published var ganks = [GankData]()
 
-  func fetchBanners() {
+  func fetchGanks() {
     GankHttp.shareInstance.fetchAllGank(page: 1, count: 20) { resp in
       if let json = resp.data {
         do {
