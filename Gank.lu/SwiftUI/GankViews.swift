@@ -8,6 +8,7 @@
 
 import SwiftUI
 import struct Kingfisher.KFImage
+import struct Kingfisher.DownsamplingImageProcessor
 
 extension View {
   func cornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View {
@@ -36,7 +37,13 @@ struct GirlView: View {
 
   var body: some View {
     ZStack(alignment: .topLeading) {
-      KFImage(URL(string: gank.url))
+      KFImage(URL(string: gank.url),options: [
+          .transition(.fade(0.8)),
+          .processor(
+            DownsamplingImageProcessor(size: CGSize(width: 375 * 1.5, height: 340 * 1.5))
+          ),
+          .cacheOriginalImage
+      ])
         .resizable()
         .aspectRatio(contentMode: .fill)
         .frame(height: 340)
@@ -79,10 +86,17 @@ struct GankView: View {
   var body: some View {
     HStack {
       ZStack(alignment: .topLeading){
-        KFImage(URL(string: gank.images[0]))
+        KFImage(URL(string: gank.images.first ?? gank.url),options: [
+            .transition(.fade(0.2)),
+            .processor(
+              DownsamplingImageProcessor(size: CGSize(width: 120 * 3, height: 120 * 3))
+            ),
+            .cacheOriginalImage
+        ])
           .resizable()
           .aspectRatio(contentMode: .fill)
           .frame(width: 120, height: 120)
+          .background(Color.gray)
           .clipped()
         Text(gank.type)
           .foregroundColor(.white)

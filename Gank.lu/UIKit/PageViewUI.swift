@@ -9,6 +9,7 @@
 import SwiftUI
 import UIKit
 import struct Kingfisher.KFImage
+import struct Kingfisher.DownsamplingImageProcessor
 
 struct PageViewUI: UIViewControllerRepresentable {
   var controllers: [UIViewController]
@@ -24,11 +25,6 @@ struct PageViewUI: UIViewControllerRepresentable {
       navigationOrientation: .horizontal)
     pageViewController.dataSource = context.coordinator
     pageViewController.delegate = context.coordinator
-//    let t = DispatchSource.makeTimerSource()
-//    t.setEventHandler {
-//      self.currentPage = (self.currentPage + 1) % self.controllers.count
-//    }
-//    t.schedule(deadline: .now(), repeating: 3)
     return pageViewController
   }
 
@@ -92,7 +88,13 @@ struct BannerCard: View {
   var body: some View {
     HStack {
       ZStack(alignment: .bottomLeading) {
-        KFImage(URL(string: url))
+        KFImage(URL(string: url), options: [
+            .transition(.fade(0.2)),
+            .processor(
+              DownsamplingImageProcessor(size: CGSize(width: 375 * 1.5, height: 180 * 1.5))
+            ),
+            .cacheOriginalImage
+        ])
           .resizable()
           .aspectRatio(contentMode: .fill)
           .frame(height: 180)
@@ -104,7 +106,7 @@ struct BannerCard: View {
       }
       .cornerRadius(16)
       .shadow(radius: 4)
-    }.padding(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16))
+    }.padding(16)
 
   }
 }
@@ -120,7 +122,7 @@ struct PageView<Page: View>: View {
   var body: some View {
     ZStack(alignment: .bottom) {
       PageViewUI(controllers: viewControllers, currentPage: $currentPage)
-        .frame(height: 188)
+        .frame(maxWidth: .infinity, minHeight: 196, alignment: .center)
       PageControl(numberOfPages: viewControllers.count, currentPage: $currentPage)
         .padding(.trailing)
     }
