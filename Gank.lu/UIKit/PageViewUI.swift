@@ -24,6 +24,11 @@ struct PageViewUI: UIViewControllerRepresentable {
       navigationOrientation: .horizontal)
     pageViewController.dataSource = context.coordinator
     pageViewController.delegate = context.coordinator
+//    let t = DispatchSource.makeTimerSource()
+//    t.setEventHandler {
+//      self.currentPage = (self.currentPage + 1) % self.controllers.count
+//    }
+//    t.schedule(deadline: .now(), repeating: 3)
     return pageViewController
   }
 
@@ -99,7 +104,7 @@ struct BannerCard: View {
       }
       .cornerRadius(16)
       .shadow(radius: 4)
-    }.padding(.horizontal)
+    }.padding(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16))
 
   }
 }

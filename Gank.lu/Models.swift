@@ -28,17 +28,26 @@ class BannerObserver: ObservableObject {
 
 class GankObserver: ObservableObject {
   @Published var ganks = [GankData]()
+  @Published var refreshing = false
+
+  var page = 1
 
   func fetchGanks() {
-    GankHttp.shareInstance.fetchAllGank(page: 1, count: 20) { resp in
+    if refreshing {
+      return
+    }
+    refreshing = true
+    GankHttp.shareInstance.fetchAllGank(page: page, count: 20) { resp in
       if let json = resp.data {
         do {
           let gankResult = try JSONDecoder().decode(GankResult.self, from: json)
           self.ganks.append(contentsOf: gankResult.data)
+          self.page += 1
         } catch let error {
           print("error", error)
         }
       }
+      self.refreshing = false
     }
   }
 }

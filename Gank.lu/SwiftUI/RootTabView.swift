@@ -13,7 +13,7 @@ struct RootTabView: View {
   @ObservedObject var gankObserved = GankObserver()
 
   var body: some View {
-    ScrollView(.vertical, showsIndicators: false) {
+    ScrollView {
       ZStack(alignment: .bottomLeading) {
         if observed.banners.isEmpty {
           Text("loading...").frame(maxWidth: .infinity)
@@ -25,7 +25,18 @@ struct RootTabView: View {
         self.gankObserved.fetchGanks()
       }
       ForEach(gankObserved.ganks, id: \.self) { gank in
-        GirlView(gank: gank).padding(EdgeInsets(top: 12, leading: 16, bottom: 0, trailing: 16))
+        HStack {
+          if gank.type == "Girl" {
+            GirlView(gank: gank).frame(height: 340)
+          } else {
+            GankView(gank: gank).frame(height: 120)
+          }
+        }.padding(EdgeInsets(top: 12, leading: 16, bottom: 0, trailing: 16))
+      }
+      if !gankObserved.ganks.isEmpty {
+        Button(action: self.gankObserved.fetchGanks) {
+          Text("load more")
+        }.padding(16)
       }
     }
   }

@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		3690D50523E1DD13005427C9 /* RootTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3690D50423E1DD13005427C9 /* RootTabView.swift */; };
 		3690D50723E1DF88005427C9 /* TodayListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3690D50623E1DF88005427C9 /* TodayListView.swift */; };
-		3690D50923E1DFC6005427C9 /* GirlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3690D50823E1DFC6005427C9 /* GirlsView.swift */; };
+		3690D50923E1DFC6005427C9 /* GankViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3690D50823E1DFC6005427C9 /* GankViews.swift */; };
 		36BAFC43242A36B600E37DA3 /* PageViewUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BAFC42242A36B600E37DA3 /* PageViewUI.swift */; };
 		36BAFC45242A417000E37DA3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BAFC44242A417000E37DA3 /* SceneDelegate.swift */; };
 		36BAFC47242A491000E37DA3 /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BAFC46242A491000E37DA3 /* PageControl.swift */; };
@@ -23,29 +23,12 @@
 		FEDBE9D21A287E2E8EFFB4AA /* Pods_Gank_lu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D28F4D072E067E5013C50BC2 /* Pods_Gank_lu.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		BE3078C51C38272500B007EA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BE3078A81C38272500B007EA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BE3078AF1C38272500B007EA;
-			remoteInfo = Gank.lu;
-		};
-		BE3078D01C38272500B007EA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BE3078A81C38272500B007EA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BE3078AF1C38272500B007EA;
-			remoteInfo = Gank.lu;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		1B738C319521A4EC4231D580 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		35A7F52EECB87B5E69D59509 /* Pods-Gank.lu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gank.lu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gank.lu/Pods-Gank.lu.debug.xcconfig"; sourceTree = "<group>"; };
 		3690D50423E1DD13005427C9 /* RootTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabView.swift; sourceTree = "<group>"; };
 		3690D50623E1DF88005427C9 /* TodayListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayListView.swift; sourceTree = "<group>"; };
-		3690D50823E1DFC6005427C9 /* GirlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GirlsView.swift; sourceTree = "<group>"; };
+		3690D50823E1DFC6005427C9 /* GankViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GankViews.swift; sourceTree = "<group>"; };
 		36BAFC42242A36B600E37DA3 /* PageViewUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewUI.swift; sourceTree = "<group>"; };
 		36BAFC44242A417000E37DA3 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		36BAFC46242A491000E37DA3 /* PageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
@@ -56,8 +39,6 @@
 		BE3078B31C38272500B007EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE3078BD1C38272500B007EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE3078BF1C38272500B007EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BE3078C41C38272500B007EA /* Gank.luTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Gank.luTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BE3078CF1C38272500B007EA /* Gank.luUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Gank.luUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEA575CE1C75A22C00696093 /* DateUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateUtil.swift; sourceTree = "<group>"; };
 		BEB6B5A41C7F6771004C50F9 /* GankModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GankModel.swift; sourceTree = "<group>"; };
 		BEC684751C42B3560036F73F /* GankHttpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GankHttpClient.swift; sourceTree = "<group>"; };
@@ -74,20 +55,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BE3078C11C38272500B007EA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BE3078CC1C38272500B007EA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -96,7 +63,7 @@
 			children = (
 				3690D50423E1DD13005427C9 /* RootTabView.swift */,
 				3690D50623E1DF88005427C9 /* TodayListView.swift */,
-				3690D50823E1DFC6005427C9 /* GirlsView.swift */,
+				3690D50823E1DFC6005427C9 /* GankViews.swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -145,8 +112,6 @@
 			isa = PBXGroup;
 			children = (
 				BE3078B01C38272500B007EA /* Gank.learn.app */,
-				BE3078C41C38272500B007EA /* Gank.luTests.xctest */,
-				BE3078CF1C38272500B007EA /* Gank.luUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -205,42 +170,6 @@
 			productReference = BE3078B01C38272500B007EA /* Gank.learn.app */;
 			productType = "com.apple.product-type.application";
 		};
-		BE3078C31C38272500B007EA /* Gank.luTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BE3078DB1C38272500B007EA /* Build configuration list for PBXNativeTarget "Gank.luTests" */;
-			buildPhases = (
-				BE3078C01C38272500B007EA /* Sources */,
-				BE3078C11C38272500B007EA /* Frameworks */,
-				BE3078C21C38272500B007EA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BE3078C61C38272500B007EA /* PBXTargetDependency */,
-			);
-			name = Gank.luTests;
-			productName = Gank.luTests;
-			productReference = BE3078C41C38272500B007EA /* Gank.luTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		BE3078CE1C38272500B007EA /* Gank.luUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BE3078DE1C38272500B007EA /* Build configuration list for PBXNativeTarget "Gank.luUITests" */;
-			buildPhases = (
-				BE3078CB1C38272500B007EA /* Sources */,
-				BE3078CC1C38272500B007EA /* Frameworks */,
-				BE3078CD1C38272500B007EA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BE3078D11C38272500B007EA /* PBXTargetDependency */,
-			);
-			name = Gank.luUITests;
-			productName = Gank.luUITests;
-			productReference = BE3078CF1C38272500B007EA /* Gank.luUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -255,18 +184,6 @@
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = BG63VCU95W;
 						LastSwiftMigration = 0820;
-					};
-					BE3078C31C38272500B007EA = {
-						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = BG63VCU95W;
-						LastSwiftMigration = 0820;
-						TestTargetID = BE3078AF1C38272500B007EA;
-					};
-					BE3078CE1C38272500B007EA = {
-						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = BG63VCU95W;
-						LastSwiftMigration = 0820;
-						TestTargetID = BE3078AF1C38272500B007EA;
 					};
 				};
 			};
@@ -285,8 +202,6 @@
 			projectRoot = "";
 			targets = (
 				BE3078AF1C38272500B007EA /* Gank.lu */,
-				BE3078C31C38272500B007EA /* Gank.luTests */,
-				BE3078CE1C38272500B007EA /* Gank.luUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -298,20 +213,6 @@
 			files = (
 				BE2F0AC01C786D4A00A0CA63 /* Images.xcassets in Resources */,
 				BE3078BE1C38272500B007EA /* LaunchScreen.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BE3078C21C38272500B007EA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BE3078CD1C38272500B007EA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,7 +269,7 @@
 				BEC684761C42B3560036F73F /* GankHttpClient.swift in Sources */,
 				36BAFC49242A6C3F00E37DA3 /* Models.swift in Sources */,
 				3690D50723E1DF88005427C9 /* TodayListView.swift in Sources */,
-				3690D50923E1DFC6005427C9 /* GirlsView.swift in Sources */,
+				3690D50923E1DFC6005427C9 /* GankViews.swift in Sources */,
 				36BAFC47242A491000E37DA3 /* PageControl.swift in Sources */,
 				BE3078B41C38272500B007EA /* AppDelegate.swift in Sources */,
 				BEA575CF1C75A22C00696093 /* DateUtil.swift in Sources */,
@@ -377,34 +278,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BE3078C01C38272500B007EA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BE3078CB1C38272500B007EA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		BE3078C61C38272500B007EA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BE3078AF1C38272500B007EA /* Gank.lu */;
-			targetProxy = BE3078C51C38272500B007EA /* PBXContainerItemProxy */;
-		};
-		BE3078D11C38272500B007EA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BE3078AF1C38272500B007EA /* Gank.lu */;
-			targetProxy = BE3078D01C38272500B007EA /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		BE3078BC1C38272500B007EA /* LaunchScreen.storyboard */ = {
@@ -542,58 +416,6 @@
 			};
 			name = Release;
 		};
-		BE3078DC1C38272500B007EA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = Gank.luTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.smartalker.Gank-luTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gank.lu.app/Gank.lu";
-			};
-			name = Debug;
-		};
-		BE3078DD1C38272500B007EA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = Gank.luTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.smartalker.Gank-luTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gank.lu.app/Gank.lu";
-			};
-			name = Release;
-		};
-		BE3078DF1C38272500B007EA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = Gank.luUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.smartalker.Gank-luUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = Gank.lu;
-				USES_XCTRUNNER = YES;
-			};
-			name = Debug;
-		};
-		BE3078E01C38272500B007EA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = Gank.luUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.smartalker.Gank-luUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = Gank.lu;
-				USES_XCTRUNNER = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -611,24 +433,6 @@
 			buildConfigurations = (
 				BE3078D91C38272500B007EA /* Debug */,
 				BE3078DA1C38272500B007EA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BE3078DB1C38272500B007EA /* Build configuration list for PBXNativeTarget "Gank.luTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BE3078DC1C38272500B007EA /* Debug */,
-				BE3078DD1C38272500B007EA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BE3078DE1C38272500B007EA /* Build configuration list for PBXNativeTarget "Gank.luUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BE3078DF1C38272500B007EA /* Debug */,
-				BE3078E01C38272500B007EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
