@@ -71,7 +71,7 @@ struct GirlView: View {
       }
     }
     .background(Color.white)
-    .cornerRadius(16)
+    .cornerRadius(8)
     .shadow(radius: 4)
   }
 }
@@ -86,7 +86,7 @@ struct GankView: View {
   var body: some View {
     HStack {
       ZStack(alignment: .topLeading){
-        KFImage(URL(string: gank.images.first ?? gank.url),options: [
+        KFImage(URL(string: gank.cover),options: [
             .transition(.fade(0.2)),
             .processor(
               DownsamplingImageProcessor(size: CGSize(width: 120 * 3, height: 120 * 3))
@@ -123,7 +123,7 @@ struct GankView: View {
       }
     }
     .background(Color.white)
-    .cornerRadius(16)
+    .cornerRadius(8)
     .shadow(radius: 4)
   }
 }

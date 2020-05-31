@@ -21,10 +21,9 @@ struct GankData: Codable, Hashable {
   var _id: String
   var author: String
   var category: String
-  var content: String
   var createdAt: String
   var desc: String
-  var images: [String]
+  var images: [String?]
   var likeCounts: Int
   var publishedAt: String
   var stars: Int
@@ -32,6 +31,14 @@ struct GankData: Codable, Hashable {
   var type: String
   var url: String
   var views: Int
+
+  var cover: String {
+    if images.isEmpty {
+      return ""
+    } else {
+      return images[0] ?? ""
+    }
+  }
 }
 
 struct GankResult: Codable {

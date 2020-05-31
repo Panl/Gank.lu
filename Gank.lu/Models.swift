@@ -37,6 +37,7 @@ class GankObserver: ObservableObject {
       return
     }
     refreshing = true
+    print("----page: \(page)")
     GankHttp.shareInstance.fetchAllGank(page: page, count: 20) { resp in
       if let json = resp.data {
         do {

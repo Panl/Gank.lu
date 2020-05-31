@@ -99,12 +99,12 @@ struct BannerCard: View {
           .aspectRatio(contentMode: .fill)
           .frame(height: 180)
         LinearGradient(gradient: Gradient(colors: [.clear, Color.black.opacity(0.6)]), startPoint: .top, endPoint: .bottom)
-          .cornerRadius(16)
+          .cornerRadius(8)
         Text(title).font(.headline)
           .fontWeight(.semibold)
           .padding(EdgeInsets.init(top: 0, leading: 16, bottom: 32, trailing: 16)).foregroundColor(.white)
       }
-      .cornerRadius(16)
+      .cornerRadius(8)
       .shadow(radius: 4)
     }.padding(16)
 
