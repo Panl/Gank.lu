@@ -1,3 +1,7 @@
+# Recent updates
+> Delete most third-party libraries and refactor with SwiftUI
+
+
 # Gank.lu
 [中文版](README.md)
 > **gank.io client for iOS**  
